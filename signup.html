@@ -61,8 +61,10 @@
     <div class="signup-box">
         <h2>Sign Up</h2>
         <form id="form">
-            <label>Full Name</label>
-            <input type="text" placeholder="Enter your full name" id="name">
+            <label>First Name</label>
+            <input type="text" placeholder="Enter your first name" id="firstname">
+            <label>Last Name</label>
+            <input type="text" placeholder="Enter your last name" id="lastname">
             <label>Email</label>
             <input type="text" placeholder="Enter your email" id="email">
             <label>Password</label>
@@ -80,24 +82,34 @@
 
 </html>
 <script>
-    let LSData = JSON.parse(localStorage.getItem("signup")) || [];
-    let form = document.querySelector("form");
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
+    let from = document.querySelector("form")
+    from.addEventListener("submit",Register)
+    apiUrl="http://127.0.0.1:9090"
+ async function Register(e) {
+    e.preventDefault()
+            
+            const firstname = document.getElementById("firstname").value;
+            const lastname = document.getElementById("lastname").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            
 
-        let obj = {
-            Name: document.getElementById("name").value,
-            Email: document.getElementById("email").value,
-            Password: document.getElementById("password").value,
-            ConfirmedPassword: document.getElementById("confirmedPassword").value,
-        }
-        if (obj.Name == "" || obj.Email == "" || obj.Password == "" || obj.ConfirmedPassword == "") {
-            alert("some fields are empty")
-        } else {
-            LSData.push(obj);
-            localStorage.setItem("signup", JSON.stringify(LSData));
-            window.location.href = "login.html"
-            alert("sign-up successful");
-        }
-    })
+            const user = {
+                firstname,
+                lastname,
+                email,
+                password
+            };
+            console.log(user);
+            const response = await fetch("http://127.0.0.1:9090/user/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(user)
+            });
+            
+            let data =await response.json()
+            console.log(data);
+ }
 </script>
