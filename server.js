@@ -211,6 +211,21 @@ server.post("/user/login", (req, res) => {
   }
 });
 
+//store
+server.post("/store", (req, res) => {
+  if (
+    !req.body ||
+    !req.body.password ||
+    !req.body.email
+  ) {
+    return res
+      .status(400)
+      .send("Bad request, requires username, password & email.");
+  }
+
+})
+
+
 function generateAccessToken(user) {
   return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "3h" });
 }
@@ -230,3 +245,6 @@ server.listen( serverPort, () => {
     `JSON Server is running at http://localhost:${serverPort}`
   );
 });
+
+
+
