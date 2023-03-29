@@ -671,6 +671,17 @@
       "createdAt": 1680125390687,
       "productId": 1,
       "storeId": 1
+    },
+    {
+      "productName": "dgfshflsd",
+      "price": "324",
+      "offer": "23",
+      "elite": false,
+      "image": "23",
+      "review": "23",
+      "createdAt": 1680127107562,
+      "productId": 1,
+      "storeId": 1
     }
   ],
   "wishlist": [],
@@ -694,6 +705,14 @@
       "userId": 1,
       "createdAt": 1680124507730,
       "id": 2
+    },
+    {
+      "storename": "fasdad",
+      "address": "adasd",
+      "contact": "adfsdf",
+      "createdAt": 1680127144016,
+      "id": 3,
+      "userId": 1
     }
   ]
 }
