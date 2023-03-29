@@ -256,15 +256,43 @@ server.post("/user/login", (req, res) => {
 server.post("/store", (req, res) => {
   if (
     !req.body ||
-    !req.body.password ||
-    !req.body.email
+    !req.body.storename ||
+    !req.body.address||
+    !req.body.contact||
+    !req.body.userId
   ) {
     return res
       .status(400)
       .send("Bad request, requires username, password & email.");
   }
 
-})
+
+  db.read();
+  const stores = db.data.stores;
+  let largestId = 0;
+  stores.forEach((store) => {
+    if (store.id > largestId) largestId = store.id;
+  });
+
+
+  const newId = largestId + 1;
+  
+  const newStoreData = {
+   storename:req.body.storename,
+   address:req.body.address,
+   contact:req.body.contact,
+   userId:req.body.userId,
+    createdAt: Date.now(),
+    id: newId,
+  };
+
+  db.data.stores.push(newStoreData);
+
+  db.write();
+
+  res.status(201).send(newStoreData);
+
+});
 
 
 function generateAccessToken(user) {

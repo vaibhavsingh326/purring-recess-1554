@@ -65900,5 +65900,15 @@
       "productId": 1,
       "storeId": 1
     }
+  ],
+  "stores": [
+    {
+      "storename": "adsf",
+      "address": "asdf",
+      "contact": "1233",
+      "userId": 1,
+      "createdAt": 1680080131336,
+      "id": 1
+    }
   ]
 }
