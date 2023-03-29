@@ -7,6 +7,70 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="">
+        <label for="">NAME</label>
+        <br>
+        <input type="text" name="name" id="name" placeholder="name">
+        <br>
+        <label for="">PRICE</label>
+        <br>
+        <input type="number" name="price" id="price" placeholder="price">
+        <br>
+        <label for="">OFFER</label>
+        <br>
+        <input type="text" name="offer" id="offer" placeholder="offer">
+        <br>
+        <label for="">IMAGE</label>
+        <br>
+        <input type="text" name="image" id="image" placeholder="image">
+        <br>
+        <label for="">ELITE</label>
+        <input type="checkbox" name="elite" id="elite">
+        <br>
+        <label for="">REVIEW</label>
+        <br>
+        <input type="number" name="review" id="review" placeholder="review">
+        <br>
+        <input type="submit" name="submit" id="submit">
+            </form>
     
 </body>
+<script>
+    let storeId =1
+    
+    let form = document.querySelector("form")
+    form.addEventListener("submit",addProduct)
+    async function addProduct(e){
+        e.preventDefault()
+    let productName = document.getElementById("name").value
+    let price = document.getElementById("price").value
+    let offer = document.getElementById("offer").value
+    let image = document.getElementById("image").value
+    let elitepara = document.getElementById("elite")
+    let review = document.getElementById("review").value
+    
+    let elite =elitepara.checked;
+        
+        const product ={
+            productName,
+            price,
+            offer,
+            elite,
+            image,
+            review,
+            storeId,
+        }
+        console.log(product);
+        let res = await fetch("http://127.0.0.1:9090/add",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(product)
+        })
+        let data = await res.json()
+        console.log(data);
+    }
+
+</script>
 </html>
