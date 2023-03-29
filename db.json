@@ -894,6 +894,14 @@
       "lastname": "singh",
       "createdAt": 1680027901424,
       "id": 57
+    },
+    {
+      "password": "$2b$10$ZV/BXvPThoZTI8reM1Yf6u3sFpXzBE0a2qor0rOMuHgu6vauLauoK",
+      "email": "iugufu@ihioo",
+      "firstname": "vaibhav",
+      "lastname": "singh",
+      "createdAt": 1680073017461,
+      "id": 58
     }
   ],
   "posts": [
@@ -65878,6 +65886,19 @@
     {
       "id": 4,
       "name": "Engineering"
+    }
+  ],
+  "products": [
+    {
+      "productName": "Vaibhav Singh ",
+      "price": "12",
+      "offer": "12",
+      "elite": true,
+      "image": "12",
+      "review": "2",
+      "createdAt": 1680074058242,
+      "productId": 1,
+      "storeId": 1
     }
   ]
 }
