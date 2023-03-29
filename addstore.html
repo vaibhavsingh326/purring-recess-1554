@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    <label for="">STORE NAME</label>
+    <input type="text" name="storename" id="storename">
+    <label for="">ADDRESS</label>
+    <input type="text" name="address" id="address">
+<label for="">CONATCT NUMBER</label>
+<input type="text" name="contact" id="contact">
+<input type="submit">
+</form>
+</body>
+</html>
+
+<script>
+   let from = document.querySelector("form")
+    from.addEventListener("submit",Register)
+    apiUrl="http://127.0.0.1:9090"
+ async function Register(e) {
+    e.preventDefault()
+            const storename = document.getElementById("storename").value;
+            const address = document.getElementById("address").value;
+            const contact = document.getElementById("contact").value;
+            const userId =1;
+
+            const user = {
+                storename,
+                address,
+               contact,
+               userId,
+                
+
+            };
+
+            const response = await fetch("http://127.0.0.1:9090/store", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(user)
+            });
+            
+            let data =await response.json()
+            console.log(data);
+ }
+
+    
+</script>
