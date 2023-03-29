@@ -23,7 +23,7 @@ const append = (data) => {
         //1.create all htmls
         const div=document.createElement("div");
         const img=document.createElement("img");
-        const h3=document.createElement("h3");
+        const h5=document.createElement("h5");
         const priceP=document.createElement("p");
         const brandP=document.createElement("p");
         const addToCart=document.createElement("button");
@@ -31,8 +31,8 @@ const append = (data) => {
 
         //2.giving style and attribute to the tag
         img.src=el.image_link;
-        h3.innerText=el.name;
-        priceP.innerText=`Price-${el.price}`;
+        h5.innerText=el.name;
+        priceP.innerText=`₹${el.price}`;
         brandP.innerText=`Brand Name-${el.brand}`
         addToCart.innerText="Add To Cart";
         buy.innerText="Buy";
@@ -58,7 +58,7 @@ const append = (data) => {
 
 
         //4.Append
-        div.append(img,h3,priceP,brandP,addToCart,buy)
+        div.append(img,h5,priceP,brandP,addToCart,buy)
         container.append(div);
     })
 }
