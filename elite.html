@@ -4,9 +4,646 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
     <title>Document</title>
+    <style>
+    .main{
+        width:90%;
+    
+        margin:auto;
+        margin-bottom: 90px;
+    }
+    .main img{
+        width: 100%;
+    }
+    .main1{
+        width:90%;
+
+        margin:auto;
+        margin-bottom: 90px;
+        
+    }
+    .main1 img{
+        width: 100%;
+    }
+    .slideshow-container{
+        width: 100%;
+        text-align: center;
+      
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; ;
+       margin: auto;
+       max-width: 1000px;
+  position: relative;
+  margin: auto;
+       
+    }
+    .mySlides{
+       
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .mySlides img{
+        width: 22%;
+    }
+    
+    *{box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* img {vertical-align: middle;} */
+
+/* Slideshow container */
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev{
+    left: 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+   
+
+
+
+
+
+
+
+.featured{
+    width: 90%;
+    margin: auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    border-radius: 35px;
+    margin-top: 70px;
+}
+.feature img{
+    width: 100%;
+}
+.feature{
+   
+    width: 100%;
+    display: grid;
+   grid-template-columns:repeat(3,1fr);
+}
+.featured h1{
+    font-size: 60px;
+}
+.featured h2{
+    font-size: 40px;
+}
+.featured{
+    text-align: center;
+}
+
+
+
+
+
+</style>
 </head>
 <body>
     
+        <div class="navbar">
+            <div class="inp">
+                <input type="text" id="searchInput" placeholder="Enter search query">
+                <button onclick="search()">Search</button>
+                <ul id="searchResults">
+                </ul>
+            </div>
+            <img src="./img/purplle_v2.png" alt="">
+            <div class="icon">
+                <i class="fa-regular fa-heart"></i>
+                <a href="./login.html"><i class="fa-sharp fa-regular fa-face-smile"></i></a>
+                <a href="./cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    
+        <nav>
+            <p>SHOP CATEGORIES</p>
+            <p>BRANDS</p>
+            <p>OFFERS</p>
+            <p>NEW</p>
+            <p>SPLURGE</p>
+            <p>MAGAZINE</p>
+            <p>ELITE OFFERS</p>
+        </nav>
+    
+    
+  
+
+    <div class="main">
+     <img src="https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1679318816_welcome-to-elite-new-banner-web.jpg" alt="error">
+ </div>
+ <div class="main1">
+    <img src="https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679670060_bday-web.gif" alt="error">
+ </div>
+
+ <div class="slideshow-container">
+
+    <!-- <h1>OFFER</h1>
+    <hr style="width:160px; height: 0%;">
+    <h2>of the day</h2> -->
+    <div class="mySlides">
+        <div class="numbertext">1 / 3</div>
+<a href="">
+<img src="https://media6.ppl-media.com/tr:w-457,ar-2-3,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1679669227_dot_-_key-320x480.png" alt="">
+</a>
+<a href="">
+<img src="https://media6.ppl-media.com/tr:w-457,ar-2-3,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1679669227_faces_canada-320x480.png" alt="">
+</a>
+<a href="">
+<img src="https://media6.ppl-media.com/tr:w-457,ar-2-3,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1679669226_ny_bae-320x480.png" alt="">
+</a>
+<a href="">
+    <img src="https://media6.ppl-media.com/tr:w-457,ar-2-3,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1679669226_stayq-320x480.png" alt="">
+</a>
+</div>
+
+<div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <a href="">
+    <img src="https://media6.ppl-media.com/tr:w-457,ar-2-3,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1679669225_purplle-320x480.png" alt="">
+    </a>
+    <a href="">
+    <img src="https://media6.ppl-media.com/tr:w-457,ar-2-3,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1679669224_good_vibes-320x480.png" alt="">
+    </a>
+    <a href="">
+    <img src="https://media6.ppl-media.com/tr:w-457,ar-2-3,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1679669224_alps_goodness-320x480.png" alt="">
+    </a>
+    <a href="">
+        <img src="" alt="">
+    </a>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+ 
+ </div>
+ <br>
+
+ <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <!-- <span class="dot" onclick="currentSlide(3)"></span>  -->
+  </div>
+
+
+  <div class="featured">
+
+    <h1>FEATURED</h1>
+    <h2>Elite Brands</h2>
+<div class="feature">
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295023_new-size-brand-grid-hussain_02.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295024_new-size-brand-grid-hussain_03.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295025_new-size-brand-grid-hussain_04.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295026_new-size-brand-grid-hussain_05.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295027_new-size-brand-grid-hussain_06.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295028_new-size-brand-grid-hussain_07.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295029_new-size-brand-grid-hussain_08.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295030_new-size-brand-grid-hussain_09.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295031_new-size-brand-grid-hussain_10.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295032_new-size-brand-grid-hussain_11.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295033_new-size-brand-grid-hussain_12.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295035_new-size-brand-grid-hussain_13.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295036_new-size-brand-grid-hussain_14.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295037_new-size-brand-grid-hussain_15.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295038_new-size-brand-grid-hussain_16.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295039_new-size-brand-grid-hussain_17.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295040_new-size-brand-grid-hussain_18.gif" alt=""></a>
+   <a href=""><img src="https://media6.ppl-media.com/tr:w-427,ar-26087-20000,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679295041_new-size-brand-grid-hussain_19.gif" alt=""></a>
+</div>
+  </div>
+
+  <div class="append">
+
+  </div>
+
+<!-- footer part -->
+
+<div id="footer1">
+    <div>
+        <img src="./img/1499247950_secure-payment.webp" alt="error">
+        <h2>100% Secure Payment</h2>
+        <p>All major credit & debit cards accepted</p>
+    </div>
+    <div class="vl"></div>
+    <div>
+        <img src="./img/Screenshot 2023-03-29 010549.png" alt="error">
+        <h2>Beauty Assistant</h2>
+        <p>Tell me what you are looking for and i will work <br>my magic to help you find your perfect match.</p>
+    </div>
+    <div class="vl"></div>
+    <div>
+        <img style="width:100px; height:100px" src="./img/istockphoto-1247852914-612x612.jpg" alt="error">
+        <h2>Help Center</h2>
+        <p>Got a question? Look no further.Browse FAQs <br> submit your query.</p>
+    </div>
+</div>
+
+<div class="footer2">
+    <div>
+        <h2 style="margin-top: 20px;">Spotlight</h2>
+        <div style="width:380;height:300; box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;margin-top: 20px;">
+            <iframe width="380" height="300"
+                src="./img/How to find perfect foundation for your skin tone Ft. Purplle.mp4">
+            </iframe>
+        </div>
+    </div>
+    <div style="width:35%">
+        <h2 style="margin-top: 20px;">Shop 0n the go</h2>
+        <div style="margin-top: 20px;" class="f2d">
+            <div>
+                <p style="padding-top: 30px;">The Purplle BFF APP is now fully<br> loaded! Get downloading now<br>
+                    on both iOS & Android</p>
+                <div style="padding-top: 30px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.manash.purplle"><img
+                            src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247983_google-play.png"
+                            alt="error"></a>
+                </div>
+
+                <div style="padding-top: 10px;">
+                    <a href="https://apps.apple.com/in/app/purplle-beauty-friend-forever/id1078972948"><img
+                            src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247967_app-store.png"
+                            alt="error"></a>
+                </div>
+            </div>
+            <div>
+                <img src="./img/Screenshot 2023-03-29 014507.png" alt="error">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer3">
+    <div class="f3d">
+        <div style="width:12% ">
+            <a href="">
+                <h3>Makeup:</h3>
+            </a>
+        </div>
+        <div style="width:80%">
+            <a href=""> Primer</a> /
+            <a href=""> Lipstick </a> /
+            <a href=""> Foundation Serum</a> /
+            <a href="">Eyeshadow<a> /
+                    <a href=""> Baby Shampoo </a> /
+                    <a href=""> Kajal</a> /
+                    <a href="">Concealer </a> /
+                    <a href="">Shaving Cream</a> /
+                    <a href="">Compact </a> /
+                    <a href=""> Mascara </a> /
+                    <a href=""> Highlighters & Illuminators</a> /
+                    <a href=""> Makeup Remover </a> /
+                    <a href=""> BB & CC Cream</a> /
+                    <a href=""> Loose Powder</a> /
+                    <a href="">Blush</a> .
+        </div>
+    </div>
+    <div class="f3d">
+        <div style="width:12%">
+            <a href="">
+                <h3>Hair:</h3>
+            </a>
+        </div>
+        <div style="width:80%">
+            <a href=""> Shampoo</a> /
+            <a href=""> Conditioner </a> /
+            <a href=""> Hair Serum</a> /
+            <a href="">Hair Oila<a> /
+                    <a href=""> Baby Shampoo </a> /
+                    <a href=""> Dry Shampoo</a> /
+                    <a href="">Hair Spa Kits </a> /
+                    <a href="">Shaving Cream</a> /
+                    <a href="">Volumizing</a> /
+                    <a href=""> Hair Spray & Leave-In Cream </a> /
+                    <a href=""> Aroma Magi</a> /
+                    <a href="">Hair Color </a> /
+                    <a href=""> Hair Extensions</a> /
+                    <a href=""> Hair Styling Too</a> /
+                    <a href="">Hair Accessories.</a> .
+        </div>
+    </div>
+    <div class="f3d">
+        <div style="width:12%">
+            <a href="">
+                <h3>Fragrance:</h3>
+            </a>
+        </div>
+        <div style="width:80%">
+            <a href=""> Perfumes </a> /
+            <a href=""> Deodrants & Roll-Ons </a> /
+            <a href="">Aftershaves Perfumes</a> /
+            <a href=""> Colognes <a> /
+                    <a href="">Darling Isabella </a> /
+                    <a href=""> Gift & Value Sets For Men </a> /
+                    <a href="">Good Vibes </a>.
+        </div>
+    </div>
+    <div class="f3d">
+        <div style="width:12%">
+            <a href="">
+                <h3> Collections:</h3>
+            </a>
+        </div>
+        <div style="width:80%">
+            <a href=""> Castor Oil</a> /
+            <a href=""> Pastel Nail Polish</a> /
+            <a href="">Lakme 9 To 5</a> /
+            <a href=""> Black Kajal<a> /
+                    <a href="">Sunscreen </a> .
+        </div>
+    </div>
+    <div class="f3d">
+        <div style="width:12%">
+            <a href="">
+                <h3>Brands:</h3>
+            </a>
+        </div>
+        <div style="width:80%">
+            <a href="">Biotique</a> /
+            <a href=""> Wow </a> /
+            <a href="">Dermdoc</a> /
+            <a href="">Himalaya<a> /
+                    <a href="">Darling Isabella </a> /
+                    <a href=""> Maybelline</a> /
+                    <a href="">Good Vibes </a> /
+                    <a href="">Shaving Cream</a> /
+                    <a href=""> NY Bae</a> /
+                    <a href=""> Stay Quirky </a> /
+                    <a href=""> Aroma Magi</a> /
+                    <a href="">Lotus</a> /
+                    <a href="">Sugar</a> /
+                    <a href="">Nivea</a> /
+                    <a href="">Lakme</a> .
+        </div>
+    </div>
+
+    <div class="f3d">
+        <div style="width:12%">
+            <a href="">
+                <h3>Men:</h3>
+            </a>
+        </div>
+        <div style="width:80%">
+            <a href="">Perfumes</a> /
+            <a href=""> Deodrants & Roll-Ons</a> /
+            <a href="">Face Wash</a> /
+            <a href="">Shower Gels <a> /
+                    <a href="">Soap </a> /
+                    <a href=""> Body Scrub</a> /
+                    <a href="">Talc </a> /
+                    <a href="">Shaving Cream</a> /
+                    <a href="">Beard Oil</a> /
+                    <a href=""> Razors </a> /
+                    <a href=""> Aftershave</a> /
+                    <a href="">Beard Wash</a> /
+                    <a href="">Grooming Kits</a> /
+                    <a href="">Shaving Accessories</a> /
+                    <a href="">Hair Styling</a> /
+                    <a href="">Trimmers</a>.
+        </div>
+
+    </div>
+    <div class="f3d">
+        <div style="width:12%">
+            <a href="">
+                <h3>Accessories:</h3>
+            </a>
+        </div>
+        <div style="width:80%">
+            <a href="">Necklaces & Pendants</a> /
+            <a href=""> Earrings</a> /
+            <a href="">Rings</a> /
+            <a href="">Bangles & Braclets <a> /
+                    <a href=""> Clips Bands & More </a> .
+        </div>
+
+    </div>
+    <div class="f3d">
+        <div style="width:12%">
+            <a href="">
+                <h3>Electronics:</h3>
+            </a>
+        </div>
+        <div style="width:80%">
+            <a href=""> Hair Straightener</a> /
+            <a href="">Hair Curler</a> /
+            <a href=""> Hair Dryer</a> /
+            <a href="">Electric Shaver <a> /
+                    <a href="">Trimmers & Clippers </a> /
+                    <a href=""> Epilators </a> /
+                    <a href="">Massager </a> .
+        </div>
+    </div>
+
+    <div class="f3d">
+        <div style="width:12%">
+            <a href="">
+                <h3>Wellness:</h3>
+            </a>
+        </div>
+        <div style="width:80%">
+            <a href=""> Health & Wellness Supplements</a> /
+            <a href=""> Vitamins & Supplements</a> /
+            <a href=""> Weight Management Products </a> /
+            <a href="">Family Nutrition <a> /
+                    <a href=""> Sports Supplements </a> /
+                    <a href=""> Green Tea</a> /
+                    <a href="">Herbal Tea </a> /
+                    <a href="">Healthy Juices & Drinks</a> .
+        </div>
+    </div>
+    <div class="f3d">
+        <div style="width:12%">
+            <a href="">
+                <h3>Blogs:</h3>
+            </a>
+        </div>
+        <div style="width:80%">
+            <a href="">Home Remedies For Dandruff </a> /
+            <a href=""> How To Apply Eyeliner </a> /
+            <a href="">Tips For Lips Care</a> /
+            <a href="">Home Remedies For Hair Fall <a> /
+                    <a href="">Best Sunscreen Lotions </a> /
+                    <a href=""> Home Remedies For Acne And Pimples</a> /
+                    <a href="">Home Remedies For Whiteheads </a> /
+                    <a href="">Home Remedies For Suntan</a> /
+                    <a href="">Serum For Oily, Dry And Sensitive Skin</a> /
+                    <a href=""> Choose The Right Serum For Your Skin </a> /
+                    <a href=""> Body Lotion For Dry Skin</a> /
+                    <a href=""> / / Home Remedies For Hyperpigmentation </a> .
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="list">
+        <h3>PURPELLE</h3>
+        <a href="">
+            <p>About us</p>
+        </a>
+        <a href="">
+            <p>Our Team</p>
+        </a>
+        <a href="">
+            <p>Careers</p>
+        </a>
+        <a href="">
+            <p>Press</p>
+        </a>
+        <a href="">
+            <p>Sitemap</p>
+        </a>
+
+    </div>
+    <div class="list">
+        <h3>PURPELLE BUSINESS</h3>
+        <a href="">
+            <p>Sell on Purplle</p>
+        </a>
+    </div>
+    <div class="list">
+        <h3>POLICY INFO</h3>
+        <a href="">
+            <p>Privacy Policy</p>
+        </a>
+        <a href="">
+            <p>Terms Of Use</p>
+        </a>
+        <a href="">
+            <p>Returm & Cancellation Policy</p>
+        </a>
+    </div>
+    <div class="list">
+        <h3>NEED HELP?</h3>
+        <a href="">
+            <p>FAQ's</p>
+        </a>
+        <a href="">
+            <p>Contact Us</p>
+        </a>
+    </div>
+</div>
+<hr >
+<div  id="PbelowF">
+    <div  class="belowF">
+        <h3 style="padding-top: 10px;">PAYMENT</h3>
+        <img src="./img/Screenshot 2023-03-29 112014.png" alt="Error">
+    </div>
+    <div class="belowF">
+        <h3 style="padding-top: 10px;">CONNECT</h3>
+        <a href="https://www.facebook.com/letspurplle"><img src="./img/Screenshot 2023-03-29 112741.png"
+                alt="error"></a>
+        <a href="https://twitter.com/letspurplle"><img src="./img/Screenshot 2023-03-29 112808.png" alt="error"></a>
+        <a href="https://plus.google.com/+Purplle"><img src="./img/Screenshot 2023-03-29 112827.png"
+                alt="error"></a>
+        <a href="https://in.pinterest.com/letspurplle/"><img src="./img/Screenshot 2023-03-29 112852.png"
+                alt="error"></a>
+        <a href=""><img src="./img/Screenshot 2023-03-29 112914.png" alt="error"></a>
+        <a href="https://www.youtube.com/channel/UCI_6AcJI1sKexCLb2NAYTOQ"><img
+                src="./img/Screenshot 2023-03-29 112929.png" alt="error"></a>
+        <a href="https://www.instagram.com/letspurplle/"><img src="./img/Screenshot 2023-03-29 112947.png"
+                alt="error"></a>
+        <a href="https://www.linkedin.com/company/purplle-com/"><img src="./img/Screenshot 2023-03-29 113004.png"
+                alt="error"></a>
+    </div>
+</div>
+
+
+
+ 
+
 </body>
 </html>
+<script>
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+      </script>
