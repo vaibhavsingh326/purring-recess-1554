@@ -1,38 +1,44 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: center;
     justify-content: space-around;
     margin-top: 11px;
+
 }
-.navbar .inp{
+
+.navbar .inp {
     /* border-bottom: 2px solid blue; */
     margin-top: 22px;
 }
-.navbar .inp input{
+
+.navbar .inp input {
     border: none;
     border-bottom: 2px solid blue;
     font-size: 18px;
 }
-.navbar .inp i{
+
+.navbar .inp i {
     margin-inline: 10px;
 }
-.navbar img{
+
+.navbar img {
     width: 10%;
     height: 60px;
 }
+
 .navbar .icon i {
     font-size: 40px;
     margin: 1rpx;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: center;
     justify-content: space-around;
@@ -45,21 +51,29 @@ nav{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-size: 16px;
     font: bolder;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    height: 53px;
 }
-nav p:hover{
+
+nav p:hover {
     color: blue;
     text-decoration: underline;
     font-weight: 600px;
 }
 
+/* dropdown */
+
 .main {
     text-align: center;
 }
-.main image{
+
+.main image {
     width: 95%;
 }
 
-.head{
+.head {
     margin-top: 13px;
     margin-left: 24px;
     padding: 22px;
@@ -68,40 +82,49 @@ nav p:hover{
 .card {
     text-align: center;
 }
-.card img{
+
+.card img {
     width: 24%;
 }
-.deal{
+
+.deal {
     text-align: center;
 }
-.deal img{
+
+.deal img {
     width: 95%;
     margin-top: 33px;
 }
-.img-card{
+
+.img-card {
     display: flex;
     justify-content: center;
     margin-top: 4px;
 }
-.img-card img{
+
+.img-card img {
     width: 48%;
 }
-.mk-card{
+
+.mk-card {
     display: flex;
     justify-content: center;
 }
-.mk-card img{
+
+.mk-card img {
     width: 33%;
 }
-.sugar{
+
+.sugar {
     text-align: center;
 }
-.sugar img{
+
+.sugar img {
     width: 95%;
     margin-top: 22px;
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: center;
     justify-content: space-around;
@@ -111,97 +134,210 @@ nav p:hover{
     font-weight: lighter;
 }
 
-#footer1{
+#footer1 {
     height: 300px;
     width: 100%;
-    display:flex;
+    display: flex;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
     justify-content: space-between;
     text-align: center;
     padding-left: 100px;
     padding-right: 150px;
-    font-weight:lighter;
+    font-weight: lighter;
 }
-#footer1>div>p{
+
+#footer1>div>p {
     margin-top: 40px;
 }
-#footer1>div>h2{
+
+#footer1>div>h2 {
     margin-top: 40px;
 }
-#footer1>div>img{
+
+#footer1>div>img {
     margin-top: 20px;
 }
+
 .vl {
     border-left: 1px solid black;
     height: 300px;
-  }
-.hover:hover{
+}
+
+.hover:hover {
     background-color: rgb(250, 254, 254);
 }
-.shipping{
+
+.shipping {
     width: 80%;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
 }
-.shipping>div>img{
+
+.shipping>div>img {
     width: 100%;
 }
-.footer2{
+
+.footer2 {
     display: flex;
     width: 100%;
     height: 400px;
     justify-content: space-around;
-    
+
     background-color: rgb(236, 235, 235);
 }
-.f2d{
-display: flex;
-justify-content: space-around;
-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-background-color: rgb(252, 210, 217);
+
+.f2d {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: rgb(252, 210, 217);
 }
-a:hover{
-   color: rgb(250, 150, 169);
+
+a:hover {
+    color: rgb(250, 150, 169);
     cursor: pointer;
-   
+
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
-    font-size:small;
+    font-size: small;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.f3d{
+
+.f3d {
     display: flex;
-    
+
 }
-.footer3{
+
+.footer3 {
     width: 80%;
-   height: 600px;
+    height: 600px;
     background-color: rgb(236, 235, 235);
     margin: auto;
     padding-top: 5px;
     /* border: 1px solid red; */
 }
-.footer3>.f3d{
+
+.footer3>.f3d {
     margin-top: 20px;
     /* border: 1px solid black; */
 }
-.footer3>div{
+
+.footer3>div {
     margin-left: 20px;
-   
+
 }
-.belowF{
+
+.belowF {
     display: flex;
     width: 40%;
     justify-content: space-between;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-#PbelowF{
+
+#PbelowF {
     width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: auto;
     margin-top: 20px;
+
+}
+
+#PbelowF>a>img {
+    margin: 0px;
+}
+
+.dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.dropbtns {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    /* margin-top: 20px; */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 1.5px;
+    margin-left: -10% !important;
+}
+
+.dropdown-contents {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 1.5px;
+    margin-left: -10% !important;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+.dropdown-contents a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+.dropdown-content a:hover {
+    color: #2f0e8b;
+}
+
+.dropdown-contents a:hover {
+    color: #2f0e8b;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    display: flex;
+    margin-left: 0px;
+    justify-content: space-around;
+    width: 1550px;
+    padding-right: 100px;
+    margin-left: -35% !important;
+}
+
+.dropbtns:hover .dropdown-contents {
+    display: block;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    margin-left: 0px;
+    justify-content: space-around;
+    width: 1550px;
+    padding-right: 100px;
+    margin-left: -35% !important;
 }
