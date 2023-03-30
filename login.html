@@ -57,7 +57,7 @@ p{
             <label>Email</label>
             <input type="text" placeholder="Enter your email" id="email">
             <label>Password</label>
-            <input type="password" placeholder="Enter your Password" id="Password">
+            <input type="password" placeholder="Enter your Password" id="password">
             <input type="submit" value="Login">
         </form>
     </div>
@@ -65,28 +65,32 @@ p{
 </body>
 </html>
 <script>
-    document.querySelector("form").addEventListener("submit",login);
-    function login(){
-        event.preventDefault();
-        let data={
-            Email:document.getElementById("email").value,
-            Password:document.getElementById("Password").value,
-        }
-        let local=JSON.parse(localStorage.getItem("signup"))||[];
-        console.log(local);
+     let from = document.querySelector("form")
+    from.addEventListener("submit",Register)
+    apiUrl="http://127.0.0.1:9090"
+ async function Register(e) {
+    e.preventDefault()
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
 
-        let flag=false;
-        for(let i=0;i<local.length;i++){
-            if(data.Email===local[i].Email && data.Password===local[i].Password){
-                flag=true
+            const user = {
+                email,
+                password,
+            };
+
+            const response = await fetch("http://127.0.0.1:9090/user/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(user)
+            });
+            
+            let data =await response.json()
+            if(data.token){
+                localStorage.setItem("token",JSON.stringify(data.token))
             }
-        }
-        if(flag===true){
-            alert("login successful")
-            window.location.href="./index.html"
-        }else{
-            alert("please check email/password")
-        }
-
-    }
+            
+            console.log(data);
+ }
 </script>

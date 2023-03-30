@@ -65,6 +65,56 @@ nav p:hover {
 
 /* dropdown */
 
+.drop{
+    position:relative;
+    display: inline-block;
+    
+    text-decoration: none;
+  }
+  .drop:hover .dropcont {
+   display: block;
+  }
+  .dropcont{
+   display: none;
+   position: absolute;
+   background-color: white;
+   min-width: 150px;
+   z-index: 1;
+  }
+  .dropcont a {
+   color: black;
+ 
+   text-decoration: none;
+   display: block;
+   /* width: 300px;
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 5px;
+   margin-bottom: 5px;
+   border: 1px solid black; */
+   font-size: 16px;
+   text-align: center;
+   
+  }
+  .dropcont a:nth-child(1){
+    color: black;
+   
+   
+  }
+  .dropcont a:hover{
+     color: rgb(209, 18, 50);
+  }
+   
+.icon{
+
+ width: 300px;
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+}
+
+
+
+
 .main {
     text-align: center;
 }

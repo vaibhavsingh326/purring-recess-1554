@@ -112,19 +112,17 @@ server.post("/adminuser/register", (req, res) => {
   }
 
   db.read();
-  const users = db.data.adminUser;
+  const users = db.data.adminusers;
   let largestId = 0;
-  let storeId =0;
+  
   users.forEach((user) => {
     if (user.id > largestId) largestId = user.id;
   });
-  users.forEach((user) => {
-    if (user.storeId > storeId) storeId = user.storeId;
-  });
+ 
 
   const hashedPassword = bcrypt.hashSync(req.body.password, 10);
   const newId = largestId + 1;
-  const newstoreId = storeId+1
+  
   
   const newUserData = {
     username: req.body.username,
@@ -135,22 +133,130 @@ server.post("/adminuser/register", (req, res) => {
     avatar: req.body.avatar || "",
     createdAt: Date.now(),
     id: newId,
-    storeId :newstoreId,
+    
   };
 
-  db.data.adminUser.push(newUserData);
+  db.data.adminusers.push(newUserData);
 
   db.write();
 
   res.status(201).send(newUserData);
 });
+server.post("/wishlist",(req,res)=>{
+  if(
+    !req.body.userId||
+    !req.body.product
+    ){
+      return res
+      .status(400)
+      .send("Bad request, requires username, password & email.");
+    }
+    db.read()
+    
+    if(db.data.wishlist[`${req.body.userId}`]==undefined){
+      db.data.wishlist[`${req.body.userId}`]=[req.body.product]
+    }else{
+      db.data.wishlist[`${req.body.userId}`].push(req.body.product)
+    }
+    db.write();
+
+  res.status(201).send(db.data.wishlist[`${req.body.userId}`]);
+
+})
+
+
+server.post("/cart",(req,res)=>{
+  if(
+    !req.body.userId||
+    !req.body.product
+    ){
+      return res
+      .status(400)
+      .send("Bad request, requires username, password & email.");
+    }
+    db.read()
+    
+    if(db.data.cart[`${req.body.userId}`]==undefined){
+      db.data.cart[`${req.body.userId}`]=[req.body.product]
+    }else{
+      db.data.cart[`${req.body.userId}`].push(req.body.product)
+    }
+    db.write();
+
+  res.status(201).send(db.data.cart[`${req.body.userId}`]);
+
+})
+
+
+
+server.post("/orders",(req,res)=>{
+  if(
+    !req.body.userId||
+    !req.body.product
+    ){
+      return res
+      .status(400)
+      .send("Bad request, requires username, password & email.");
+    }
+    db.read()
+    
+    if(db.data.orders[`${req.body.userId}`]==undefined){
+      db.data.orders[`${req.body.userId}`]=[req.body.product]
+    }else{
+      db.data.orders[`${req.body.userId}`].push(req.body.product)
+    }
+    db.write();
+
+  res.status(201).send(db.data.orders[`${req.body.userId}`]);
+
+})
+
+
+server.post("/store",(req,res)=>{
+  if (
+    !req.body ||
+    !req.body.storename ||
+    !req.body.address||
+    !req.body.contact||
+    !req.body.userId
+  ) {
+    return res
+      .status(400)
+      .send("Bad request, requires username, password & email.");
+  }
+
+  db.read();
+  const stores = db.data.stores;
+  let largestId = 0;
+  stores.forEach((store) => {
+    if (store.id > largestId) largestId = store.id;
+  });
+  const newId = largestId + 1;
+
+
+  const newStore = {
+    storename:req.body.storename,
+    address:req.body.address,
+    contact:req.body.contact,
+    createdAt: Date.now(),
+    id: newId,
+    userId:req.body.userId
+  };
+  db.data.stores.push(newStore);
+
+  db.write();
+
+  res.status(201).send(newStore);
+})
+
+
+
 server.post("/add",(req,res)=>{
   if (
     !req.body ||
     !req.body.productName ||
     !req.body.price||
     !req.body.offer||
-    !req.body.elite||
     !req.body.image||
     !req.body.review||
     !req.body.storeId
@@ -227,7 +333,7 @@ server.post("/user/register", (req, res) => {
 
 // login/sign in logic
 server.post("/user/login", (req, res) => {
-  if (!req.body || !req.body.username || !req.body.password) {
+  if (!req.body || !req.body.email || !req.body.password) {
     return res
       .status(400)
       .send("Bad request, requires username & password both.");
@@ -235,9 +341,9 @@ server.post("/user/login", (req, res) => {
 
   db.read();
   const users = db.data.users;
-  const user = users.find((u) => u.username === req.body.username);
+  const user = users.find((u) => u.email === req.body.email);
   if (user == null) {
-    return res.status(400).send(`Cannot find user: ${req.body.username}`);
+    return res.status(400).send(`Cannot find user: ${req.body.email}`);
   }
 
   if (bcrypt.compareSync(req.body.password, user.password)) {
