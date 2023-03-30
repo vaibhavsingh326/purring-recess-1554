@@ -687,7 +687,18 @@
   "wishlist": [],
   "orders": [],
   "cart": [],
-  "adminusers": [],
+  "adminusers": [
+    {
+      "username": "vaibhavsingh326",
+      "password": "$2b$10$Ajb6IImxOdb7xjslRo7Myup36UBhOaivUo67QiFDVFJqePpk6VwZK",
+      "email": "vaibhav@masaischool.com",
+      "firstname": "Vaibhav",
+      "lastname": "Singh",
+      "avatar": "",
+      "createdAt": 1680129781975,
+      "id": 1
+    }
+  ],
   "adminorders": [],
   "stores": [
     {

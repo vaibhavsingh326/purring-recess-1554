@@ -33,7 +33,6 @@
         <br>
         <input type="password" name="password" id="password" placeholder="password">
         <br>
-       <input type="checkbox" name="admin" id="admin">
        <input type="submit">
         
         
@@ -51,7 +50,6 @@
             const lastname = document.getElementById("lastName").value;
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
-            const admin = true
 
             const user = {
                 username,
@@ -59,11 +57,9 @@
                 lastname,
                 email,
                 password,
-                
-
             };
 
-            const response = await fetch("http://127.0.0.1:9090/adminuser/register", {
+            const res = await fetch("http://127.0.0.1:9090/adminuser/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -71,7 +67,7 @@
                 body: JSON.stringify(user)
             });
             
-            let data =await response.json()
+            let data =await res.json()
             console.log(data);
  }
 </script>

@@ -112,19 +112,17 @@ server.post("/adminuser/register", (req, res) => {
   }
 
   db.read();
-  const users = db.data.adminUser;
+  const users = db.data.adminusers;
   let largestId = 0;
-  let storeId =0;
+  
   users.forEach((user) => {
     if (user.id > largestId) largestId = user.id;
   });
-  users.forEach((user) => {
-    if (user.storeId > storeId) storeId = user.storeId;
-  });
+ 
 
   const hashedPassword = bcrypt.hashSync(req.body.password, 10);
   const newId = largestId + 1;
-  const newstoreId = storeId+1
+  
   
   const newUserData = {
     username: req.body.username,
@@ -135,10 +133,10 @@ server.post("/adminuser/register", (req, res) => {
     avatar: req.body.avatar || "",
     createdAt: Date.now(),
     id: newId,
-    storeId :newstoreId,
+    
   };
 
-  db.data.adminUser.push(newUserData);
+  db.data.adminusers.push(newUserData);
 
   db.write();
 
