@@ -629,58 +629,25 @@
   ],
   "products": [
     {
-      "productName": "Vaibhav Singh ",
+      "productName": "toner",
       "price": "12",
-      "offer": "12",
+      "offer": "343",
       "elite": true,
-      "image": "12",
-      "review": "2",
-      "createdAt": 1680074058242,
-      "productId": 1,
+      "image": "333",
+      "review": "3",
+      "createdAt": 1680195699243,
+      "id": 1,
       "storeId": 1
     },
     {
-      "productName": "Vaibhav Singh ",
-      "price": "23",
-      "offer": "23",
-      "elite": true,
-      "image": "23",
-      "review": "2",
-      "createdAt": 1680124668527,
-      "productId": 1,
-      "storeId": 1
-    },
-    {
-      "productName": "dgfshflsd",
-      "price": "23",
-      "offer": "10",
-      "elite": 2,
-      "image": "sdhdf",
-      "review": "4",
-      "createdAt": 1680125187891,
-      "productId": 1,
-      "storeId": 1
-    },
-    {
-      "productName": "dgfshflsd",
+      "productName": "toner",
       "price": "12",
-      "offer": "10",
-      "elite": false,
-      "image": "sdhdf",
-      "review": "6",
-      "createdAt": 1680125390687,
-      "productId": 1,
-      "storeId": 1
-    },
-    {
-      "productName": "dgfshflsd",
-      "price": "324",
-      "offer": "23",
-      "elite": false,
-      "image": "23",
-      "review": "23",
-      "createdAt": 1680127107562,
-      "productId": 1,
+      "offer": "343",
+      "elite": true,
+      "image": "333",
+      "review": "3",
+      "createdAt": 1680195712660,
+      "id": 2,
       "storeId": 1
     }
   ],
@@ -697,33 +664,45 @@
       "avatar": "",
       "createdAt": 1680129781975,
       "id": 1
+    },
+    {
+      "username": "Supriya Kumari",
+      "password": "$2b$10$muHc4kKMZYKHymJQexEeFuPxTXahwkohVRaPajSsBiACmUyIdGHqS",
+      "email": "supriyayout@gmail.com",
+      "firstname": "Supriya",
+      "lastname": "Kumari",
+      "avatar": "",
+      "createdAt": 1680194659214,
+      "id": 2
+    },
+    {
+      "username": "abcd",
+      "password": "$2b$10$OqibwsqAjQwpt1W./V5/y.xZFHuHfHprteOlaIq32t.VNMzb6OWoe",
+      "email": "amankumarom25@gmail.com",
+      "firstname": "ab",
+      "lastname": "cd",
+      "avatar": "",
+      "createdAt": 1680194806513,
+      "id": 3
     }
   ],
   "adminorders": [],
   "stores": [
     {
-      "storename": "dgfshflsd",
-      "address": "fsd",
-      "contact": "asdfs",
-      "userId": 1,
-      "createdAt": 1680124499135,
-      "id": 1
-    },
-    {
-      "storename": "sdf",
-      "address": "asdf",
-      "contact": "sdf",
-      "userId": 1,
-      "createdAt": 1680124507730,
-      "id": 2
-    },
-    {
-      "storename": "fasdad",
-      "address": "adasd",
-      "contact": "adfsdf",
-      "createdAt": 1680127144016,
-      "id": 3,
+      "storename": "1",
+      "address": "1",
+      "contact": "1",
+      "createdAt": 1680195870861,
+      "id": 1,
       "userId": 1
+    },
+    {
+      "storename": "2",
+      "address": "2",
+      "contact": "2",
+      "createdAt": 1680196090711,
+      "id": 2,
+      "userId": 2
     }
   ]
 }
