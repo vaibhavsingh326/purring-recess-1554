@@ -28,7 +28,7 @@
             const storename = document.getElementById("storename").value;
             const address = document.getElementById("address").value;
             const contact = document.getElementById("contact").value;
-            const userId =1;
+            const userId =JSON.parse(localStorage.getItem("userId"));
 
             const user = {
                 storename,

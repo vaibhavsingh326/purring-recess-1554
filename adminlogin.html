@@ -89,6 +89,7 @@ p{
             let data =await response.json()
             if(data.token!=""){
                 localStorage.setItem("token",JSON.stringify(data.token))
+                localStorage.setItem("userId",JSON.stringify(data.user.id))
                 window.location = "./admin-dashboard.html"
             }
             

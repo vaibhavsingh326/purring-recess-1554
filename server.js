@@ -362,6 +362,7 @@ server.post("/add",(req,res)=>{
     !req.body.price||
     !req.body.offer||
     !req.body.image||
+    !req.body.category||
     !req.body.review||
     !req.body.storeId
   ) {
@@ -385,9 +386,10 @@ server.post("/add",(req,res)=>{
     offer: req.body.offer ,
     elite: req.body.elite ,
     image:req.body.image,
+    category:req.body.category,
     review:req.body.review,
     createdAt: Date.now(),
-    productId: newId,
+    id: newId,
     storeId:req.body.storeId
   };
   db.data.products.push(newProd);
