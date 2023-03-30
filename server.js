@@ -99,6 +99,77 @@ server.use((req, res, next) => {
 
   next();
 });
+
+
+server.post("/user/register", (req, res) => {
+  if (
+    !req.body ||
+    !req.body.password ||
+    !req.body.email
+  ) {
+    return res
+      .status(400)
+      .send("Bad request, requires username, password & email.");
+  }
+
+  db.read();
+  const users = db.data.users;
+  let largestId = 0;
+  users.forEach((user) => {
+    if (user.id > largestId) largestId = user.id;
+  });
+
+  const hashedPassword = bcrypt.hashSync(req.body.password, 10);
+  const newId = largestId + 1;
+  
+  const newUserData = {
+    password: hashedPassword,
+    email: req.body.email,
+    firstname: req.body.firstname || "",
+    lastname: req.body.lastname || "",
+    createdAt: Date.now(),
+    id: newId,
+  };
+
+  db.data.users.push(newUserData);
+
+  db.write();
+
+  res.status(201).send(newUserData);
+});
+
+
+
+
+// login/sign in logic
+server.post("/admin/login", (req, res) => {
+  if (!req.body || !req.body.email || !req.body.password) {
+    return res
+      .status(400)
+      .send("Bad request, requires username & password both.");
+  }
+
+  db.read();
+  const users = db.data.adminusers;
+  const user = users.find((u) => u.email === req.body.email);
+  if (user == null) {
+    return res.status(400).send(`Cannot find user: ${req.body.email}`);
+  }
+
+  if (bcrypt.compareSync(req.body.password, user.password)) {
+    // creating JWT token
+    const accessToken = generateAccessToken(user);
+    return res.send({
+      accessToken: accessToken,
+      user: user
+    });
+  } else {
+    res.send("Not allowed, name/password mismatch.");
+  }
+});
+
+
+
 server.post("/adminuser/register", (req, res) => {
   if (
     !req.body ||
@@ -208,6 +279,28 @@ server.post("/orders",(req,res)=>{
     db.write();
 
   res.status(201).send(db.data.orders[`${req.body.userId}`]);
+
+})
+
+server.post("/admin/orders",(req,res)=>{
+  if(
+    !req.body.userId||
+    !req.body.product
+    ){
+      return res
+      .status(400)
+      .send("Bad request, requires username, password & email.");
+    }
+    db.read()
+    
+    if(db.data.adminorders[`${req.body.product.storeId}`]==undefined){
+      db.data.adminorders[`${req.body.product.storeId}`]=[req.body]
+    }else{
+      db.data.orders[`${req.body.userId}`].push(req.body)
+    }
+    db.write();
+
+  res.status(201).send(db.data.orders[`${req.body}`]);
 
 })
 
