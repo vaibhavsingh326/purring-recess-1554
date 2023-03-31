@@ -122,17 +122,6 @@ nav p:hover {
     grid-template-columns: repeat(3, 1fr);
 }
 
-
-
-
-.main {
-    text-align: center;
-}
-
-.main image {
-    width: 95%;
-}
-
 .head {
     margin-top: 13px;
     margin-left: 24px;
