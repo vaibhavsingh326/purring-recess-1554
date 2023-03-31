@@ -14,6 +14,7 @@
             font-family: 'poppins', sans-serif;
         }
 
+        /* adding CSS to navbar */
     nav a:hover {
             color: gray;
             font-weight: 600px;
@@ -33,6 +34,7 @@
     }
     .navbar img {
             width: 8%;
+            margin-left: 30%;
         }
     .navbar {
         display: flex;
@@ -40,8 +42,30 @@
         justify-content: space-around;
         margin-top: 11px;
     }
+
+    /* adding CSS to create store button */
+    #createstore{
+        background-color: dodgerblue;
+        color: white;
+        padding: 11px;
+        border-radius: 2px;
+        border: navajowhite;
+        font-size: larger;
+    }
+
+    /* adding CSS to Button to add the products */
+    #addproduct{
+        margin-top: 30px;
+        background-color: dodgerblue;
+        color: white;
+        padding: 11px;
+        border-radius: 2px;
+        border: navajowhite;
+        font-size: larger;
+    }
 </style>
 <body>
+    <!-- Navbar starts fron here -->
     <div class="navbar">
         <img id="dash" src="./img/purplle_v2.png" alt="">
         <button id="createstore">Create Store</button>
@@ -50,6 +74,9 @@
         <a href="./admin-products.html">Products</a>
         <a href="./admin-orders.html">orders</a>
     </nav>
+    <!-- Navbar end fron here -->
+
+    <!-- Button to add the products -->
     <button id="addproduct">Add Product</button>
 </body>
 <script>
@@ -63,7 +90,7 @@
         window.location= "./addstore.html"
     })
     let dash =document.getElementById("dash")
-    createbtn.addEventListener("click",()=>{
+    dash.addEventListener("click",()=>{
         window.location= "./admin-dashboard.html"
     })
 
