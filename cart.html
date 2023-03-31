@@ -8,62 +8,48 @@
     <title>Cart Page</title>
     <link rel="stylesheet" href="./styles/index.css">
     <style>
-        .whole {
-            display: flex;
-
+        a{
+            color: rgb(244, 65, 154);
+            font-size: 20px;
         }
+       .div1{
+        margin-left: 10%;
+        border: 2px solid red;
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+       padding-top: 20px;
+       padding-bottom: 20px;
+        background-color:rgb(255, 235, 255);
+        margin-bottom: 50px;
+       }
+.div2{
+    margin-left: 10%;
+        border: 2px solid red;
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       margin-bottom: 50px;
+       
+}
+.div3{
+    margin-left: 10%;
+        border: 2px solid red;
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       background-color:rgb(255, 235, 255);
+}
+.div3 button{
+background-color: black;
+color: goldenrod;
+width: 150px;
+}
 
-        .cart-navbar {
-            width: 50%;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        button {
-            border: none;
-
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-            border-radius: 0.5rem;
-            font-weight: bold;
-        }
-
-        .cart-container>div>button {
-            border-radius: 0.5rem;
-        }
-
-        .cart-container {
-            display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            padding: 2rem;
-        }
-
-        .cart-container>div {
-
-            margin: 1rem;
-            text-align: center;
-            padding: 0.5rem;
-            border-radius: 8px;
-        }
-
-        h3,
-        p {
-            margin-bottom: 0.3rem;
-            color: #fff;
-        }
-
-        .logo img {
-            width: 100px;
-            border-radius: 8px;
-        }
-
-        button {
-            padding: 0.5rem;
-            margin-top: 0.5rem;
-            border-radius: 8px;
-            border: none;
-            margin-right: 10px;
-        }
     </style>
 </head>
 
@@ -100,15 +86,33 @@
 
 
 
-    <div class="whole">
-        <div class="cart-navbar">
-            <h2>Total Price - <span id="totalPriceSpan">0</span></h2>
-            <button id="payment_button">Payment Page</button>
-        </div>
+   <div class="whole">  
+    <div class="cart1">
+<div class="div1">
+    <h3>	🛒 OFFERS AVAILABLE(3)</h3>
+    <a href="">View All</a>
+</div>
+<div class="div2">
+    <h1>My Cart()</h1>
+    <a href="">Shop More ></a>
+</div>
+<div class="div3">
+    <div>
+       
+    <h4> ✔️Your are missing out!</h4>
+    
+    <p>Save Rs 55 on this order and get a free gift</p>
+    
+    </div>
+    <button>JOIN ELITE TODAY</button>
+</div>
 
-        <div class="cart-container"></div>
-
-        <div class="payment"></div>
+    </div>
+<div class="cart2"></div>
+ 
+    <button>PLACE ORDER</button>
+</div>
+    
 
 
 

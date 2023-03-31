@@ -99,6 +99,77 @@ server.use((req, res, next) => {
 
   next();
 });
+
+
+server.post("/user/register", (req, res) => {
+  if (
+    !req.body ||
+    !req.body.password ||
+    !req.body.email
+  ) {
+    return res
+      .status(400)
+      .send("Bad request, requires username, password & email.");
+  }
+
+  db.read();
+  const users = db.data.users;
+  let largestId = 0;
+  users.forEach((user) => {
+    if (user.id > largestId) largestId = user.id;
+  });
+
+  const hashedPassword = bcrypt.hashSync(req.body.password, 10);
+  const newId = largestId + 1;
+  
+  const newUserData = {
+    password: hashedPassword,
+    email: req.body.email,
+    firstname: req.body.firstname || "",
+    lastname: req.body.lastname || "",
+    createdAt: Date.now(),
+    id: newId,
+  };
+
+  db.data.users.push(newUserData);
+
+  db.write();
+
+  res.status(201).send(newUserData);
+});
+
+
+
+
+// login/sign in logic
+server.post("/admin/login", (req, res) => {
+  if (!req.body || !req.body.email || !req.body.password) {
+    return res
+      .status(400)
+      .send("Bad request, requires username & password both.");
+  }
+
+  db.read();
+  const users = db.data.adminusers;
+  const user = users.find((u) => u.email === req.body.email);
+  if (user == null) {
+    return res.status(400).send(`Cannot find user: ${req.body.email}`);
+  }
+
+  if (bcrypt.compareSync(req.body.password, user.password)) {
+    // creating JWT token
+    const accessToken = generateAccessToken(user);
+    return res.send({
+      accessToken: accessToken,
+      user: user
+    });
+  } else {
+    res.send("Not allowed, name/password mismatch.");
+  }
+});
+
+
+
 server.post("/adminuser/register", (req, res) => {
   if (
     !req.body ||
@@ -211,6 +282,28 @@ server.post("/orders",(req,res)=>{
 
 })
 
+server.post("/admin/orders",(req,res)=>{
+  if(
+    !req.body.userId||
+    !req.body.product
+    ){
+      return res
+      .status(400)
+      .send("Bad request, requires username, password & email.");
+    }
+    db.read()
+    
+    if(db.data.adminorders[`${req.body.product.storeId}`]==undefined){
+      db.data.adminorders[`${req.body.product.storeId}`]=[req.body]
+    }else{
+      db.data.orders[`${req.body.userId}`].push(req.body)
+    }
+    db.write();
+
+  res.status(201).send(db.data.orders[`${req.body}`]);
+
+})
+
 
 server.post("/store",(req,res)=>{
   if (
@@ -228,6 +321,14 @@ server.post("/store",(req,res)=>{
   db.read();
   const stores = db.data.stores;
   let largestId = 0;
+  let flag = true
+  stores.forEach((store)=>{
+    if(req.body.userId==store.userId){
+      flag = false
+    }
+  })
+
+  if(flag){
   stores.forEach((store) => {
     if (store.id > largestId) largestId = store.id;
   });
@@ -247,6 +348,9 @@ server.post("/store",(req,res)=>{
   db.write();
 
   res.status(201).send(newStore);
+}else{
+  res.status(201).send("User already has a store")
+}
 })
 
 
@@ -258,6 +362,7 @@ server.post("/add",(req,res)=>{
     !req.body.price||
     !req.body.offer||
     !req.body.image||
+    !req.body.category||
     !req.body.review||
     !req.body.storeId
   ) {
@@ -281,9 +386,10 @@ server.post("/add",(req,res)=>{
     offer: req.body.offer ,
     elite: req.body.elite ,
     image:req.body.image,
+    category:req.body.category,
     review:req.body.review,
     createdAt: Date.now(),
-    productId: newId,
+    id: newId,
     storeId:req.body.storeId
   };
   db.data.products.push(newProd);

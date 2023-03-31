@@ -1,14 +1,14 @@
 const data = JSON.parse(localStorage.getItem("cart")) || [];
 
-const totalPrice = (data) => {
-    let total = 0;
-    data.map((el) => {
-        total += el.price * el.qty;
-    })
-    const span = document.querySelector("#totalPriceSpan")
-    span.innerText = total;
-}
-totalPrice(data);
+// const totalPrice = (data) => {
+//     let total = 0;
+//     data.map((el) => {
+//         total += el.price * el.qty;
+//     })
+//     const span = document.querySelector("#totalPriceSpan")
+//     span.innerText = total;
+// }
+// totalPrice(data);
 
 const append = (data) => {
     const container = document.querySelector(".cart-container");

@@ -8,6 +8,56 @@
     <link rel="stylesheet" href="./styles/index.css">
     <script src="https://kit.fontawesome.com/5089e6484a.js" crossorigin="anonymous"></script>
     <title>Home Page</title>
+    <style>
+         .drop{
+       position:relative;
+       display: inline-block;
+       
+       text-decoration: none;
+     }
+     .drop:hover .dropcont {
+      display: block;
+     }
+     .dropcont{
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 150px;
+      z-index: 1;
+     }
+     .dropcont a {
+      color: rgb(61, 59, 59);
+    
+      text-decoration: none;
+      display: block;
+      /* width: 300px;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      border: 1px solid black; */
+   
+      text-align: center;
+      
+     }
+     .dropcont a:nth-child(1){
+       color: black;
+      
+      
+     }
+     .dropcont a:hover{
+        color: rgb(209, 18, 50);
+     }
+      
+.icon{
+  
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+  
+
+    </style>
 </head>
 
 <body>
