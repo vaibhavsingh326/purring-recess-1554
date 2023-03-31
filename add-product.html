@@ -74,6 +74,11 @@
             border-radius: 2px;
         }
     </style>
+    <style>
+        input{
+            width: 400px;
+        }
+    </style>
 </head>
 
 <body>
@@ -106,6 +111,9 @@
             <br>
             <input type="text" name="image" id="image" placeholder="image">
             <br>
+        <label for="">CATEGORY</label><br>
+        <input type="text" name="category" id="category">
+        <br>
             <label for="">ELITE</label>
             <input type="checkbox" name="elite" id="elite">
             <br>
@@ -119,35 +127,39 @@
 
 </body>
 <script>
-    let storeId = 1
-
+    let storeId =JSON.parse(localStorage.getItem("storeId"))
+    console.log(storeId);
+    
     let form = document.querySelector("form")
-    form.addEventListener("submit", addProduct)
-    async function addProduct(e) {
+    form.addEventListener("submit",addProduct)
+    async function addProduct(e){
+        if(storeId !=null){
         e.preventDefault()
-        let productName = document.getElementById("name").value
-        let price = document.getElementById("price").value
-        let offer = document.getElementById("offer").value
-        let image = document.getElementById("image").value
-        let elitepara = document.getElementById("elite")
-        let review = document.getElementById("review").value
-
-        let elite = elitepara.checked;
-
-        const product = {
+    let productName = document.getElementById("name").value
+    let price = document.getElementById("price").value
+    let offer = document.getElementById("offer").value
+    let image = document.getElementById("image").value
+    let category=document.getElementById("category").value
+    let elitepara = document.getElementById("elite")
+    let review = document.getElementById("review").value
+    
+    let elite =elitepara.checked;
+        
+        const product ={
             productName,
             price,
             offer,
             elite,
             image,
+            category,
             review,
             storeId,
         }
-        console.log(product);
-        let res = await fetch("http://127.0.0.1:9090/add", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
+        
+        let res = await fetch("http://127.0.0.1:9090/add",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
             },
             body: JSON.stringify(product)
         })
@@ -167,7 +179,7 @@
     dash.addEventListener("click", () => {
         window.location = "./admin-dashboard.html"
     })
-
+    }
 </script>
 
 </html>

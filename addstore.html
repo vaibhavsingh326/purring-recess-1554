@@ -101,15 +101,15 @@
 </html>
 
 <script>
-    let from = document.querySelector("form")
-    from.addEventListener("submit", Register)
-    apiUrl = "http://127.0.0.1:9090"
-    async function Register(e) {
-        e.preventDefault()
-        const storename = document.getElementById("storename").value;
-        const address = document.getElementById("address").value;
-        const contact = document.getElementById("contact").value;
-        const userId = 1;
+   let from = document.querySelector("form")
+    from.addEventListener("submit",Register)
+    apiUrl="http://127.0.0.1:9090"
+ async function Register(e) {
+    e.preventDefault()
+            const storename = document.getElementById("storename").value;
+            const address = document.getElementById("address").value;
+            const contact = document.getElementById("contact").value;
+            const userId =JSON.parse(localStorage.getItem("userId"));
 
         const user = {
             storename,

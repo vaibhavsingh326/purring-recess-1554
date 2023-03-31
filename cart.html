@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,72 +8,111 @@
     <title>Cart Page</title>
     <link rel="stylesheet" href="./styles/index.css">
     <style>
+
         .whole{
             display: flex;
-            
-        }
-        .cart-navbar{
-            width:50%;
-            display: flex;
-            justify-content: space-around;
-        }
-        button{
-            border: none;
-          
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-            border-radius: 0.5rem;
-            font-weight: bold;
-        }
-        .cart-container>div>button{
-            border-radius: 0.5rem;
+            justify-content: space-between;
+         
         }
 
-        .cart-container {
-            display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            padding: 2rem;
+        .cart2{
+    margin-top:60px;
+    border: 2px solid green;
+}
+.cart1{
+    width: 70%;
+    border: 2px solid orange;
+    margin: 5%;
+}
+        a{
+            color: rgb(244, 65, 154);
+            font-size: 20px;
         }
+       .div1{
+      
+        border: 2px solid red;
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+       padding-top: 20px;
+       padding-bottom: 20px;
+        background-color:rgb(255, 235, 255);
+        margin-bottom: 50px;
+       }
+.div2{
+   
+        border: 2px solid red;
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       margin-bottom: 50px;
+       
+}
+.div3{
+  
+        border: 2px solid red;
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       background-color:rgb(255, 235, 255);
+       margin-bottom: 50px;
+}
+.div3 button{
+background-color: black;
+color: goldenrod;
+width: 150px;
+}
+.div4{
+    margin-bottom: 50px;
+    border: 4px solid blue;
+    width: 600px;
+    
+}
+.div5{
+  
+    border: 2px solid black;
+    width: 600px;
+    text-align: center;
+   
+}
+.div5-1{
+    display: flex;
+    justify-content: space-between;
 
-        .cart-container>div {
-           
-            margin: 1rem;
-            text-align: center;
-            padding: 0.5rem;
-            border-radius: 8px;
-        }
-
-        h3,
-        p {
-            margin-bottom: 0.3rem;
-            color: #fff;
-        }
-
-        img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        button {
-            padding: 0.5rem;
-            margin-top: 0.5rem;
-            border-radius: 8px;
-            border: none;
-            margin-right: 10px;
-        }
+    
+}
+.div5-1 img{
+    width:33%;
+    border: 0.5px solid black;
+}
+.div6{
+    border: 1px solid fuchsia;
+    width: 70%;
+    margin:auto;
+}
+.div6 img{
+    width: 100%;
+}
 
     </style>
 </head>
+
 <body>
     <!-- after navbar -->
     <div class="navbar">
         <div class="inp">
             <input type="text" id="searchInput" placeholder="Enter search query">
-  <button onclick="search()">Search</button>
-  <ul id="searchResults">
-  </ul>
+            <button onclick="search()">Search</button>
+            <ul id="searchResults">
+            </ul>
         </div>
-        <img src="./img/purplle_v2.png" alt="">
+        <div class="logo">
+           <a href="./index.html"> <img src="./img/purplle_v2.png" alt=""></a>
+        </div>
         <div class="icon">
             <i class="fa-regular fa-heart"></i>
             <a href="./login.html"><i class="fa-sharp fa-regular fa-face-smile"></i></a>
@@ -87,28 +127,71 @@
         <p style="color:black">NEW</p>
         <p style="color:black">SPLURGE</p>
         <p style="color:black">MAGAZINE</p>
-        <p style="color:black">ELITE OFFERS</p>
+        <a href="./elite.html"><p style="color:black;font-size: larger;">ELITE OFFERS</p></a>
     </nav>
 
     <!-- cart starts from here --->
 
 
 
-   <div class="whole">
-    <div class="cart-navbar">
-        <h2>Total Price - <span id="totalPriceSpan">0</span></h2>
-        <button id="payment_button">Payment Page</button>
+   <div class="whole">  
+    <div class="cart1">
+<div class="div1">
+    <h3>	🛒 OFFERS AVAILABLE(3)</h3>
+    <a href="">View All</a>
+</div>
+<div class="div2">
+    <h1>My Cart()</h1>
+    <a href="">Shop More ></a>
+</div>
+<div class="div3">
+    <div>     
+    <h4> ✔️Your are missing out!</h4>
+    <p>Save Rs 55 on this order and get a free gift</p>
     </div>
+    <button>JOIN ELITE TODAY</button>
+</div>
+<div class="div5">
+    <h1>NEW ARRIVALS</h1>
+    <br>
+    <br>
+    <div class="div5-1">
+        <img src="https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-@@mediafiles@mailers@banners@1659451450_new-tag.png,ow-115,ofo-top_right,dpr-2/static/img/product/289960/ny-bae-serum-lipstick-violet-waters-15-4-2-g_3_display_1669107942_53b9cac2.jpg" alt="">
+    <img src="https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/276827/good-vibes-foot-mask-rosehip-20-ml_9_display_1659531089_72ae3645.jpg" alt="">
+<img src="https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-@@mediafiles@mailers@banners@1659451450_new-tag.png,ow-115,ofo-top_right,dpr-2/static/img/product/322344/carmesi-disposable-period-panties-xl-xxl_1_display_1669283226_4b32f0a8.jpg" alt="">    
+</div>
+</div>
+<div class="div4"></div>
 
-    <div class="cart-container"></div>
+    </div>
+    
 
-<div class="payment"></div>
-
-
-
+    
+<div class="cart2">
+<div class="div6">
+    <img src="https://png.pngitem.com/pimgs/s/353-3532426_graphic-design-hd-png-download.png" alt="">
+</div>
+<div style="display: flex; justify-content: space-between;margin: auto; border: 2px solid black; width: 70%;margin-top: 30px; margin-bottom: 30px;">
+    <h4 style="color: grey;">Enter Pincode</h4>
+    <h4 style="color: rgb(244, 65, 154);">Check Delivery</h4>
+</div>
+<hr style="width: 70%; margin: auto;">
+<div>
+    <h4>Coupons</h4>
+    <h4>Apply Coupon</h4>
+</div>
+</div>
 
 
 </div>
+    
+
+
+
+
+
+    </div>
 </body>
+
 </html>
 <script src="./scripts/cart.js"></script>
