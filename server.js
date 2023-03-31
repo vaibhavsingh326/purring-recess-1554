@@ -155,10 +155,17 @@ server.post("/admin/login", (req, res) => {
   if (user == null) {
     return res.status(400).send(`Cannot find user: ${req.body.email}`);
   }
-
+  let storeId =null
+  const store = db.data.stores.find((s)=>s.userId===user.id)
+  if(store != undefined){
+    storeId = store.id
+  }
+  
+  
   if (bcrypt.compareSync(req.body.password, user.password)) {
     // creating JWT token
     const accessToken = generateAccessToken(user);
+    user.storeId = storeId
     return res.send({
       accessToken: accessToken,
       user: user

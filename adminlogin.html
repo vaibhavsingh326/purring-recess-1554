@@ -90,6 +90,7 @@ p{
             if(data.token!=""){
                 localStorage.setItem("token",JSON.stringify(data.token))
                 localStorage.setItem("userId",JSON.stringify(data.user.id))
+                localStorage.setItem("storeId",JSON.stringify(data.user.storeId))
                 window.location = "./admin-dashboard.html"
             }
             

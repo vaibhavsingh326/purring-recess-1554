@@ -39,11 +39,13 @@
     
 </body>
 <script>
-    let storeId =1
+    let storeId =JSON.parse(localStorage.getItem("storeId"))
+    console.log(storeId);
     
     let form = document.querySelector("form")
     form.addEventListener("submit",addProduct)
     async function addProduct(e){
+        if(storeId !=null){
         e.preventDefault()
     let productName = document.getElementById("name").value
     let price = document.getElementById("price").value
@@ -75,6 +77,10 @@
         })
         let data = await res.json()
         console.log(data);
+    }
+    else{
+        alert("please create a store to add products")
+    }
     }
 
 </script>
