@@ -196,8 +196,12 @@ server.post("/adminuser/register", (req, res) => {
   users.forEach((user) => {
     if (user.id > largestId) largestId = user.id;
   });
+  let flag =true
+  users.forEach((user) => {
+    if (user.email === req.body.email) flag = false;
+  });
  
-
+if(flag){
   const hashedPassword = bcrypt.hashSync(req.body.password, 10);
   const newId = largestId + 1;
   
@@ -219,6 +223,9 @@ server.post("/adminuser/register", (req, res) => {
   db.write();
 
   res.status(201).send(newUserData);
+}else {
+  res.status(201).send("Email already in use")
+}
 });
 server.post("/wishlist",(req,res)=>{
   if(
@@ -422,6 +429,12 @@ server.post("/user/register", (req, res) => {
   users.forEach((user) => {
     if (user.id > largestId) largestId = user.id;
   });
+  let flag =true
+  users.forEach((user) => {
+    if (user.email === req.body.email) flag = false;
+  });
+ 
+if(flag){
 
   const hashedPassword = bcrypt.hashSync(req.body.password, 10);
   const newId = largestId + 1;
@@ -440,6 +453,9 @@ server.post("/user/register", (req, res) => {
   db.write();
 
   res.status(201).send(newUserData);
+}else {
+  res.status(201).send("Email already in use")
+}
 });
 
 // login/sign in logic
