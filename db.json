@@ -933,8 +933,6 @@
       "review": "3",
       "createdAt": 1680195712660,
       "id": 2,
-<<<<<<< HEAD
-=======
       "storeId": 1
     },
     {
@@ -946,7 +944,6 @@
       "review": "3",
       "createdAt": 1680195712660,
       "id": 2,
->>>>>>> 81051b8ee461fcddf9a8a02eb9f8c0da89be7cba
       "storeId": 2
     }
   ],
