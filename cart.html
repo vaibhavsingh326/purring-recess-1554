@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,27 @@
     <title>Cart Page</title>
     <link rel="stylesheet" href="./styles/index.css">
     <style>
-        .whole{
+        .whole {
             display: flex;
-            
+
         }
-        .cart-navbar{
-            width:50%;
+
+        .cart-navbar {
+            width: 50%;
             display: flex;
             justify-content: space-around;
         }
-        button{
+
+        button {
             border: none;
-          
+
             padding-left: 0.5rem;
             padding-right: 0.5rem;
             border-radius: 0.5rem;
             font-weight: bold;
         }
-        .cart-container>div>button{
+
+        .cart-container>div>button {
             border-radius: 0.5rem;
         }
 
@@ -35,7 +39,7 @@
         }
 
         .cart-container>div {
-           
+
             margin: 1rem;
             text-align: center;
             padding: 0.5rem;
@@ -48,8 +52,8 @@
             color: #fff;
         }
 
-        img {
-            width: 100%;
+        .logo img {
+            width: 100px;
             border-radius: 8px;
         }
 
@@ -60,19 +64,21 @@
             border: none;
             margin-right: 10px;
         }
-
     </style>
 </head>
+
 <body>
     <!-- after navbar -->
     <div class="navbar">
         <div class="inp">
             <input type="text" id="searchInput" placeholder="Enter search query">
-  <button onclick="search()">Search</button>
-  <ul id="searchResults">
-  </ul>
+            <button onclick="search()">Search</button>
+            <ul id="searchResults">
+            </ul>
         </div>
-        <img src="./img/purplle_v2.png" alt="">
+        <div class="logo">
+           <a href="./index.html"> <img src="./img/purplle_v2.png" alt=""></a>
+        </div>
         <div class="icon">
             <i class="fa-regular fa-heart"></i>
             <a href="./login.html"><i class="fa-sharp fa-regular fa-face-smile"></i></a>
@@ -87,28 +93,29 @@
         <p style="color:black">NEW</p>
         <p style="color:black">SPLURGE</p>
         <p style="color:black">MAGAZINE</p>
-        <p style="color:black">ELITE OFFERS</p>
+        <a href="./elite.html"><p style="color:black;font-size: larger;">ELITE OFFERS</p></a>
     </nav>
 
     <!-- cart starts from here --->
 
 
 
-   <div class="whole">
-    <div class="cart-navbar">
-        <h2>Total Price - <span id="totalPriceSpan">0</span></h2>
-        <button id="payment_button">Payment Page</button>
+    <div class="whole">
+        <div class="cart-navbar">
+            <h2>Total Price - <span id="totalPriceSpan">0</span></h2>
+            <button id="payment_button">Payment Page</button>
+        </div>
+
+        <div class="cart-container"></div>
+
+        <div class="payment"></div>
+
+
+
+
+
     </div>
-
-    <div class="cart-container"></div>
-
-<div class="payment"></div>
-
-
-
-
-
-</div>
 </body>
+
 </html>
 <script src="./scripts/cart.js"></script>
