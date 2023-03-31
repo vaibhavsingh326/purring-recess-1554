@@ -367,8 +367,6 @@ server.post("/add",(req,res)=>{
     if (product.id > largestId) largestId = product.id;
   });
   const newId = largestId + 1;
-
-
   const newProd = {
     productName: req.body.productName,
     price: req.body.price,
