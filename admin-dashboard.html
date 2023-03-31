@@ -54,6 +54,9 @@
     
 </body>
 <SCript>
+    let userId = JSON.parse(localStorage.getItem("userId"))
+    let storeId =JSON.parse(localStorage.getItem("storeId"))
+    console.log(userId,storeId);
     let createbtn =document.getElementById("createstore")
     createbtn.addEventListener("click",()=>{
         window.location= "./addstore.html"

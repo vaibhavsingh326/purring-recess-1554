@@ -923,6 +923,17 @@
       "createdAt": 1680203518765,
       "id": 22,
       "storeId": 1
+    },
+    {
+      "productName": "toner",
+      "price": "12",
+      "offer": "343",
+      "elite": true,
+      "image": "333",
+      "review": "3",
+      "createdAt": 1680195712660,
+      "id": 2,
+      "storeId": 2
     }
   ],
   "wishlist": [],
