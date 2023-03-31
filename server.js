@@ -321,6 +321,14 @@ server.post("/store",(req,res)=>{
   db.read();
   const stores = db.data.stores;
   let largestId = 0;
+  let flag = true
+  stores.forEach((store)=>{
+    if(req.body.userId==store.userId){
+      flag = false
+    }
+  })
+
+  if(flag){
   stores.forEach((store) => {
     if (store.id > largestId) largestId = store.id;
   });
@@ -340,6 +348,9 @@ server.post("/store",(req,res)=>{
   db.write();
 
   res.status(201).send(newStore);
+}else{
+  res.status(201).send("User already has a store")
+}
 })
 
 

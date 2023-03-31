@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +21,7 @@
        padding-top: 20px;
        padding-bottom: 20px;
         background-color:rgb(255, 235, 255);
-        margin-bottom: 50px;border-radius: 5px;
+        margin-bottom: 50px;
        }
 .div2{
     margin-left: 10%;
@@ -51,16 +52,19 @@ width: 150px;
 
     </style>
 </head>
+
 <body>
     <!-- after navbar -->
     <div class="navbar">
         <div class="inp">
             <input type="text" id="searchInput" placeholder="Enter search query">
-  <button onclick="search()">Search</button>
-  <ul id="searchResults">
-  </ul>
+            <button onclick="search()">Search</button>
+            <ul id="searchResults">
+            </ul>
         </div>
-        <img src="./img/purplle_v2.png" alt="">
+        <div class="logo">
+           <a href="./index.html"> <img src="./img/purplle_v2.png" alt=""></a>
+        </div>
         <div class="icon">
             <i class="fa-regular fa-heart"></i>
             <a href="./login.html"><i class="fa-sharp fa-regular fa-face-smile"></i></a>
@@ -75,7 +79,7 @@ width: 150px;
         <p style="color:black">NEW</p>
         <p style="color:black">SPLURGE</p>
         <p style="color:black">MAGAZINE</p>
-        <p style="color:black">ELITE OFFERS</p>
+        <a href="./elite.html"><p style="color:black;font-size: larger;">ELITE OFFERS</p></a>
     </nav>
 
     <!-- cart starts from here --->
@@ -114,7 +118,8 @@ width: 150px;
 
 
 
-</div>
+    </div>
 </body>
+
 </html>
 <script src="./scripts/cart.js"></script>
