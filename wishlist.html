@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Wishlist Page</title>
+
+    <style>
+        #empty {
+            background-color: rgb(223, 43, 103);
+            height: 170px;
+            margin-top: -34px;
+
+        }
+
+        .avatar {
+            margin-top: 80px;
+            margin-left: 50%;
+        }
+
+        #button {
+            border: none;
+            
+            background-color: rgb(40, 36, 36);
+        }
+
+       
+
+        .part1 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+            width: 90%;
+            margin: auto;
+            margin-top: -50px;
+            background-color: white;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        }
+
+        .part1>p {
+            font-family: "Lucida Console", "Courier New", monospace;
+            ;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- nav bar -->
+
+    <div class="navbar">
+        <div class="inp">
+            <input type="text" id="searchInput" placeholder="Enter search query">
+            <button onclick="search()">Search</button>
+            <ul id="searchResults">
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="./index.html"> <img src="./img/purplle_v2.png" alt=""></a>
+        </div>
+        <div class="icon">
+            <a href="./wishlist.html"><i class="fa-regular fa-heart"></i></a>
+            <a href="./login.html"><i class="fa-sharp fa-regular fa-face-smile"></i></a>
+            <a href="./cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+
+    <!-- nav bar & Dropdown part -->
+
+    <nav>
+        <div class="dropdown">
+            <p class="dropbtn">SHOP CATEGORIES
+            <p>
+        </div>
+        <p>BRANDS</p>
+        <p>OFFERS</p>
+        <p>NEW</p>
+        <p>SPLURGE</p>
+        <p>MAGAZINE</p>
+        <a href="./elite.html">
+            <h2 style="font-size: larger;">ELITE OFFERS</h2>
+        </a>
+    </nav>
+    <div class="avatar">
+        <input type="file" id="file" style="display:none;" />
+        <button id="button" name="button" value="Upload" onclick="fileUpload()">
+            <img id="preview"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRr5LcBMBnk_8829ptYnpdnG13hgcyUT7GFS0ztG1ioz6eRv3u7_SwNSVRkQdghGsD5Gc&usqp=CAU"
+                width="80" height="80">
+        </button>
+    </div>
+
+    <div id="empty"></div>
+
+    <div class="part1">
+        <div>
+            <img src="./img/Screenshot 2023-03-31 203410.png" alt="error">
+            <p>MY PROFILE</p>
+        </div>
+        <div>
+            <img src="./img/Screenshot 2023-03-31 193900.png" alt="error">
+            <p style="padding-top: 8px;">MY ORDER</p>
+        </div>
+        <div>
+            <img src="./img/Screenshot 2023-03-31 193931.png" alt="error">
+            <p style="padding-top: 5px;">BEAUTY PROFILE</p>
+        </div>
+        <div>
+            <img src="./img/Screenshot 2023-03-31 194013.png" alt="error">
+            <p style="padding-top: 25px;">MY WISHLIST</p>
+        </div>
+        <div>
+            <img src="./img/Screenshot 2023-03-31 194038.png" alt="error">
+            <p style="padding-top: 8px;">MY COUPONS</p>
+        </div>
+        <div>
+            <img src="./img/Screenshot 2023-03-31 194058.png" alt="error">
+            <p style="padding-top: 12px;">PURPLE CREDIT</p>
+        </div>
+        <div>
+            <img src="./img/Screenshot 2023-03-31 194121.png" alt="error">
+            <p style="padding-top: 12px;">PAYMENT</p>
+        </div>
+        <div>
+            <img src="./img/Screenshot 2023-03-31 194205.png" alt="error">
+            <p style="padding-top: 8px;">REVIEWS $ RATINGS</p>
+        </div>
+    </div>
+
+
+
+    <div>
+        <!-- write on cart part append -->
+    </div>
+
+
+
+
+
+
+    <!-- footer part -->
+
+    <div id="footer1">
+        <div>
+            <img src="./img/1499247950_secure-payment.webp" alt="error">
+            <h2>100% Secure Payment</h2>
+            <p>All major credit & debit cards accepted</p>
+        </div>
+        <div class="vl"></div>
+        <div>
+            <img src="./img/Screenshot 2023-03-29 010549.png" alt="error">
+            <h2>Beauty Assistant</h2>
+            <p>Tell me what you are looking for and i will work <br>my magic to help you find your perfect match.</p>
+        </div>
+        <div class="vl"></div>
+        <div>
+            <img style="width:100px; height:100px" src="./img/istockphoto-1247852914-612x612.jpg" alt="error">
+            <h2>Help Center</h2>
+            <p>Got a question? Look no further.Browse FAQs <br> submit your query.</p>
+        </div>
+    </div>
+
+    <div class="footer2">
+        <div>
+            <h2 style="margin-top: 20px;">Spotlight</h2>
+            <div style="width:380;height:300; box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;margin-top: 20px;">
+                <video width="380" height="300" controls="controls" type="video/mp4" autoplay="false" preload="none"
+                    src="How to find perfect foundation for your skin tone Ft. Purplle.mp4">
+                </video>
+            </div>
+        </div>
+        <div style="width:35%">
+            <h2 style="margin-top: 20px;">Shop 0n the go</h2>
+            <div style="margin-top: 20px;" class="f2d">
+                <div>
+                    <p style="padding-top: 30px;">The Purplle BFF APP is now fully<br> loaded! Get downloading now<br>
+                        on both iOS & Android</p>
+                    <div style="padding-top: 30px;">
+                        <a href="https://play.google.com/store/apps/details?id=com.manash.purplle"><img
+                                src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247983_google-play.png"
+                                alt="error"></a>
+                    </div>
+
+                    <div style="padding-top: 10px;">
+                        <a href="https://apps.apple.com/in/app/purplle-beauty-friend-forever/id1078972948"><img
+                                src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247967_app-store.png"
+                                alt="error"></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="./img/Screenshot 2023-03-29 014507.png" alt="error">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer3">
+        <div class="f3d">
+            <div style="width:12% ">
+                <a href="">
+                    <h3>Makeup:</h3>
+                </a>
+            </div>
+            <div style="width:80%">
+                <a href=""> Primer</a> /
+                <a href=""> Lipstick </a> /
+                <a href=""> Foundation Serum</a> /
+                <a href="">Eyeshadow<a> /
+                        <a href=""> Baby Shampoo </a> /
+                        <a href=""> Kajal</a> /
+                        <a href="">Concealer </a> /
+                        <a href="">Shaving Cream</a> /
+                        <a href="">Compact </a> /
+                        <a href=""> Mascara </a> /
+                        <a href=""> Highlighters & Illuminators</a> /
+                        <a href=""> Makeup Remover </a> /
+                        <a href=""> BB & CC Cream</a> /
+                        <a href=""> Loose Powder</a> /
+                        <a href="">Blush</a> .
+            </div>
+        </div>
+        <div class="f3d">
+            <div style="width:12%">
+                <a href="">
+                    <h3>Hair:</h3>
+                </a>
+            </div>
+            <div style="width:80%">
+                <a href=""> Shampoo</a> /
+                <a href=""> Conditioner </a> /
+                <a href=""> Hair Serum</a> /
+                <a href="">Hair Oila<a> /
+                        <a href=""> Baby Shampoo </a> /
+                        <a href=""> Dry Shampoo</a> /
+                        <a href="">Hair Spa Kits </a> /
+                        <a href="">Shaving Cream</a> /
+                        <a href="">Volumizing</a> /
+                        <a href=""> Hair Spray & Leave-In Cream </a> /
+                        <a href=""> Aroma Magi</a> /
+                        <a href="">Hair Color </a> /
+                        <a href=""> Hair Extensions</a> /
+                        <a href=""> Hair Styling Too</a> /
+                        <a href="">Hair Accessories.</a> .
+            </div>
+        </div>
+        <div class="f3d">
+            <div style="width:12%">
+                <a href="">
+                    <h3>Fragrance:</h3>
+                </a>
+            </div>
+            <div style="width:80%">
+                <a href=""> Perfumes </a> /
+                <a href=""> Deodrants & Roll-Ons </a> /
+                <a href="">Aftershaves Perfumes</a> /
+                <a href=""> Colognes <a> /
+                        <a href="">Darling Isabella </a> /
+                        <a href=""> Gift & Value Sets For Men </a> /
+                        <a href="">Good Vibes </a>.
+            </div>
+        </div>
+        <div class="f3d">
+            <div style="width:12%">
+                <a href="">
+                    <h3> Collections:</h3>
+                </a>
+            </div>
+            <div style="width:80%">
+                <a href=""> Castor Oil</a> /
+                <a href=""> Pastel Nail Polish</a> /
+                <a href="">Lakme 9 To 5</a> /
+                <a href=""> Black Kajal<a> /
+                        <a href="">Sunscreen </a> .
+            </div>
+        </div>
+        <div class="f3d">
+            <div style="width:12%">
+                <a href="">
+                    <h3>Brands:</h3>
+                </a>
+            </div>
+            <div style="width:80%">
+                <a href="">Biotique</a> /
+                <a href=""> Wow </a> /
+                <a href="">Dermdoc</a> /
+                <a href="">Himalaya<a> /
+                        <a href="">Darling Isabella </a> /
+                        <a href=""> Maybelline</a> /
+                        <a href="">Good Vibes </a> /
+                        <a href="">Shaving Cream</a> /
+                        <a href=""> NY Bae</a> /
+                        <a href=""> Stay Quirky </a> /
+                        <a href=""> Aroma Magi</a> /
+                        <a href="">Lotus</a> /
+                        <a href="">Sugar</a> /
+                        <a href="">Nivea</a> /
+                        <a href="">Lakme</a> .
+            </div>
+        </div>
+
+        <div class="f3d">
+            <div style="width:12%">
+                <a href="">
+                    <h3>Men:</h3>
+                </a>
+            </div>
+            <div style="width:80%">
+                <a href="">Perfumes</a> /
+                <a href=""> Deodrants & Roll-Ons</a> /
+                <a href="">Face Wash</a> /
+                <a href="">Shower Gels <a> /
+                        <a href="">Soap </a> /
+                        <a href=""> Body Scrub</a> /
+                        <a href="">Talc </a> /
+                        <a href="">Shaving Cream</a> /
+                        <a href="">Beard Oil</a> /
+                        <a href=""> Razors </a> /
+                        <a href=""> Aftershave</a> /
+                        <a href="">Beard Wash</a> /
+                        <a href="">Grooming Kits</a> /
+                        <a href="">Shaving Accessories</a> /
+                        <a href="">Hair Styling</a> /
+                        <a href="">Trimmers</a>.
+            </div>
+
+        </div>
+        <div class="f3d">
+            <div style="width:12%">
+                <a href="">
+                    <h3>Accessories:</h3>
+                </a>
+            </div>
+            <div style="width:80%">
+                <a href="">Necklaces & Pendants</a> /
+                <a href=""> Earrings</a> /
+                <a href="">Rings</a> /
+                <a href="">Bangles & Braclets <a> /
+                        <a href=""> Clips Bands & More </a> .
+            </div>
+
+        </div>
+        <div class="f3d">
+            <div style="width:12%">
+                <a href="">
+                    <h3>Electronics:</h3>
+                </a>
+            </div>
+            <div style="width:80%">
+                <a href=""> Hair Straightener</a> /
+                <a href="">Hair Curler</a> /
+                <a href=""> Hair Dryer</a> /
+                <a href="">Electric Shaver <a> /
+                        <a href="">Trimmers & Clippers </a> /
+                        <a href=""> Epilators </a> /
+                        <a href="">Massager </a> .
+            </div>
+        </div>
+
+        <div class="f3d">
+            <div style="width:12%">
+                <a href="">
+                    <h3>Wellness:</h3>
+                </a>
+            </div>
+            <div style="width:80%">
+                <a href=""> Health & Wellness Supplements</a> /
+                <a href=""> Vitamins & Supplements</a> /
+                <a href=""> Weight Management Products </a> /
+                <a href="">Family Nutrition <a> /
+                        <a href=""> Sports Supplements </a> /
+                        <a href=""> Green Tea</a> /
+                        <a href="">Herbal Tea </a> /
+                        <a href="">Healthy Juices & Drinks</a> .
+            </div>
+        </div>
+        <div class="f3d">
+            <div style="width:12%">
+                <a href="">
+                    <h3>Blogs:</h3>
+                </a>
+            </div>
+            <div style="width:80%">
+                <a href="">Home Remedies For Dandruff </a> /
+                <a href=""> How To Apply Eyeliner </a> /
+                <a href="">Tips For Lips Care</a> /
+                <a href="">Home Remedies For Hair Fall <a> /
+                        <a href="">Best Sunscreen Lotions </a> /
+                        <a href=""> Home Remedies For Acne And Pimples</a> /
+                        <a href="">Home Remedies For Whiteheads </a> /
+                        <a href="">Home Remedies For Suntan</a> /
+                        <a href="">Serum For Oily, Dry And Sensitive Skin</a> /
+                        <a href=""> Choose The Right Serum For Your Skin </a> /
+                        <a href=""> Body Lotion For Dry Skin</a> /
+                        <a href=""> / / Home Remedies For Hyperpigmentation </a> .
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="list">
+            <h3>PURPELLE</h3>
+            <a href="">
+                <p>About us</p>
+            </a>
+            <a href="">
+                <p>Our Team</p>
+            </a>
+            <a href="">
+                <p>Careers</p>
+            </a>
+            <a href="">
+                <p>Press</p>
+            </a>
+            <a href="">
+                <p>Sitemap</p>
+            </a>
+
+        </div>
+        <div class="list">
+            <h3>PURPELLE BUSINESS</h3>
+            <a href="">
+                <p>Sell on Purplle</p>
+            </a>
+        </div>
+        <div class="list">
+            <h3>POLICY INFO</h3>
+            <a href="">
+                <p>Privacy Policy</p>
+            </a>
+            <a href="">
+                <p>Terms Of Use</p>
+            </a>
+            <a href="">
+                <p>Returm & Cancellation Policy</p>
+            </a>
+        </div>
+        <div class="list">
+            <h3>NEED HELP?</h3>
+            <a href="">
+                <p>FAQ's</p>
+            </a>
+            <a href="">
+                <p>Contact Us</p>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div id="PbelowF">
+        <div class="belowF">
+            <h3 style="padding-top: 10px;">PAYMENT</h3>
+            <img src="./img/Screenshot 2023-03-29 112014.png" alt="Error">
+        </div>
+        <div class="belowF">
+            <h3 style="padding-top: 10px;">CONNECT</h3>
+            <a href="https://www.facebook.com/letspurplle"><img src="./img/Screenshot 2023-03-29 112741.png"
+                    alt="error"></a>
+            <a href="https://twitter.com/letspurplle"><img src="./img/Screenshot 2023-03-29 112808.png" alt="error"></a>
+            <a href="https://plus.google.com/+Purplle"><img src="./img/Screenshot 2023-03-29 141638.png"
+                    alt="error"></a>
+            <a href="https://in.pinterest.com/letspurplle/"><img src="./img/Screenshot 2023-03-29 112852.png"
+                    alt="error"></a>
+            <a href=""><img src="./img/Screenshot 2023-03-29 142914.png" alt="error"></a>
+            <a href="https://www.youtube.com/channel/UCI_6AcJI1sKexCLb2NAYTOQ"><img
+                    src="./img/Screenshot 2023-03-29 142124.png" alt="error"></a>
+            <a href="https://www.instagram.com/letspurplle/"><img src="./img/Screenshot 2023-03-29 112947.png"
+                    alt="error"></a>
+            <a href="https://www.linkedin.com/company/purplle-com/"><img style="padding-right: 115px;"
+                    src="./img/Screenshot 2023-03-29 113004.png" alt="error"></a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function fileUpload() {
+        document.getElementById("file").click();
+        document.getElementById("file").addEventListener("change", function (event) {
+            console.log(event.target.files[0]);
+            var image = document.getElementById("preview");
+            image.src = URL.createObjectURL(event.target.files[0]);
+        });
+    }
+</script>
+
