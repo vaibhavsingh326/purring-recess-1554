@@ -227,6 +227,9 @@ if(flag){
   res.status(201).send("Email already in use")
 }
 });
+
+
+
 server.post("/wishlist",(req,res)=>{
   if(
     !req.body.userId||
@@ -237,15 +240,23 @@ server.post("/wishlist",(req,res)=>{
       .send("Bad request, requires username, password & email.");
     }
     db.read()
-    
-    if(db.data.wishlist[`${req.body.userId}`]==undefined){
-      db.data.wishlist[`${req.body.userId}`]=[req.body.product]
+
+    const wishlist = db.data.wishlist
+    const wish = db.data.wishlist.indexOf(wishlist.find((w)=> w.userId===req.body.userId))
+    if(wish ==-1){
+      db.data.wishlist.push({userId:req.body.userId,products:[req.body.product]})
     }else{
-      db.data.wishlist[`${req.body.userId}`].push(req.body.product)
+      db.data.wishlist[wish].products.push(req.body.product)
     }
+    
+    // if(db.data.wishlist[`${req.body.userId}`]==undefined){
+    //   db.data.wishlist[`${req.body.userId}`]=[req.body.product]
+    // }else{
+    //   db.data.wishlist[`${req.body.userId}`].push(req.body.product)
+    // }
     db.write();
 
-  res.status(201).send(db.data.wishlist[`${req.body.userId}`]);
+  res.status(201).send(req.body.product);
 
 })
 
@@ -260,15 +271,24 @@ server.post("/cart",(req,res)=>{
       .send("Bad request, requires username, password & email.");
     }
     db.read()
+
     
-    if(db.data.cart[`${req.body.userId}`]==undefined){
-      db.data.cart[`${req.body.userId}`]=[req.body.product]
+    const carts = db.data.cart
+    const  cart = db.data.cart.indexOf(carts.find((w)=> w.userId===req.body.userId))
+    if(cart ==-1){
+      db.data.cart.push({userId:req.body.userId,products:[req.body.product]})
     }else{
-      db.data.cart[`${req.body.userId}`].push(req.body.product)
+      db.data.cart[cart].products.push(req.body.product)
     }
+    
+    // if(db.data.cart[`${req.body.userId}`]==undefined){
+    //   db.data.cart[`${req.body.userId}`]=[req.body.product]
+    // }else{
+    //   db.data.cart[`${req.body.userId}`].push(req.body.product)
+    // }
     db.write();
 
-  res.status(201).send(db.data.cart[`${req.body.userId}`]);
+  res.status(201).send(req.body.product);
 
 })
 
@@ -284,15 +304,24 @@ server.post("/orders",(req,res)=>{
       .send("Bad request, requires username, password & email.");
     }
     db.read()
-    
-    if(db.data.orders[`${req.body.userId}`]==undefined){
-      db.data.orders[`${req.body.userId}`]=[req.body.product]
+
+     
+    const orders = db.data.orders
+    const  order = db.data.orders.indexOf(orders.find((w)=> w.userId===req.body.userId))
+    if(order ==-1){
+      db.data.orders.push({userId:req.body.userId,products:[req.body.product]})
     }else{
-      db.data.orders[`${req.body.userId}`].push(req.body.product)
+      db.data.orders[order].products.push(req.body.product)
     }
+    
+    // if(db.data.orders[`${req.body.userId}`]==undefined){
+    //   db.data.orders[`${req.body.userId}`]=[req.body.product]
+    // }else{
+    //   db.data.orders[`${req.body.userId}`].push(req.body.product)
+    // }
     db.write();
 
-  res.status(201).send(db.data.orders[`${req.body.userId}`]);
+  res.status(201).send(req.body.product);
 
 })
 
