@@ -155,10 +155,17 @@ server.post("/admin/login", (req, res) => {
   if (user == null) {
     return res.status(400).send(`Cannot find user: ${req.body.email}`);
   }
-
+  let storeId =null
+  const store = db.data.stores.find((s)=>s.userId===user.id)
+  if(store != undefined){
+    storeId = store.id
+  }
+  
+  
   if (bcrypt.compareSync(req.body.password, user.password)) {
     // creating JWT token
     const accessToken = generateAccessToken(user);
+    user.storeId = storeId
     return res.send({
       accessToken: accessToken,
       user: user
@@ -189,8 +196,12 @@ server.post("/adminuser/register", (req, res) => {
   users.forEach((user) => {
     if (user.id > largestId) largestId = user.id;
   });
+  let flag =true
+  users.forEach((user) => {
+    if (user.email === req.body.email) flag = false;
+  });
  
-
+if(flag){
   const hashedPassword = bcrypt.hashSync(req.body.password, 10);
   const newId = largestId + 1;
   
@@ -212,6 +223,9 @@ server.post("/adminuser/register", (req, res) => {
   db.write();
 
   res.status(201).send(newUserData);
+}else {
+  res.status(201).send("Email already in use")
+}
 });
 server.post("/wishlist",(req,res)=>{
   if(
@@ -378,8 +392,6 @@ server.post("/add",(req,res)=>{
     if (product.id > largestId) largestId = product.id;
   });
   const newId = largestId + 1;
-
-
   const newProd = {
     productName: req.body.productName,
     price: req.body.price,
@@ -417,6 +429,12 @@ server.post("/user/register", (req, res) => {
   users.forEach((user) => {
     if (user.id > largestId) largestId = user.id;
   });
+  let flag =true
+  users.forEach((user) => {
+    if (user.email === req.body.email) flag = false;
+  });
+ 
+if(flag){
 
   const hashedPassword = bcrypt.hashSync(req.body.password, 10);
   const newId = largestId + 1;
@@ -435,6 +453,9 @@ server.post("/user/register", (req, res) => {
   db.write();
 
   res.status(201).send(newUserData);
+}else {
+  res.status(201).send("Email already in use")
+}
 });
 
 // login/sign in logic

@@ -84,3 +84,25 @@ function DisplayData(data){
 
     });
 }
+
+// script for slideshow
+
+var imgArray = [
+  'https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1680153474_web.jpg',
+  'https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1680168530_web-banner.jpg',
+  'https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1680184656_1294x418.gif',
+  'https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1676992171_web-banner-1.jpg',
+  'https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1679914902_pu_webhp.gif'
+];
+var curIndex = 0;
+var imgDuration = 5000;
+
+function slideShow() {
+  document.getElementById('image1').src = imgArray[curIndex];
+  curIndex++;
+  if (curIndex == imgArray.length) { curIndex = 0; }
+  setTimeout("slideShow()", imgDuration);
+}
+slideShow();
+
+// slide show ends here

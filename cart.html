@@ -8,46 +8,91 @@
     <title>Cart Page</title>
     <link rel="stylesheet" href="./styles/index.css">
     <style>
-        a{
-            color: rgb(244, 65, 154);
-            font-size: 20px;
-        }
-       .div1{
-        margin-left: 10%;
-        border: 2px solid red;
-        width: 600px;
-        display: flex;
-        justify-content: space-between;
-       padding-top: 20px;
-       padding-bottom: 20px;
-        background-color:rgb(255, 235, 255);
-        margin-bottom: 50px;
+
+.whole{
+ display: flex;
+justify-content: space-between;         
+ }
+
+ .cart2{
+ margin-top:30px;
+  margin-right: 10%;
+}
+.cart1{
+  width: 70%;
+ margin: 5%;
+}
+ a{
+color: rgb(244, 65, 154);
+font-size: 20px;
+ }
+.div1{
+             
+font-family:verdana;
+ display: flex;
+justify-content:space-between;
+padding-top: 20px;
+padding-bottom: 20px;
+ background-color:rgb(255, 235, 255);
+ margin-bottom: 30px;
+border-radius: 10px;
        }
 .div2{
-    margin-left: 10%;
-        border: 2px solid red;
-        width: 600px;
-        display: flex;
-        justify-content: space-between;
-       padding-top: 10px;
-       padding-bottom: 10px;
-       margin-bottom: 50px;
+ font-family:verdana;
+ display: flex;
+ justify-content: space-between;
+padding-top: 10px;
+ padding-bottom: 10px;
+margin-bottom: 30px;
        
 }
 .div3{
-    margin-left: 10%;
-        border: 2px solid red;
-        width: 600px;
-        display: flex;
-        justify-content: space-between;
-       padding-top: 10px;
-       padding-bottom: 10px;
-       background-color:rgb(255, 235, 255);
+display: flex;
+ justify-content: space-between;
+padding-top: 10px;
+padding-bottom: 10px;
+background-color:rgb(255, 235, 255);
+margin-bottom: 30px;
 }
 .div3 button{
 background-color: black;
 color: goldenrod;
 width: 150px;
+}
+.div4{
+    margin-bottom: 30px;
+border: 1px dotted grey;    
+}
+.div5{
+ text-align: center;   
+}
+.div5-1{
+    display: flex;
+    justify-content: space-between;   
+}
+.div5-1 img{
+    width:33%;
+}
+.div6{  
+    width: 70%;
+    margin:auto;
+}
+.div6 img{
+    width: 100%;
+    
+}
+.div7{
+    width: 70%;
+    margin: auto;
+}
+.div7 div{
+ width: 100%;
+display: flex;
+justify-content: space-between;
+
+}
+.div7 div h4{
+    color:rgb(124, 120, 120);
 }
 
     </style>
@@ -94,30 +139,87 @@ width: 150px;
 </div>
 <div class="div2">
     <h1>My Cart()</h1>
-    <a href="">Shop More ></a>
+    <a href="product.html">Shop More ></a>
 </div>
 <div class="div3">
-    <div>
-       
-    <h4> ✔️Your are missing out!</h4>
-    
-    <p>Save Rs 55 on this order and get a free gift</p>
-    
+    <div>     
+    <h4 style="color:rgb(124, 120, 120);"> ✔️Your are missing out!</h4>
+    <p style="color: rgb(124, 120, 120);">Save Rs 55 on this order and get a free gift</p>
     </div>
     <button>JOIN ELITE TODAY</button>
 </div>
+<div class="div4"></div>
+<div class="div5">
+    <h1>NEW ARRIVALS</h1>
+    <br>
+    <br>
+    <div class="div5-1">
+        <img src="https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-@@mediafiles@mailers@banners@1659451450_new-tag.png,ow-115,ofo-top_right,dpr-2/static/img/product/289960/ny-bae-serum-lipstick-violet-waters-15-4-2-g_3_display_1669107942_53b9cac2.jpg" alt="">
+    <img src="https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/276827/good-vibes-foot-mask-rosehip-20-ml_9_display_1659531089_72ae3645.jpg" alt="">
+<img src="https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-@@mediafiles@mailers@banners@1659451450_new-tag.png,ow-115,ofo-top_right,dpr-2/static/img/product/322344/carmesi-disposable-period-panties-xl-xxl_1_display_1669283226_4b32f0a8.jpg" alt="">    
+</div>
+</div>
+
 
     </div>
-<div class="cart2"></div>
- 
-    <button>PLACE ORDER</button>
-</div>
     
 
+    
+<div class="cart2">
+<div class="div6">
+    <img src="https://www.acumentoday.in/wp-content/uploads/2019/06/Payement-1-edit.png" alt="">
+</div>
+<div style="display: flex; justify-content: space-between;margin: auto; width: 70%;margin-top: 15px; margin-bottom: 15px;">
+    <h4 style="color: grey;">Enter Pincode</h4>
+    <h4 style="color: rgb(244, 65, 154);">Check Delivery</h4>
+</div>
+<hr style="width: 70%; margin: auto;">
+<div style="display: flex; justify-content: space-between;margin: auto;  width: 70%;margin-top: 15px; margin-bottom: 15px;">
+    <h4 style="color: grey;">Coupons</h4>
+    <h4 style="color: rgb(244, 65, 154);" >Apply Coupon</h4>
+</div>
+<hr style="width: 70%; margin: auto;margin-bottom: 30px;">
+
+<div class="div7">
+    <h3>Price Details</h3>
+    <br>
+   <div class="bill1">
+    <h4>Total MRP:</h4>
+    <div class="totalmrp" style="color:rgb(244, 65, 154);width: 100px;text-align: right;margin-bottom: 15px;">totalmrp</div>
+   </div>
+   <div class="bill2">
+    <h4>Saving on MRP:</h4>
+    <div class="savingonmrp" style="color: rgb(244, 65, 154);text-align: right;width: 100px;margin-bottom: 15px;">savingonmrp</div>
+   </div>
+   <div class="bill3">
+    <h4>SubTotal:</h4>
+    <div class="subtotal"  style="color:rgb(244, 65, 154);width: 100px;text-align: right;margin-bottom: 15px;">subtotal</div>
+   </div>
+   <div class="bill4">
+    <h4>Shipping Charges:</h4>
+    <div class="shippingCharges"  style="color:rgb(244, 65, 154);width: 100px;text-align: right;margin-bottom: 15px;">shippingcharges</div>
+   </div>
+   <div class="bill5"><h4>Coupon Discount:</h4>
+   <h5 style="color:rgb(244, 65, 154);width: 100px;text-align: right;margin-bottom: 15px;"> Apply Coupon</h5>
+</div>
+<hr style="width: 100%; margin: auto;margin-top: 10px;margin-bottom: 10px;">
+<div class="bill6">
+    <h3>Order Total:</h3>
+    <div class="ordertotal" style="color:rgb(244, 65, 154);width: 100px;text-align: right;margin-bottom: 15px;">ordertotal</div>
+</div>
+<div class="bill7">
+    <h4>You Save</h4>
+    <div class="yousave" class="ordertotal" style="color:rgb(244, 65, 154);width: 100px;text-align: right;margin-bottom: 5px;">67</div>
+    
+</div>
+
+<button style="background-color:rgb(244, 65, 154);width: 100%;color: white;height: 40px; margin-top: 10px;border-radius: 5px;border: 0px;">PLACE ORDER</button>
+<h5 style="text-align: center;margin-top: 10px;color: rgb(124, 120, 120);">Need Help? 99999999</h5>
+</div>
 
 
-
-
+</div>
+</div>
     </div>
 </body>
 
