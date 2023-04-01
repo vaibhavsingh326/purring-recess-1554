@@ -973,9 +973,48 @@
       "storeId": 2
     }
   ],
-  "wishlist": [],
-  "orders": [],
-  "cart": ,
+  "wishlist": {},
+  "orders": {},
+  "cart": {
+    "57": [
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 12,
+        "storeId": 1
+      },
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 12,
+        "storeId": 1
+      },
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 12,
+        "storeId": 1
+      }
+    ]
+  },
   "adminusers": [
     {
       "username": "vaibhavsingh326",
@@ -1008,7 +1047,7 @@
       "id": 3
     }
   ],
-  "adminorders": [],
+  "adminorders": {},
   "stores": [
     {
       "storename": "store1",

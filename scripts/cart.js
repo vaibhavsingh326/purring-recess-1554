@@ -1,4 +1,4 @@
-const data = JSON.parse(localStorage.getItem("cart")) || [];
+let data = JSON.parse(localStorage.getItem("cart")) || [];
 
 // const totalPrice = (data) => {
 //     let total = 0;
@@ -9,7 +9,13 @@ const data = JSON.parse(localStorage.getItem("cart")) || [];
 //     span.innerText = total;
 // }
 // totalPrice(data);
-
+let userId = JSON.parse(localStorage.getItem("userId"))
+async function getdata(){
+    let res = await fetch(`http://127.0.0.1:9090/cart?id=${userId}`)
+    data = await res.json()
+    console.log(data);
+}
+getdata()
 const append = (data) => {
     const container = document.querySelector(".cart-container");
     container.innerHTML = null;
@@ -27,10 +33,10 @@ const append = (data) => {
         const decrement = document.createElement("button");
 
         //2.giving style and attribute to the tag
-        img.src = el.image_link;
-        h3.innerText = el.name;
+        img.src = el.image;
+        h3.innerText = el.productName;
         priceP.innerText = `Price-${el.price}`;
-        brandP.innerText = `Brand Name-${el.brand}`
+       // brandP.innerText = `Brand Name-${el.brand}`
         qtyP.innerText = `Qty - ${el.qty}`
         remove.innerText = "Remove";
         increment.innerText = "+";
@@ -70,4 +76,4 @@ const append = (data) => {
     })
 }
 
-append(data);
+//append(data);
