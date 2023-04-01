@@ -1839,8 +1839,9 @@
   ],
   "wishlist": [],
   "orders": [],
-  "cart": {
-    "3": [
+  "cart": [{
+    "userId":57,
+    "products": [
       {
         "productName": "Lakme Absolute Perfect Radiance Skin Brightening Cream",
         "price": "249",
@@ -1866,7 +1867,10 @@
         "storeId": 1
       }
     ]
-  },
+  }]
+    
+  
+  ,
   "adminusers": [
     {
       "username": "vaibhavsingh326",

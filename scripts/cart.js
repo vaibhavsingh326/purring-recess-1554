@@ -1,4 +1,5 @@
 const data = JSON.parse(localStorage.getItem("cart")) || [];
+const userId =JSON.parse(localStorage.getItem("userId"))||3
 
 // const totalPrice = (data) => {
 //     let total = 0;
@@ -70,4 +71,12 @@ const append = (data) => {
     })
 }
 
-append(data);
+//append(data);
+
+async function getcart(){
+    console.log(userId);
+    let res = await fetch(`http://127.0.0.1:9090/cart?userId=${userId}`)
+    let data =await res.json()
+    console.log(data);
+}
+getcart() 
