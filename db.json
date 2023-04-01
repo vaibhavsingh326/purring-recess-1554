@@ -681,6 +681,78 @@
       "lastname": "Nagaraju",
       "createdAt": 1680160273883,
       "id": 65
+    },
+    {
+      "password": "$2b$10$7arRQdnj5KR1jWip2SKeHOS76I1GEGPN2EqSTy9zZ6e8J5YzkYIEe",
+      "email": "rajuchacha@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680353234021,
+      "id": 66
+    },
+    {
+      "password": "$2b$10$otzBfr84ZlqrQTSRFBCOdevd5x./IPqAhI.A3OrPcdeU5q/X1NI5u",
+      "email": "rajuchacha@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680353239318,
+      "id": 67
+    },
+    {
+      "password": "$2b$10$4DKmGswXMrsZCjMkeNuucei4bW58xqDalZUyVfq5uJEkAWwJN7ptm",
+      "email": "rajuchacha@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680353240027,
+      "id": 68
+    },
+    {
+      "password": "$2b$10$.cnR17uly28tQSORJXHl5OsJF1xQeKz/tWgilL4yvAdHC7LhrFoki",
+      "email": "rajuchacha@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680353240327,
+      "id": 69
+    },
+    {
+      "password": "$2b$10$V4G4r8WwRkrrLSwdMhiSDu2mEylTDT8pTyseg0HI.Oudxw7iQS5By",
+      "email": "rajuchacha@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680353240543,
+      "id": 70
+    },
+    {
+      "password": "$2b$10$MQibr84Q5fnuVPb6opCmX.aQMGyc.tfAXcVzC2Klk.Bv0ZDUJ9r0u",
+      "email": "rajuchacha@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680353240763,
+      "id": 71
+    },
+    {
+      "password": "$2b$10$YTrBINkyk7s25NAXONPZEuVZEuK1LifzwtfPyExeHDRN1rSf6Jd/K",
+      "email": "rajuchacha@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680353240970,
+      "id": 72
+    },
+    {
+      "password": "$2b$10$QlohC5pZjTgdNgDd9Ic0aeJ13ex4BY/rzYALR0X4l9w58MYIpPvbi",
+      "email": "rajuchacha@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680353241174,
+      "id": 73
+    },
+    {
+      "password": "$2b$10$qsR/5Gvf5qUwhBOApTvbOeLOpT.QZhFZSVyd/2JpIVFWpTFAGMJ1G",
+      "email": "rajuchacha@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680353241372,
+      "id": 74
     }
   ],
   "products": [
@@ -1839,38 +1911,73 @@
   ],
   "wishlist": [],
   "orders": [],
-  "cart": [{
-    "userId":57,
-    "products": [
-      {
-        "productName": "Lakme Absolute Perfect Radiance Skin Brightening Cream",
-        "price": "249",
-        "offer": "15",
-        "elite": false,
-        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-Best_seller_700x700base_gUMVzNGWt_.png,ofo-top_right,dpr-2/static/img/product/286868/lakme-absolute-perfect-radiance-skin-brightening-day-creme-50-g_1_display_1615968869_4aee738c.jpg",
-        "category": "face Cream",
-        "review": "3",
-        "createdAt": 1680202239992,
-        "id": 4,
-        "storeId": 1
-      },
-      {
-        "productName": "Lotus Herbals Whiteglow Skin Whitening Cream",
-        "price": "295",
-        "offer": "30",
-        "elite": false,
-        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-Best_seller_700x700base_gUMVzNGWt_.png,ofo-top_right,dpr-2/static/img/product/349218/lotus-herbals-whiteglow-skin-whitening-and-brightening-gel-creme-spf-25-i-pa-40-g-15_2_display_1643970573_b85e02bd.jpg",
-        "category": "face Cream",
-        "review": "5",
-        "createdAt": 1680202155551,
-        "id": 3,
-        "storeId": 1
-      }
-    ]
-  }]
-    
-  
-  ,
+  "cart": [
+    {
+      "userId": 66,
+      "products": [
+        {
+          "productName": "Mamaearth Ubtan Ultra Light Face Cream",
+          "price": "259",
+          "offer": "10",
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/241644/mamaearth-ubtan-ultra-light-gel-oil-free-moisturizer-with-turmeric-and-saffron-for-deep-hydration-200-ml_1_display_1623389908_47b530e7.jpg",
+          "category": "face Cream",
+          "review": "4",
+          "createdAt": 1680202070075,
+          "id": 2,
+          "storeId": 1
+        },
+        {
+          "productName": "Good Vibes Papaya Hydrating Face Cream",
+          "price": "255",
+          "offer": "100",
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/275214/good-vibes-hydrating-face-cream-papaya-50-g-1_6_display_1620451298_33edd5ed.jpg",
+          "category": "face Cream",
+          "review": "5",
+          "createdAt": 1680201769118,
+          "id": 1,
+          "storeId": 1
+        },
+        {
+          "productName": "Good Vibes Papaya Hydrating Face Cream",
+          "price": "255",
+          "offer": "100",
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/275214/good-vibes-hydrating-face-cream-papaya-50-g-1_6_display_1620451298_33edd5ed.jpg",
+          "category": "Face ream",
+          "review": "5",
+          "createdAt": 1680261604402,
+          "id": 93,
+          "storeId": 4
+        },
+        {
+          "productName": "Good Vibes Vitamin C Facewash ",
+          "price": "215",
+          "offer": "75",
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/325687/good-vibes-vitamin-c-glow-face-wash-deep-cleansing-brightening-refreshing-no-parabens-no-mineral-oil-no-animal-testing-120-ml-1_1_display_1662962061_0a74b151.jpg",
+          "category": "Facewash",
+          "review": "4",
+          "createdAt": 1680261409697,
+          "id": 92,
+          "storeId": 4
+        },
+        {
+          "productName": "Aroma Magic White Tea and Chamomile Facewash (100ml)",
+          "price": "185",
+          "offer": "40",
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/195825/aroma-magic-white-tea-and-chamomile-face-wash-100-ml-13_2_display_1524551242_62a97f2a.jpg",
+          "category": "Facewash",
+          "review": "2",
+          "createdAt": 1680261310540,
+          "id": 91,
+          "storeId": 4
+        }
+      ]
+    }
+  ],
   "adminusers": [
     {
       "username": "vaibhavsingh326",
@@ -1913,7 +2020,7 @@
       "id": 4
     }
   ],
-  "adminorders": [],
+  "adminorders": {},
   "stores": [
     {
       "storename": "Supriya's",

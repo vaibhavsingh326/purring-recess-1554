@@ -7,63 +7,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
     <script src="https://kit.fontawesome.com/5089e6484a.js" crossorigin="anonymous"></script>
-    <title>Home Page</title>
-    <style>
-         .drop{
-       position:relative;
-       display: inline-block;
-       
-       text-decoration: none;
-     }
-     .drop:hover .dropcont {
-      display: block;
-     }
-     .dropcont{
-      display: none;
-      position: absolute;
-      background-color: white;
-      min-width: 150px;
-      z-index: 1;
-     }
-     .dropcont a {
-      color: rgb(61, 59, 59);
+    <title>Magazine</title>
     
-      text-decoration: none;
-      display: block;
-      text-align: left;
-      /* width: 300px;
-      text-align: center;
-      padding-top: 10px;
-      padding-bottom: 5px;
-      margin-bottom: 5px;
-      border: 1px solid black; */
-   
-      text-align: center;
-      
-     }
-     .dropcont a:nth-child(1){
-       color: black;
-      
-      
-     }
-     .dropcont a:hover{
-        color: rgb(209, 18, 50);
-     }
-      
-.icon{
-  
-    width: 300px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
- /* ========= 
-/* AqleemaB */
-/* ============ */ 
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #top {
+            width: 97%;
+            margin: auto;
+        }
+
+        #top img {
+            width: 100%;
+        }
+
+        .head {
+            margin: 50px 0px 15px 17px;
+        }
+
+        .best_deal {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .best_deal_card{
+            width: 18%;
+            border: 0px solid teal;
+        }
+        .best_deal_card img {
+            width: 100%;
+        }
+
+        .highlights{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+        }
+        .highlights_card{
+            width: 99%;
+            margin: auto;
+        }
+        .highlights_card img{
+            width: 100%;
+        }
+
+        .sub_head{
+            text-align: center;
+            margin: 50px 0px 50px 0px;
+        }
+
+        .tranding{
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+
+        }
+        .tranding img{
+            width: 19%;
+        }
+
+        .skin{
+            display: flex;
+            margin: auto;
+            justify-content: space-around; 
+        }
+        .skin img{
+            width: 19%;
+        }
+
+        .makeup{
+            display: flex;
+            margin: auto;
+            justify-content: space-around; 
+        }
+        .makeup img{
+            width: 19%;
+        }
+
+        .hair{
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+        }
+        .hair img{
+            width: 19%;
+        }
+
+        .bodycare{
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+        }
+        .bodycare img{
+            width: 19%;
+        }
     </style>
 </head>
 
 <body>
-    <!-- //Navbar starts from here -->
+    <!-- nav -->
+
     <div class="navbar">
         <div class="inp">
             <input type="text" id="searchInput" placeholder="Enter search query">
@@ -85,6 +134,8 @@
                 <a href="">YOUR BEAUTY PROFILE</a>
                 <a href="adminlogin.html">ADMIN LOGIN</a>
                 <a href="admin-register.html">ADMIN REGISTER</a>
+                
+               
                 <a href="./wishlist.html">❤️YOUR WISHLIST</a>
                </div>
                </div>
@@ -516,94 +567,132 @@
         <p>OFFERS</p>
         <p>NEW</p>
         <p>SPLURGE</p>
-        <a href="/magazine.html"><h2  style="font-size: larger;">MAGAZINE</h2></a>
-        <a href="./elite.html">
-            <h2 style="font-size: larger;">ELITE OFFERS</h2>
-        </a>
+        <p>MAGAZINE</p>
+        <p>ELITE OFFERS</p>
     </nav>
 
 
-    <div class="main">
-        <img src="https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1676992171_web-banner-1.jpg"
-            alt="">
+
+    <div id="top">
+        <img src="https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1645718034_floral-watercolor-beauty-linkedin-banner.png"
+            alt="error">
     </div>
 
     <div class="head">
-        <h1>CATEGORY STORES</h1>
+        <h2>TODAY'S BEST FOR YOU</h2>
     </div>
 
-    <div class="card">
-        <img src="https://media6.ppl-media.com/tr:w-457,ar-17-24,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1676707783_skincare-1.jpg"
-            alt="">
-        <img src="https://media6.ppl-media.com/tr:w-457,ar-17-24,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1676637899_make-up.jpg"
-            alt="">
-        <img src="https://media6.ppl-media.com/tr:w-457,ar-17-24,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1676637898_haircare-2.jpg"
-            alt="">
-        <img src="https://media6.ppl-media.com/tr:w-457,ar-17-24,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1676637898_body-care.jpg"
-            alt="">
-    </div>
-
-    <div class="deal">
-        <img src="https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1676962011_header-day-2-web.gif"
-            alt="">
-    </div>
-
-    <div class="img-card">
-        <img src="https://media6.ppl-media.com/tr:dpr-2/mediafiles/ecomm/misc/1676890678_ezgif-4-1a9a710bf8.gif?tr=f-gif"
-            alt="">
-        <img src="https://media6.ppl-media.com/tr:dpr-2/mediafiles/ecomm/misc/1676890390_blue-heaven.gif?tr=f-gif"
-            alt="">
-    </div>
-    <div class="img-card">
-        <img src="https://media6.ppl-media.com/tr:w-640,ar-20557-9993,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1677039348_biotique-copy-1.jpeg"
-            alt="">
-        <img src="https://media6.ppl-media.com/tr:w-640,ar-20557-9993,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1677057198_dd-celebs_pb.gif"
-            alt="">
-    </div>
-    <div class="img-card">
-        <img src="https://media6.ppl-media.com/tr:w-640,ar-20557-9993,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1676641764_streax-streax-professional-copy-1-1440x700.jpeg"
-            alt="">
-        <img src="https://media6.ppl-media.com/tr:w-640,ar-20557-9993,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1676641779_kaja.gif"
-            alt="">
-    </div>
-    <div class="img-card">
-        <img src="https://media6.ppl-media.com/tr:w-640,ar-20557-9993,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1676641744_garnier-revised-copy-1-1440x700.jpeg"
-            alt="">
-        <img src="https://media6.ppl-media.com/tr:w-640,ar-20557-9993,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1676962363_sq-celebs_pb-sq-50-.gif"
-            alt="">
-    </div>
-
-    <div class="head">
-        <h1>HAR BRAMD KA DESTINATION</h1>
-    </div>
-
-    <div class="mk-card">
-        <img src="https://media6.ppl-media.com/tr:dpr-2/mediafiles/ecomm/misc/1672825871_sugar.png" alt="">
-        <img src="https://media6.ppl-media.com/tr:dpr-2/mediafiles/ecomm/misc/1672681691_blue-heaven-1200x1800.jpeg"
-            alt="">
-        <img src="https://media6.ppl-media.com/tr:dpr-2/mediafiles/ecomm/misc/1672681694_garnier-1200x1800.jpeg" alt="">
-    </div>
-    <div class="mk-card">
-        <img src="https://media6.ppl-media.com/tr:dpr-2/mediafiles/ecomm/misc/1672637806_faces_revised-copy.jpg" alt="">
-        <img src="https://media6.ppl-media.com/tr:dpr-2/mediafiles/ecomm/misc/1672750536_mamaearth_hair-care-1476x1028-3.jpeg"
-            alt="">
-        <img src="https://media6.ppl-media.com/tr:dpr-2/mediafiles/ecomm/misc/1672854525_l-oreal-paris_anushka-skin-care-winter-1476x1028-1.jpeg"
-            alt="">
-    </div>
-
-    <div class="sugar">
-        <img src="https://media6.ppl-media.com/tr:dpr-2/mediafiles/ecomm/misc/1672829614_sugar_new-year-2596x836.jpeg"
-            alt="">
-    </div>
-    <div class="shipping">
-        <div>
-            <img src="./img/Screenshot 2023-03-29 004659.png" alt="">
+    <div class="best_deal">
+        <div class="best_deal_card">
+            <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/317363/dermdoc-2-percentage-salicylic-acid-face-serum-15-ml-19_1_display_1680085480_4aa01889.jpg"
+                alt="">
+            <p>purplle Compact Powder SPF for Wheatish Skin Be Your Own</p>
+            <p>₹210 <span style="color:rgb(187, 110, 123)">30% off</span></p>
         </div>
-
+        <div class="best_deal_card">
+            <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/319174/purplle-compact-with-spf-be-your-own-bff-honey-self-care-2-17_10_display_1665466465_d10ab1a0.jpg"
+                alt="">
+            <p>purplle Compact Powder SPF for Wheatish Skin Be Your Own</p>
+            <p>₹210 <span style="color:rgb(187, 110, 123)">25% off</span></p>
+        </div>
+        <div class="best_deal_card">
+            <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/343179/good-vibes-vitamin-c-brightening-face-serum-10-ml-74_1_display_1673259531_bca7bf3a.jpg"
+                alt="">
+            <p>purplle Compact Powder SPF for Wheatish Skin Be Your Own</p>
+            <p>₹210 <span style="color:rgb(187, 110, 123)">27% off</span></p>
+        </div>
+        <div class="best_deal_card">
+            <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-@@mediafiles@mailers@banners@1659451450_new-tag.png,ow-115,ofo-top_right,dpr-2/static/img/product/338934/good-vibes-vitamin-c-anti-blemish-glow-under-eye-gel-15-ml_2_display_1679909629_686a1b96.jpg"
+                alt="">
+            <p>purplle Compact Powder SPF for Wheatish Skin Be Your Own</p>
+            <p>₹210 <span style="color:rgb(187, 110, 123)">35% off</span></p>
+        </div>
+        <div class="best_deal_card">
+            <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/348018/good-vibes-onion-hairfall-control-shampoo-with-keratin-corn-wheat-protein-and-soy-strengthening-no-parabens-no-animal-testing-300-ml_1_display_1676965837_44ad90a4.jpg"
+                alt="">
+            <p>purplle Compact Powder SPF for Wheatish Skin Be Your Own</p>
+            <p>₹210 <span style="color:rgb(187, 110, 123)">20% off</span></p>
+        </div>
     </div>
 
-    <!-- footer part -->
+    <div class="head">
+        <h2>OUR LATEST HIGHLIGHTS</h2>
+    </div>
 
+    <div class="highlights">
+        <div class="highlights_card">
+            <img src="https://media6.ppl-media.com/mediafiles/blogs/shikakai_3087165a75.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-U2hpa2FrYWkgSGFpciBCZW5lZml0cw==,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        </div>
+        <div class="highlights_card">
+            <img src="https://media6.ppl-media.com/mediafiles/blogs/Yougurt_da7a1f8d97.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-eW9ndXJ0IGJlbmVmaXRzIGZvciBza2luICYgdXNlcw==,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        </div>
+        <div class="highlights_card">
+            <img src="https://media6.ppl-media.com/mediafiles/blogs/oats_benefits_de950f4596.png?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-T2F0cyBCZW5lZml0cyBmb3IgU2tpbiA=,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        </div>
+        <div class="highlights_card">
+            <img src="https://media6.ppl-media.com/mediafiles/blogs/turmeric_root_and_powder_6f409a9d26.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-VHVybWVyaWMgQmVuZWZpdHMgZm9yIEhhaXI=,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        </div>
+    </div>
+
+    <div class="sub_head">
+        <h3>TRENDING BLOG ARTICLES</h3>
+    </div>
+    <div class="tranding">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/Hairstyles_for_Oval_Faces_for_Men_25bcc0aa51.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-VG9wIDEwIFN0eWxpc2ggSGFpcnN0eWxlcyBmb3IgT3ZhLi4u,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/shutterstock_2053913117_b9fa9fbc8c.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-MTAgTmF0dXJhbCBSZW1lZGllcyB0byBTdG9wIEhhaXIgLi4u,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/d4980f3842a925eddf643755bbcffd2a_1200x_bfc6062eb5.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-OSBGb29kcyB0byBIZWxwIEluY3JlYXNlIEJyZWFzdCBNLi4u,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/shutterstock_1491969896_9198201c3a.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-VG9wIDcgUm91bmQgRmFjZSBIYWlyc3R5bGVzIGZvciBNLi4u,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/Custom_dimensions_2240x1260_px_Custom_dimensions_386a0743ee.jpeg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-VG9wIDUgSGFja3MgdG8gUmVtb3ZlIERhcmsgU3BvdHMgLi4u,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+    </div>
+
+    <div class="sub_head">
+        <h3>READ BY CATEGORY</h3>
+    </div>
+
+    <div class="head">
+        <h2>SKIN</h2>
+    </div>
+    <div class="skin">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/Yougurt_da7a1f8d97.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-eW9ndXJ0IGJlbmVmaXRzIGZvciBza2luICYgdXNlcw==,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/oats_benefits_de950f4596.png?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-T2F0cyBCZW5lZml0cyBmb3IgU2tpbiA=,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/Argan_Oil_Uses_and_Side_Effects_0e03cb2e40.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-QXJnYW4gT2lsIFVzZXMgYW5kIFNpZGUgRWZmZWN0cw==,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/Jasmine_Essential_Oil_e1548692158500_d50f0b7ecc.jpeg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-U2tpbiBCZW5lZml0cyBvZiBKYXNtaW5lIG9pbA==,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/pf_fcea0c37_cover_image_2_30c4c8b2da.webp?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-TmlhY2luYW1pZGUgZm9yIGFjbmUu,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+    </div>
+
+    <div class="head">
+        <h2>MAKEUP</h2>
+    </div>
+    <div class="makeup">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/makeup_remover_23f7d4d520.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-QmVzdCBESVkgbWFrZXVwIHJlbW92ZXIgcmVtZWRpZXM=,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/cleansing_balm_a2ec6ad540.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-QmVzdCBtYWtldXAgY2xlYW5zaW5nIGJhbG0gaW4gaW5kLi4u,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/makeup_remover_pads_3202ac1872.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-QmVzdCByZXVzYWJsZSBtYWtldXAgcmVtb3ZlciBwYWRzIA==,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/make_up_for_ever_hd_blush_20_db778c019d.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-QmVzdCBjcmVhbSBibHVzaCBhdmFpbGFibGUgaW4gaW5kLi4u,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/types_of_face_powder_923a4716c8.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-VHlwZXMgb2YgbWFrZXVwIGZhY2UgcG93ZGVycw==,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+    </div>
+
+    <div class="head">
+        <h2>HAIR</h2>
+    </div>
+    <div class="hair">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/shikakai_3087165a75.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-U2hpa2FrYWkgSGFpciBCZW5lZml0cw==,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/turmeric_root_and_powder_6f409a9d26.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-VHVybWVyaWMgQmVuZWZpdHMgZm9yIEhhaXI=,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/hair_spa_importance_2059a7445b.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-YmVzdCBzdWxmYXRlIGFuZCBwYXJhYmVuIGZyZWUgY29uLi4u,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/hair_loss_182ee89a06.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-QmVzdCBBbnRpIEhhaXIgRmFsbCBNYXNr,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/Damaged_hair_a3300b7f4e.png?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-SGFpciBjYXJlIHJvdXRpbmUgZm9yIGRhbWFnZWQgaGFpcg==,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+    </div>
+    <div class="head">
+        <h2>BODYCARE</h2>
+    </div>
+    <div class="bodycare">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/Body_scrub_01_1f45e4032b.png?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-NyBCZXN0IEJvZHkgU2NydWJzIEZvciBEcnkgU2tpbiBBLi4u,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/Body_wash_01_bdc72a8e97.png?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-VGhlIEJlc3QgQUhBIEJvZHkgV2FzaGVzIFlvdSBDYW4gLi4u,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/7_Best_Body_Washes_For_Skin_Acne_01_65641af55d.png?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-NyBCZXN0IEJvZHkgV2FzaGVzIEZvciBTa2luIEFjbmU=,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/GUEST_85e45031_609f_43c5_85a4_52b47117ef98_e0f86c3abd.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top,bg-FFFFFF:ote-NSBCZXN0IFNraW4gV2hpdGVuaW5nIEJvZHkgV2FzaGVz,ots-60,oy-950,otp-40_20,otw-1280,otia-cen" alt="">
+        <img src="https://media6.ppl-media.com/mediafiles/blogs/bath_salts_123_ecf74398ae.jpg?tr=w-1280,h-950:w-1280,h-1100,cm-pad_resize,fo-top:ote-QmF0aCBTYWx0cyBBbmQgV2h5IFlvdSBOZWVkIFRvIFVzLi4u,ots-60,oy-950,otp-40_20,otw-1280" alt="">
+    </div>
+
+    <!-- footer -->
     <div id="footer1">
         <div>
             <img src="./img/1499247950_secure-payment.webp" alt="error">
@@ -629,8 +718,8 @@
             <h2 style="margin-top: 20px;">Spotlight</h2>
             <div style="width:380;height:300; box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;margin-top: 20px;">
                 <video width="380" height="300" controls="controls" type="video/mp4" autoplay="false" preload="none"
-                    src="./img/How to find perfect foundation for your skin tone Ft. Purplle.mp4">
-            </video>
+                    src="How to find perfect foundation for your skin tone Ft. Purplle.mp4">
+                </video>
             </div>
         </div>
         <div style="width:35%">
@@ -930,8 +1019,7 @@
             <a href="https://www.linkedin.com/company/purplle-com/"><img style="padding-right: 115px;"
                     src="./img/Screenshot 2023-03-29 113004.png" alt="error"></a>
         </div>
-    </div>
+    </div> 
 </body>
 
 </html>
-<script src="./scripts/index.js"></script>

@@ -15,6 +15,7 @@
 
 .logo img {
     width: 100px;
+    /* height: 100px; */
     border-radius: 8px;
 }
 
@@ -193,6 +194,7 @@ nav p:hover {
     padding-left: 100px;
     padding-right: 150px;
     font-weight: lighter;
+   
 }
 
 #footer1>div>p {

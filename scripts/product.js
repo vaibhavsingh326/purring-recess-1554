@@ -102,7 +102,7 @@ const append = (data) => {
   container.innerHTML = null;
 
   data.forEach((el) => {
-    if (el.elite==true) {
+    if (el.elite==false) {
         return;
     }
     const div = document.createElement("div");
