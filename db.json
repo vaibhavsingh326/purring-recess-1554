@@ -1839,7 +1839,34 @@
   ],
   "wishlist": [],
   "orders": [],
-  "cart": ,
+  "cart": {
+    "3": [
+      {
+        "productName": "Lakme Absolute Perfect Radiance Skin Brightening Cream",
+        "price": "249",
+        "offer": "15",
+        "elite": false,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-Best_seller_700x700base_gUMVzNGWt_.png,ofo-top_right,dpr-2/static/img/product/286868/lakme-absolute-perfect-radiance-skin-brightening-day-creme-50-g_1_display_1615968869_4aee738c.jpg",
+        "category": "face Cream",
+        "review": "3",
+        "createdAt": 1680202239992,
+        "id": 4,
+        "storeId": 1
+      },
+      {
+        "productName": "Lotus Herbals Whiteglow Skin Whitening Cream",
+        "price": "295",
+        "offer": "30",
+        "elite": false,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-Best_seller_700x700base_gUMVzNGWt_.png,ofo-top_right,dpr-2/static/img/product/349218/lotus-herbals-whiteglow-skin-whitening-and-brightening-gel-creme-spf-25-i-pa-40-g-15_2_display_1643970573_b85e02bd.jpg",
+        "category": "face Cream",
+        "review": "5",
+        "createdAt": 1680202155551,
+        "id": 3,
+        "storeId": 1
+      }
+    ]
+  },
   "adminusers": [
     {
       "username": "vaibhavsingh326",
