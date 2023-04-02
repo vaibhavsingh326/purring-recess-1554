@@ -412,11 +412,16 @@ server.post("/admin/orders",(req,res)=>{
     }
     db.read()
     const orders = db.data.orders
+    const largestId=0
+    orders.forEach((ele)=>{
+      if(ele.orderId>largestId)largestId=ele.orderId
+    })
+    const newId = largestId+1
     const  order = db.data.orders.indexOf(orders.find((w)=> w.storeId===req.body.storeId))
     if(order ==-1){
-      db.data.orders.push({storeId:req.body.storeId,orderlist:[req.body.order]})
+      db.data.orders.push({storeId:req.body.storeId,orderlist:[{orderId:newId,order:req.body.order}]})
     }else{
-      db.data.orders[order].orderlist.push(req.body.order)
+      db.data.orders[order].orderlist.push({orderId:newId,order:req.body.order})
     }
     
     // if(db.data.adminorders[`${req.body.product.storeId}`]==undefined){
@@ -426,7 +431,7 @@ server.post("/admin/orders",(req,res)=>{
     // }
     db.write();
 
-  res.status(201).send(db.data.orders[`${req.body}`]);
+  res.status(201).send(req.body);
 
 })
 

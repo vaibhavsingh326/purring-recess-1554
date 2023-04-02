@@ -9,13 +9,14 @@
 
 
  //let data = JSON.parse(localStorage.getItem("cart")) || [];
-let userId = JSON.parse(localStorage.getItem("userId"))
+let userId = (JSON.parse(localStorage.getItem("userId")))
 console.log(userId);
  var data =[]
  let products=[]
 async function getdata(){
     let res = await fetch(`http://127.0.0.1:9090/cart?userId=${userId}`)
       products = await res.json()
+      console.log(products);
    data =products[0].products
     console.log(data);
     append(data); 

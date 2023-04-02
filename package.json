@@ -28,6 +28,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "nodemon": "^2.0.22",
     "vite": "^3.2.3"
   },
   "homepage": "."
