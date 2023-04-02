@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment</title>
+    
+    <title>Payment
+    </title>
+    <!-- <link rel="stylesheet" href="./scripts/cart.js"> -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
@@ -245,11 +248,36 @@
 </html>
 
 <script>
+
+
+
+
+
+
+
     let submit = document.getElementById("submit");
 
     submit.addEventListener("click",(e)=>{
         e.preventDefault();
         window.location="./pay-order.html"
     })
+
+  
+    const totalMRP = localStorage.getItem('totalMRP');
+const totalOffer = localStorage.getItem('totalOffer');
+const subtotal = localStorage.getItem('subtotal');
+const shipping = localStorage.getItem('shipping');
+const ordertotal = localStorage.getItem('ordertotal');
+const yousave = localStorage.getItem('yousave');
+
+// Update the corresponding HTML elements with the data
+document.querySelector(".totalmrp").innerHTML = `₹${totalMRP}`;
+document.querySelector(".savingonmrp").innerHTML = `₹${totalOffer}`;
+document.querySelector(".subtotal").innerHTML = `₹${subtotal}`;
+document.querySelector(".shippingcharges").innerHTML = `₹${shipping}`;
+document.querySelector(".ordertotal").innerHTML = `₹${ordertotal}`;
+document.querySelector(".yousave").innerHTML = `₹${yousave}`;
+
+
 
 </script>

@@ -273,17 +273,13 @@ server.post("/wishlist",(req,res)=>{
     }
     db.read()
 
-    const wishlist = db.data.wishlist
-    const wish = db.data.wishlist.indexOf(wishlist.find((w)=> w.userId===req.body.userId))
-    if(wish ==-1){
-      db.data.wishlist.push({userId:req.body.userId,products:[req.body.product]})
+   
 
     const wishlist = db.data.wishlist
     const wish = db.data.wishlist.indexOf(wishlist.find((w)=> w.userId===req.body.userId))
     if(wish ==-1){
       db.data.wishlist.push({userId:req.body.userId,products:[req.body.product]})
     }else{
-      db.data.wishlist[wish].products.push(req.body.product)
       db.data.wishlist[wish].products.push(req.body.product)
     }
     
@@ -299,11 +295,12 @@ server.post("/wishlist",(req,res)=>{
     //   db.data.wishlist[`${req.body.userId}`].push(req.body.product)
     // }
     db.write();
+  
 
   res.status(201).send(req.body.product);
-  res.status(201).send(req.body.product);
+ 
 
-})
+});
 
 
 server.post("/cart",(req,res)=>{
@@ -318,10 +315,7 @@ server.post("/cart",(req,res)=>{
     db.read()
 
     
-    const carts = db.data.cart
-    const  cart = db.data.cart.indexOf(carts.find((w)=> w.userId===req.body.userId))
-    if(cart ==-1){
-      db.data.cart.push({userId:req.body.userId,products:[req.body.product]})
+   
 
     
     const carts = db.data.cart
@@ -329,9 +323,10 @@ server.post("/cart",(req,res)=>{
     if(cart ==-1){
       db.data.cart.push({userId:req.body.userId,products:[req.body.product]})
     }else{
-      db.data.cart[cart].products.push(req.body.product)
+     
       db.data.cart[cart].products.push(req.body.product)
     }
+  
     
     // if(db.data.cart[`${req.body.userId}`]==undefined){
     //   db.data.cart[`${req.body.userId}`]=[req.body.product]
@@ -346,7 +341,7 @@ server.post("/cart",(req,res)=>{
     // }
     db.write();
 
-  res.status(201).send(req.body.product);
+ 
   res.status(201).send(req.body.product);
 
 })
@@ -365,18 +360,12 @@ server.post("/orders",(req,res)=>{
     db.read()
 
      
-    const orders = db.data.orders
-    const  order = db.data.orders.indexOf(orders.find((w)=> w.userId===req.body.userId))
-    if(order ==-1){
-      db.data.orders.push({userId:req.body.userId,products:[req.body.product]})
-
-     
+   
     const orders = db.data.orders
     const  order = db.data.orders.indexOf(orders.find((w)=> w.userId===req.body.userId))
     if(order ==-1){
       db.data.orders.push({userId:req.body.userId,products:[req.body.product]})
     }else{
-      db.data.orders[order].products.push(req.body.product)
       db.data.orders[order].products.push(req.body.product)
     }
     
@@ -392,8 +381,7 @@ server.post("/orders",(req,res)=>{
     //   db.data.orders[`${req.body.userId}`].push(req.body.product)
     // }
     db.write();
-
-  res.status(201).send(req.body.product);
+ 
   res.status(201).send(req.body.product);
 
 })

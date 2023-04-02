@@ -5,9 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .parent{
+            display: flex;
+           
+        }
+        .parent img{
+            width: 100%;
+        }
+        .div1{
+            width:50%
+        }
+        .remove{
+            margin-top: 70px;
+        }
+    </style>
 </head>
 <body>
-   <div class="div4">wish</div> 
+   <div class="wishlist">wish</div> 
 </body>
 </html>
 <script>
@@ -27,34 +42,30 @@ async function getdata(){
 getdata()
 
 const append = (data) => {
-    const container = document.querySelector(".div4");
+    const container = document.querySelector(".wishlist");
     container.innerHTML = null;
 
     data.forEach((el) => {
      
         const div = document.createElement("div");
+        div.classList.add("parent")
 
         const img = document.createElement("img");
         const div1=document.createElement("div");
+        div1.classList.add("div1")
         const h3 = document.createElement("h3");
         const priceP = document.createElement("p");
      
  
         const remove = document.createElement("button");
+        remove.classList.add("remove")
         const movetowishlist=document.createElement("button")
-   
-
 
         img.src = el.image;
         
         h3.innerText = el.productName;
         priceP.innerText = `Price-${el.price}`;
-   
-    
-     
-    
-
-
+        remove.innerText="Remove"
         remove.addEventListener("click", () => {
             data = data.filter((ele) => {
                 return ele.id !== el.id;
@@ -64,9 +75,7 @@ const append = (data) => {
             totalPrice(data);
         })
 
-    
-
-        movetowishlist.addEventListener("click", () => {
+     movetowishlist.addEventListener("click", () => {
       
           });
 
@@ -77,35 +86,5 @@ const append = (data) => {
         container.append(div);
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </script>
