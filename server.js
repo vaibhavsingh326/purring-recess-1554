@@ -313,8 +313,9 @@ server.post("/wishlist",(req,res)=>{
 
   
   res.status(201).send(req.body.product);
+ 
 
-})
+});
 
 
 server.post("/cart",(req,res)=>{
@@ -339,6 +340,7 @@ server.post("/cart",(req,res)=>{
       
       db.data.cart[cart].products.push(req.body.product)
     }
+  
     
     // if(db.data.cart[`${req.body.userId}`]==undefined){
     //   db.data.cart[`${req.body.userId}`]=[req.body.product]

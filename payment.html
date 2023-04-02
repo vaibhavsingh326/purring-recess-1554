@@ -322,4 +322,25 @@
 
     }
 
+
+
+
+  
+    const totalMRP = localStorage.getItem('totalMRP');
+const totalOffer = localStorage.getItem('totalOffer');
+const subtotal = localStorage.getItem('subtotal');
+const shipping = localStorage.getItem('shipping');
+const ordertotal = localStorage.getItem('ordertotal');
+const yousave = localStorage.getItem('yousave');
+
+// Update the corresponding HTML elements with the data
+document.querySelector(".totalmrp").innerHTML = `₹${totalMRP}`;
+document.querySelector(".savingonmrp").innerHTML = `₹${totalOffer}`;
+document.querySelector(".subtotal").innerHTML = `₹${subtotal}`;
+document.querySelector(".shippingcharges").innerHTML = `₹${shipping}`;
+document.querySelector(".ordertotal").innerHTML = `₹${ordertotal}`;
+document.querySelector(".yousave").innerHTML = `₹${yousave}`;
+
+
+
 </script>
