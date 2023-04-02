@@ -227,6 +227,19 @@ if(flag){
   res.status(201).send("Email already in use")
 }
 });
+server.patch("/products",(req,res)=>{
+  if(!req.body.id||!req.body.product){
+    return res
+    .status(400)
+    .send("Bad request , the data is not working")
+  }
+  db.read()
+  const product = db.data.products.find((p)=> p.id === req.body.product.id)
+  db.data.products.splice(db.data.products.indexOf(product),1,req.body.product)
+  db.write()
+  res.status(201).send(db.data.products)
+
+});
 
 
 server.post("/adminorders",(req,res)=>{
@@ -273,17 +286,15 @@ server.post("/wishlist",(req,res)=>{
     }
     db.read()
 
-    const wishlist = db.data.wishlist
-    const wish = db.data.wishlist.indexOf(wishlist.find((w)=> w.userId===req.body.userId))
-    if(wish ==-1){
-      db.data.wishlist.push({userId:req.body.userId,products:[req.body.product]})
+    
+    
 
     const wishlist = db.data.wishlist
     const wish = db.data.wishlist.indexOf(wishlist.find((w)=> w.userId===req.body.userId))
     if(wish ==-1){
       db.data.wishlist.push({userId:req.body.userId,products:[req.body.product]})
     }else{
-      db.data.wishlist[wish].products.push(req.body.product)
+     
       db.data.wishlist[wish].products.push(req.body.product)
     }
     
@@ -300,7 +311,7 @@ server.post("/wishlist",(req,res)=>{
     // }
     db.write();
 
-  res.status(201).send(req.body.product);
+  
   res.status(201).send(req.body.product);
 
 })
@@ -318,18 +329,14 @@ server.post("/cart",(req,res)=>{
     db.read()
 
     
-    const carts = db.data.cart
-    const  cart = db.data.cart.indexOf(carts.find((w)=> w.userId===req.body.userId))
-    if(cart ==-1){
-      db.data.cart.push({userId:req.body.userId,products:[req.body.product]})
-
+ 
     
     const carts = db.data.cart
     const  cart = db.data.cart.indexOf(carts.find((w)=> w.userId===req.body.userId))
     if(cart ==-1){
       db.data.cart.push({userId:req.body.userId,products:[req.body.product]})
     }else{
-      db.data.cart[cart].products.push(req.body.product)
+      
       db.data.cart[cart].products.push(req.body.product)
     }
     
@@ -347,7 +354,7 @@ server.post("/cart",(req,res)=>{
     db.write();
 
   res.status(201).send(req.body.product);
-  res.status(201).send(req.body.product);
+  
 
 })
 
@@ -356,7 +363,7 @@ server.post("/cart",(req,res)=>{
 server.post("/orders",(req,res)=>{
   if(
     !req.body.userId||
-    !req.body.product
+    !req.body.order
     ){
       return res
       .status(400)
@@ -365,19 +372,15 @@ server.post("/orders",(req,res)=>{
     db.read()
 
      
-    const orders = db.data.orders
-    const  order = db.data.orders.indexOf(orders.find((w)=> w.userId===req.body.userId))
-    if(order ==-1){
-      db.data.orders.push({userId:req.body.userId,products:[req.body.product]})
+    
 
      
     const orders = db.data.orders
     const  order = db.data.orders.indexOf(orders.find((w)=> w.userId===req.body.userId))
     if(order ==-1){
-      db.data.orders.push({userId:req.body.userId,products:[req.body.product]})
+      db.data.orders.push({userId:req.body.userId,orderlist:[req.body.order]})
     }else{
-      db.data.orders[order].products.push(req.body.product)
-      db.data.orders[order].products.push(req.body.product)
+      db.data.orders[order].orderlist.push(req.body.order)
     }
     
     // if(db.data.orders[`${req.body.userId}`]==undefined){
@@ -393,27 +396,34 @@ server.post("/orders",(req,res)=>{
     // }
     db.write();
 
-  res.status(201).send(req.body.product);
-  res.status(201).send(req.body.product);
+  res.status(201).send(req.body.order);
+  
 
 })
 
 server.post("/admin/orders",(req,res)=>{
   if(
-    !req.body.userId||
-    !req.body.product
+    !req.body.storeId||
+    !req.body.order
     ){
       return res
       .status(400)
       .send("Bad request, requires username, password & email.");
     }
     db.read()
-    
-    if(db.data.adminorders[`${req.body.product.storeId}`]==undefined){
-      db.data.adminorders[`${req.body.product.storeId}`]=[req.body]
+    const orders = db.data.orders
+    const  order = db.data.orders.indexOf(orders.find((w)=> w.storeId===req.body.storeId))
+    if(order ==-1){
+      db.data.orders.push({storeId:req.body.storeId,orderlist:[req.body.order]})
     }else{
-      db.data.orders[`${req.body.userId}`].push(req.body)
+      db.data.orders[order].orderlist.push(req.body.order)
     }
+    
+    // if(db.data.adminorders[`${req.body.product.storeId}`]==undefined){
+    //   db.data.adminorders[`${req.body.product.storeId}`]=[req.body]
+    // }else{
+    //   db.data.orders[`${req.body.userId}`].push(req.body)
+    // }
     db.write();
 
   res.status(201).send(db.data.orders[`${req.body}`]);
