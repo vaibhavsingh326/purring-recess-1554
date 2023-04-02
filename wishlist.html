@@ -12,8 +12,8 @@
 </html>
 <script>
 
-
-let data = JSON.parse(localStorage.getItem("cart")) || [];
+let newData=[]
+let data = JSON.parse(localStorage.getItem("wishlist")) || [];
 let userId = JSON.parse(localStorage.getItem("userId"))
 console.log(userId);
 async function getdata(){
@@ -39,7 +39,7 @@ const append = (data) => {
         const h3 = document.createElement("h3");
         const priceP = document.createElement("p");
      
-        const qty = document.createElement("button");
+ 
         const remove = document.createElement("button");
         const movetowishlist=document.createElement("button")
    
@@ -50,9 +50,8 @@ const append = (data) => {
         h3.innerText = el.productName;
         priceP.innerText = `Price-${el.price}`;
    
-        qty.innerText = `Qty - ${el.qty}`
-        remove.innerText = "Remove";
-        movetowishlist.innerText="Move to Wishlist"
+    
+     
     
 
 
@@ -60,37 +59,21 @@ const append = (data) => {
             data = data.filter((ele) => {
                 return ele.id !== el.id;
             })
-            localStorage.setItem("cart", JSON.stringify(data))
+            localStorage.setItem("wishlist", JSON.stringify(data))
             append(data)
             totalPrice(data);
         })
 
-        // // Addind eventlistener on increase button
-        // increment.addEventListener("click", () => {
-        //     el = el.qty++;
-        //     localStorage.setItem("cart", JSON.stringify(data))
-        //     append(data);
-        //     totalPrice(data);
-        // })
-
-        // // Addind eventlistener on deccrease button
-        // decrement.addEventListener("click", () => {
-        //     if (el.qty > 1) {
-        //         el = el.qty--;
-        //         localStorage.setItem("cart", JSON.stringify(data))
-        //         append(data);
-        //         totalPrice(data);
-        //     }
-        // })
+    
 
         movetowishlist.addEventListener("click", () => {
       
           });
 
-       div1.append(h3,qty,remove,movetowishlist)
+       div1.append(h3,remove)
 
    
-        div.append(img,div1, priceP,remove)
+        div.append(img,div1, priceP)
         container.append(div);
     })
 }
