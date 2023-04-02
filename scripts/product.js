@@ -170,3 +170,15 @@ function checkDuplicate(el) {
   }
   return false;
 }
+async function getProductsByAscPrice(){
+    let res = await fetch(`http://127.0.0.1:9090/products?_sort=price&_order=asc`)
+    let data =await res.json()
+    append(data)
+    
+}
+async function getProductsByAscPrice(){
+    let res = await fetch(`http://127.0.0.1:9090/products?_sort=price&_order=desc`)
+    let data =await res.json()
+    append(data)
+    
+}

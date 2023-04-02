@@ -11,7 +11,7 @@
 
 let data = JSON.parse(localStorage.getItem("cart")) || [];
 let userId = JSON.parse(localStorage.getItem("userId"))
-
+console.log(userId);
 async function getdata(){
     let res = await fetch(`http://127.0.0.1:9090/cart?userId=${userId}`)
     let newData = await res.json()
