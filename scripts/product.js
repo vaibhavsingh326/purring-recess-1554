@@ -76,7 +76,8 @@
 
 
 
-let userId=3
+let userId=JSON.parse(localStorage.getItem("userId"))
+let userId=Number(JSON.parse(localStorage.getItem("userId")))
 //JSON.parse(localStorage.getItem("userId"))
 console.log(userId);
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -150,7 +151,7 @@ async function gotocart(e){
             product=ele
         }
      })
-    console.log(product);
+    console.log(userId,product);
     let res =await fetch("http://127.0.0.1:9090/cart",{
         method:"POST",
         headers:{
@@ -158,6 +159,7 @@ async function gotocart(e){
         },
         body:JSON.stringify({userId,product})
     })
+    console.log(res)
     let data = await res.json()
     console.log(data);
 }
@@ -169,4 +171,23 @@ function checkDuplicate(el) {
     }
   }
   return false;
+}
+async function getProductsByAscPrice(){
+    let res = await fetch(`http://127.0.0.1:9090/products?_sort=price&_order=asc`)
+    let data =await res.json()
+    append(data)
+    
+}
+async function getProductsByAscPrice(){
+    let res = await fetch(`http://127.0.0.1:9090/products?_sort=price&_order=desc`)
+    let data =await res.json()
+    append(data)
+    
+}
+async function getproductByCtaegory(e){
+    let category = e.target.dataset.category
+    let res = await fetch(`http://127.0.0.1:9090/products?category=${category}`)
+    let response = await res.json()
+    append(response)
+
 }
