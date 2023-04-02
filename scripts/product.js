@@ -77,7 +77,7 @@
 
 
 let userId=JSON.parse(localStorage.getItem("userId"))
-let userId=Number(JSON.parse(localStorage.getItem("userId")))
+// let userId=Number(JSON.parse(localStorage.getItem("userId")))
 //JSON.parse(localStorage.getItem("userId"))
 console.log(userId);
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
