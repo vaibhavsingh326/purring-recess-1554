@@ -2076,26 +2076,6 @@
           "createdAt": 1680202418968,
           "id": 6,
           "storeId": 1
-        }
-      ]
-    }
-  ],
-  "orders": [],
-  "cart": [
-    {
-      "userId": 66,
-      "products": [
-        {
-          "productName": "Maybelline Newyork Sensational Liquid Lipstick",
-          "price": "399",
-          "offer": "70",
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
-          "category": "Lipstick",
-          "review": "5",
-          "createdAt": 1680202418968,
-          "id": 6,
-          "storeId": 1
         },
         {
           "productName": "Lakme Absolute Matte Lipstick",
@@ -2138,11 +2118,11 @@
           "price": 499,
           "offer": 30,
           "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
-          "category": "Lipstick",
-          "review": "5",
-          "createdAt": 1680202418968,
-          "id": 6,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/269644/1-percentage-hyaluronic-sunscreen-aqua-ultra-light-gel-with-spf-50-pa-for-broad-spectrum-uv-a-uv-b-and-blue-light-protection-50g_1_display_1653126903_d20570c1.jpg",
+          "category": "Sunscreen",
+          "review": "4",
+          "createdAt": 1680202936282,
+          "id": 11,
           "storeId": 1
         },
         {
