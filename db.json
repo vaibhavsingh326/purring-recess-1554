@@ -681,6 +681,54 @@
       "lastname": "Nagaraju",
       "createdAt": 1680160273883,
       "id": 65
+    },
+    {
+      "password": "$2b$10$.9o8/IRu1N09n.Wi1q/K1.V5C5Xu.eT.qWBGQUtvQiQloj/T1GFoW",
+      "email": "nanilonka143@gmail.com",
+      "firstname": "Lonka",
+      "lastname": "Nagaraju",
+      "createdAt": 1680418906405,
+      "id": 66
+    },
+    {
+      "password": "$2b$10$YZoI7dEDW4wUI1LTgsYHfOXzjeFoHyjkpK0nbWoUVeoP7JAnMgAuK",
+      "email": "nanilonka143@gmail.com",
+      "firstname": "Lonka",
+      "lastname": "Nagaraju",
+      "createdAt": 1680418907013,
+      "id": 67
+    },
+    {
+      "password": "$2b$10$4a9Imepsjx5i5UMaINMuGOEx4uKZ98D4BzuMa13zIgEvwkibNEV9u",
+      "email": "nanilonka143@gmail.com",
+      "firstname": "Lonka",
+      "lastname": "Nagaraju",
+      "createdAt": 1680418907334,
+      "id": 68
+    },
+    {
+      "password": "$2b$10$TeMLJoHZuW3rUsjkPp6lV.YMWucXYoZay57e0ZoZ72lGY2v1sijgm",
+      "email": "nanilonka143@gmail.com",
+      "firstname": "Lonka",
+      "lastname": "Nagaraju",
+      "createdAt": 1680418907741,
+      "id": 69
+    },
+    {
+      "password": "$2b$10$ViVqEynZEmq8DgURs9utiuIsMYkOEi/84MQQ4wWr.7bsVYdohEryO",
+      "email": "nanilonka143@gmail.com",
+      "firstname": "Lonka",
+      "lastname": "Nagaraju",
+      "createdAt": 1680418908062,
+      "id": 70
+    },
+    {
+      "password": "$2b$10$B0pCxM3XOrLfyenR9BqItubd4cb2x3lcpH5gkHJdYBE/JCFoyaxpu",
+      "email": "nanilonka143@gmail.com",
+      "firstname": "Lonka",
+      "lastname": "Nagaraju",
+      "createdAt": 1680437317304,
+      "id": 71
     }
   ],
   "products": [
@@ -1837,10 +1885,239 @@
       "storeId": 4
     }
   ],
-
   "wishlist": {},
   "orders": {},
   "cart": {
+    "3": [
+      {
+        "productName": "Lakme Absolute Matte Lipstick",
+        "price": "550",
+        "offer": "60",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,dpr-2/static/img/product/331884/lakme-9to5-primer-matte-lip-color-mp6-deep-wine-3-6-g_9_display_1633410901_44ccf247.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202531652,
+        "id": 56,
+        "storeId": 3
+      },
+      {
+        "productName": "Lakme Absolute Matte Lipstick",
+        "price": "550",
+        "offer": "60",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,dpr-2/static/img/product/331884/lakme-9to5-primer-matte-lip-color-mp6-deep-wine-3-6-g_9_display_1633410901_44ccf247.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202531652,
+        "id": 56,
+        "storeId": 3
+      },
+      {
+        "productName": "Lakme Absolute Matte Lipstick",
+        "price": "550",
+        "offer": "60",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,dpr-2/static/img/product/331884/lakme-9to5-primer-matte-lip-color-mp6-deep-wine-3-6-g_9_display_1633410901_44ccf247.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202531652,
+        "id": 56,
+        "storeId": 3
+      },
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 6,
+        "storeId": 1
+      },
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 6,
+        "storeId": 1
+      },
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 6,
+        "storeId": 1
+      },
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 6,
+        "storeId": 1
+      },
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 6,
+        "storeId": 1
+      },
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 6,
+        "storeId": 1
+      },
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 6,
+        "storeId": 1
+      },
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 6,
+        "storeId": 1
+      },
+      {
+        "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+        "price": "399",
+        "offer": "70",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+        "category": "Lipstick",
+        "review": "5",
+        "createdAt": 1680202418968,
+        "id": 6,
+        "storeId": 1
+      },
+      {
+        "productName": "Mamaearth Ubtan Ultra Light Face Cream",
+        "price": "259",
+        "offer": "10",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/241644/mamaearth-ubtan-ultra-light-gel-oil-free-moisturizer-with-turmeric-and-saffron-for-deep-hydration-200-ml_1_display_1623389908_47b530e7.jpg",
+        "category": "face Cream",
+        "review": "4",
+        "createdAt": 1680202070075,
+        "id": 2,
+        "storeId": 1
+      },
+      {
+        "productName": "Mamaearth Ubtan Ultra Light Face Cream",
+        "price": "259",
+        "offer": "10",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/241644/mamaearth-ubtan-ultra-light-gel-oil-free-moisturizer-with-turmeric-and-saffron-for-deep-hydration-200-ml_1_display_1623389908_47b530e7.jpg",
+        "category": "face Cream",
+        "review": "4",
+        "createdAt": 1680202070075,
+        "id": 2,
+        "storeId": 1
+      },
+      {
+        "productName": "Mamaearth Ubtan Ultra Light Face Cream",
+        "price": "259",
+        "offer": "10",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/241644/mamaearth-ubtan-ultra-light-gel-oil-free-moisturizer-with-turmeric-and-saffron-for-deep-hydration-200-ml_1_display_1623389908_47b530e7.jpg",
+        "category": "face Cream",
+        "review": "4",
+        "createdAt": 1680202070075,
+        "id": 2,
+        "storeId": 1
+      },
+      {
+        "productName": "Good Vibes Papaya Hydrating Face Cream",
+        "price": "255",
+        "offer": "100",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/275214/good-vibes-hydrating-face-cream-papaya-50-g-1_6_display_1620451298_33edd5ed.jpg",
+        "category": "face Cream",
+        "review": "5",
+        "createdAt": 1680201769118,
+        "id": 1,
+        "storeId": 1
+      },
+      {
+        "productName": "Good Vibes Papaya Hydrating Face Cream",
+        "price": "255",
+        "offer": "100",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/275214/good-vibes-hydrating-face-cream-papaya-50-g-1_6_display_1620451298_33edd5ed.jpg",
+        "category": "face Cream",
+        "review": "5",
+        "createdAt": 1680201769118,
+        "id": 1,
+        "storeId": 1
+      },
+      {
+        "productName": "Good Vibes Papaya Hydrating Face Cream",
+        "price": "255",
+        "offer": "100",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/275214/good-vibes-hydrating-face-cream-papaya-50-g-1_6_display_1620451298_33edd5ed.jpg",
+        "category": "face Cream",
+        "review": "5",
+        "createdAt": 1680201769118,
+        "id": 1,
+        "storeId": 1
+      },
+      {
+        "productName": "Good Vibes Papaya Hydrating Face Cream",
+        "price": "255",
+        "offer": "100",
+        "elite": true,
+        "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/275214/good-vibes-hydrating-face-cream-papaya-50-g-1_6_display_1620451298_33edd5ed.jpg",
+        "category": "face Cream",
+        "review": "5",
+        "createdAt": 1680201769118,
+        "id": 1,
+        "storeId": 1
+      }
+    ],
     "57": [
       {
         "productName": "Maybelline Newyork Sensational Liquid Lipstick",

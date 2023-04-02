@@ -6,9 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://kit.fontawesome.com/5089e6484a.js" crossorigin="anonymous"></script>
     <title>Wishlist Page</title>
 
     <style>
+        .parent{
+            display: flex;
+        }
+        .parent img{
+            width: 100%;
+        }
+        .div1{
+            width:50%
+        }
+        .remove{
+            margin-top: 70px;
+        }
         #empty {
             background-color: rgb(223, 43, 103);
             height: 170px;
@@ -64,7 +77,19 @@
         </div>
         <div class="icon">
             <a href="./wishlist.html"><i class="fa-regular fa-heart"></i></a>
-            <a href="./login.html"><i class="fa-sharp fa-regular fa-face-smile"></i></a>
+            <div class="drop">
+                <i class="fa-sharp fa-regular fa-face-smile"></i>
+                <div class="dropcont">
+                    <a href="signup.html">USER REGISTER</a>
+                    <a href="login.html">USER LOGIN</a>
+                    <a href="elite.html">ELITE MEMBERSHIP</a>
+                    <a href="">YOUR BEAUTY PROFILE</a>
+                    <a href="adminlogin.html">ADMIN LOGIN</a>
+                    <a href="admin-register.html">ADMIN REGISTER</a>
+                    <a href="./wishlist.html">❤️YOUR WISHLIST</a>
+                </div>
+            </div>
+
             <a href="./cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
         </div>
     </div>
@@ -76,11 +101,13 @@
             <p class="dropbtn">SHOP CATEGORIES
             <p>
         </div>
-        <p>BRANDS</p>
+        <a href="./brand.html"><h2 style="font-size: larger;">BRANDS</h2></a>
         <p>OFFERS</p>
-        <p>NEW</p>
+        <a href="./new-arrival.html">
+            <h2>NEW</h2>
+        </a>
         <p>SPLURGE</p>
-        <p>MAGAZINE</p>
+        <a href="/magazine.html"><h2  style="font-size: larger;">MAGAZINE</h2></a>
         <a href="./elite.html">
             <h2 style="font-size: larger;">ELITE OFFERS</h2>
         </a>
@@ -133,7 +160,7 @@
 
 
 
-    <div>
+    <div class="whishlist">
         <!-- write on cart part append -->
     </div>
 
@@ -168,8 +195,8 @@
         <div>
             <h2 style="margin-top: 20px;">Spotlight</h2>
             <div style="width:380;height:300; box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;margin-top: 20px;">
-                <video width="380" height="300" controls="controls" type="video/mp4" autoplay="false" preload="none"
-                    src="How to find perfect foundation for your skin tone Ft. Purplle.mp4">
+                <video width="380" height="300" controls="controls" type="video/mp4" controls preload="none"
+                    src="./img/How to find perfect foundation for your skin tone Ft. Purplle.mp4">
                 </video>
             </div>
         </div>
@@ -483,5 +510,52 @@
             image.src = URL.createObjectURL(event.target.files[0]);
         });
     }
+
+    
+
+    let newData=[]
+let data = JSON.parse(localStorage.getItem("wishlist")) || [];
+let userId = JSON.parse(localStorage.getItem("userId"))
+console.log(userId);
+async function getdata(){
+    let res = await fetch(`http://127.0.0.1:9090/wishlist?userId=${userId}`)
+    let newData = await res.json()
+    console.log(newData);
+    append(newData[0].products);
+}
+getdata()
+const append = (data) => {
+    const container = document.querySelector(".wishlist");
+    container.innerHTML = null;
+    data.forEach((el) => {
+        const div = document.createElement("div");
+        div.classList.add("parent")
+        const img = document.createElement("img");
+        const div1=document.createElement("div");
+        div1.classList.add("div1")
+        const h3 = document.createElement("h3");
+        const priceP = document.createElement("p");
+        const remove = document.createElement("button");
+        remove.classList.add("remove")
+        const movetowishlist=document.createElement("button")
+        img.src = el.image;
+        h3.innerText = el.productName;
+        priceP.innerText = `Price-${el.price}`;
+        remove.innerText="Remove"
+        remove.addEventListener("click", () => {
+            data = data.filter((ele) => {
+                return ele.id !== el.id;
+            })
+            localStorage.setItem("wishlist", JSON.stringify(data))
+            append(data)
+            totalPrice(data);
+        })
+     movetowishlist.addEventListener("click", () => {
+          });
+       div1.append(h3,remove)
+        div.append(img,div1, priceP)
+        container.append(div);
+    })
+}
 </script>
 
