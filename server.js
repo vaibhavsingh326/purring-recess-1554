@@ -227,6 +227,54 @@ if(flag){
   res.status(201).send("Email already in use")
 }
 });
+server.patch("/products",(req,res)=>{
+  if(!req.body.id||!req.body.product){
+    return res
+    .status(400)
+    .send("Bad request , the data is not working")
+  }
+  db.read()
+  const product = db.data.products.find((p)=> p.id === req.body.product.id)
+  db.data.products.splice(db.data.products.indexOf(product),1,req.body.product)
+  db.write()
+  res.status(201).send(db.data.products)
+
+});
+
+
+server.post("/adminorders",(req,res)=>{
+  if(
+    !req.body.storeId||
+    !req.body.product
+    ){
+      return res
+      .status(400)
+      .send("Bad request, requires username, password & email.");
+    }
+    db.read()
+
+    const adminorders = db.data.adminorders
+    const order = db.data.adminorders.indexOf(adminorders.find((w)=> w.userId===req.body.userId))
+    if(order ==-1){
+      db.data.adminorders.push({userId:req.body.userId,products:[req.body.product]})
+    }else{
+      db.data.adminorders[order].products.push(req.body.product)
+    }
+    
+    // if(db.data.wishlist[`${req.body.userId}`]==undefined){
+    //   db.data.wishlist[`${req.body.userId}`]=[req.body.product]
+    // }else{
+    //   db.data.wishlist[`${req.body.userId}`].push(req.body.product)
+    // }
+    db.write();
+
+  res.status(201).send(req.body.product);
+
+})
+
+
+
+
 server.post("/wishlist",(req,res)=>{
   if(
     !req.body.userId||
@@ -237,15 +285,34 @@ server.post("/wishlist",(req,res)=>{
       .send("Bad request, requires username, password & email.");
     }
     db.read()
+
     
-    if(db.data.wishlist[`${req.body.userId}`]==undefined){
-      db.data.wishlist[`${req.body.userId}`]=[req.body.product]
+    
+
+    const wishlist = db.data.wishlist
+    const wish = db.data.wishlist.indexOf(wishlist.find((w)=> w.userId===req.body.userId))
+    if(wish ==-1){
+      db.data.wishlist.push({userId:req.body.userId,products:[req.body.product]})
     }else{
-      db.data.wishlist[`${req.body.userId}`].push(req.body.product)
+     
+      db.data.wishlist[wish].products.push(req.body.product)
     }
+    
+    // if(db.data.wishlist[`${req.body.userId}`]==undefined){
+    //   db.data.wishlist[`${req.body.userId}`]=[req.body.product]
+    // }else{
+    //   db.data.wishlist[`${req.body.userId}`].push(req.body.product)
+    // }
+    
+    // if(db.data.wishlist[`${req.body.userId}`]==undefined){
+    //   db.data.wishlist[`${req.body.userId}`]=[req.body.product]
+    // }else{
+    //   db.data.wishlist[`${req.body.userId}`].push(req.body.product)
+    // }
     db.write();
 
-  res.status(201).send(db.data.wishlist[`${req.body.userId}`]);
+  
+  res.status(201).send(req.body.product);
 
 })
 
@@ -260,15 +327,34 @@ server.post("/cart",(req,res)=>{
       .send("Bad request, requires username, password & email.");
     }
     db.read()
+
     
-    if(db.data.cart[`${req.body.userId}`]==undefined){
-      db.data.cart[`${req.body.userId}`]=[req.body.product]
+ 
+    
+    const carts = db.data.cart
+    const  cart = db.data.cart.indexOf(carts.find((w)=> w.userId===req.body.userId))
+    if(cart ==-1){
+      db.data.cart.push({userId:req.body.userId,products:[req.body.product]})
     }else{
-      db.data.cart[`${req.body.userId}`].push(req.body.product)
+      
+      db.data.cart[cart].products.push(req.body.product)
     }
+    
+    // if(db.data.cart[`${req.body.userId}`]==undefined){
+    //   db.data.cart[`${req.body.userId}`]=[req.body.product]
+    // }else{
+    //   db.data.cart[`${req.body.userId}`].push(req.body.product)
+    // }
+    
+    // if(db.data.cart[`${req.body.userId}`]==undefined){
+    //   db.data.cart[`${req.body.userId}`]=[req.body.product]
+    // }else{
+    //   db.data.cart[`${req.body.userId}`].push(req.body.product)
+    // }
     db.write();
 
-  res.status(201).send(db.data.cart[`${req.body.userId}`]);
+  res.status(201).send(req.body.product);
+  
 
 })
 
@@ -277,44 +363,75 @@ server.post("/cart",(req,res)=>{
 server.post("/orders",(req,res)=>{
   if(
     !req.body.userId||
-    !req.body.product
+    !req.body.order
     ){
       return res
       .status(400)
       .send("Bad request, requires username, password & email.");
     }
     db.read()
+
+     
     
-    if(db.data.orders[`${req.body.userId}`]==undefined){
-      db.data.orders[`${req.body.userId}`]=[req.body.product]
+
+     
+    const orders = db.data.orders
+    const  order = db.data.orders.indexOf(orders.find((w)=> w.userId===req.body.userId))
+    if(order ==-1){
+      db.data.orders.push({userId:req.body.userId,orderlist:[req.body.order]})
     }else{
-      db.data.orders[`${req.body.userId}`].push(req.body.product)
+      db.data.orders[order].orderlist.push(req.body.order)
     }
+    
+    // if(db.data.orders[`${req.body.userId}`]==undefined){
+    //   db.data.orders[`${req.body.userId}`]=[req.body.product]
+    // }else{
+    //   db.data.orders[`${req.body.userId}`].push(req.body.product)
+    // }
+    
+    // if(db.data.orders[`${req.body.userId}`]==undefined){
+    //   db.data.orders[`${req.body.userId}`]=[req.body.product]
+    // }else{
+    //   db.data.orders[`${req.body.userId}`].push(req.body.product)
+    // }
     db.write();
 
-  res.status(201).send(db.data.orders[`${req.body.userId}`]);
+  res.status(201).send(req.body.order);
+  
 
 })
 
 server.post("/admin/orders",(req,res)=>{
   if(
-    !req.body.userId||
-    !req.body.product
+    !req.body.storeId||
+    !req.body.order
     ){
       return res
       .status(400)
       .send("Bad request, requires username, password & email.");
     }
     db.read()
-    
-    if(db.data.adminorders[`${req.body.product.storeId}`]==undefined){
-      db.data.adminorders[`${req.body.product.storeId}`]=[req.body]
+    const orders = db.data.orders
+    const largestId=0
+    orders.forEach((ele)=>{
+      if(ele.orderId>largestId)largestId=ele.orderId
+    })
+    const newId = largestId+1
+    const  order = db.data.orders.indexOf(orders.find((w)=> w.storeId===req.body.storeId))
+    if(order ==-1){
+      db.data.orders.push({storeId:req.body.storeId,orderlist:[{orderId:newId,order:req.body.order}]})
     }else{
-      db.data.orders[`${req.body.userId}`].push(req.body)
+      db.data.orders[order].orderlist.push({orderId:newId,order:req.body.order})
     }
+    
+    // if(db.data.adminorders[`${req.body.product.storeId}`]==undefined){
+    //   db.data.adminorders[`${req.body.product.storeId}`]=[req.body]
+    // }else{
+    //   db.data.orders[`${req.body.userId}`].push(req.body)
+    // }
     db.write();
 
-  res.status(201).send(db.data.orders[`${req.body}`]);
+  res.status(201).send(req.body);
 
 })
 
