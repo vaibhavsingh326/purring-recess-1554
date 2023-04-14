@@ -109,7 +109,7 @@ function totalPrice(products, quantity=1) {
        document.querySelector(".totalmrp").innerHTML = `₹${totalMRP.toFixed(2)}`;
        document.querySelector(".savingonmrp").innerHTML = `₹${totalOffer.toFixed(2)}`;
        document.querySelector(".subtotal").innerHTML = `₹${subtotal.toFixed(2)}`;
-       document.querySelector(".shippingcharges").innerHTML = `₹${ship.toFixed(2)}`;
+    //    document.querySelector(".shippingcharges").innerHTML = `₹${ship.toFixed(2)}`;
        document.querySelector(".ordertotal").innerHTML = `₹${ordertotal.toFixed(2)}`;
        document.querySelector(".yousave").innerHTML = `₹${yousave.toFixed(2)}`;
     

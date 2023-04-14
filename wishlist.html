@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
     <script src="https://kit.fontawesome.com/5089e6484a.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
+        #empty {
+            background-color: rgb(223, 43, 103);
+            height: 170px;
+            margin-top: -34px;
+        }
+        .avatar {
+            margin-top: 80px;
+            margin-left: 50%;
+        }
+        #button {
+            border: none;
+            
+            background-color: rgb(40, 36, 36);
+        }
+       
+        .part1 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+            width: 90%;
+            margin: auto;
+            margin-top: -50px;
+            background-color: white;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        }
+        .part1>p {
+            font-family: "Lucida Console", "Courier New", monospace;
+            
+        }
         .parent{
             display: flex;
         }
@@ -132,7 +162,7 @@
 
 
 
-    <div class="whishlist">
+    <div class="wishlist">
         <!-- write on cart part append -->
     </div>
 
@@ -474,64 +504,59 @@
 </html>
 <script>
 
-let newData=[]
-let data = JSON.parse(localStorage.getItem("wishlist")) || [];
-let userId = JSON.parse(localStorage.getItem("userId"))
-console.log(userId);
-async function getdata(){
-    let res = await fetch(`http://127.0.0.1:9090/wishlist?userId=${userId}`)
-    let newData = await res.json()
-   
-    console.log(newData);
-    append(newData[0].products); 
-}
-
-getdata()
-
-const append = (data) => {
-    const container = document.querySelector(".wishlist");
-    container.innerHTML = null;
-
-    data.forEach((el) => {
-     
-        const div = document.createElement("div");
-        div.classList.add("parent")
-
-        const img = document.createElement("img");
-        const div1=document.createElement("div");
-        div1.classList.add("div1")
-        const h3 = document.createElement("h3");
-        const priceP = document.createElement("p");
-     
- 
-        const remove = document.createElement("button");
-        remove.classList.add("remove")
-        const movetowishlist=document.createElement("button")
-
-        img.src = el.image;
-        
-        h3.innerText = el.productName;
-        priceP.innerText = `Price-${el.price}`;
-        remove.innerText="Remove"
-        remove.addEventListener("click", () => {
-            data = data.filter((ele) => {
-                return ele.id !== el.id;
+    let newData=[]
+    let data = JSON.parse(localStorage.getItem("wishlist")) || [];
+    let userId = JSON.parse(localStorage.getItem("userId"))
+    console.log(userId);
+    async function getdata(){
+        let res = await fetch(`http://127.0.0.1:9090/wishlist?userId=${userId}`)
+        let newData = await res.json()
+        console.log(newData);
+        append(newData[0].products);
+    }
+    getdata()
+    const append = (data) => {
+        const container = document.querySelector(".wishlist");
+        container.innerHTML = null;
+        data.forEach((el) => {
+            const div = document.createElement("div");
+            div.classList.add("parent")
+            const img = document.createElement("img");
+            const div1=document.createElement("div");
+            div1.classList.add("div1")
+            const h3 = document.createElement("h3");
+            const priceP = document.createElement("p");
+            const remove = document.createElement("button");
+            remove.classList.add("remove")
+            const movetowishlist=document.createElement("button")
+            img.src = el.image;
+            h3.innerText = el.productName;
+            priceP.innerText = `Price-${el.price}`;
+            remove.innerText="Remove"
+            remove.addEventListener("click", () => {
+                data = data.filter((ele) => {
+                    return ele.id !== el.id;
+                })
+                localStorage.setItem("wishlist", JSON.stringify(data))
+                append(data)
+                totalPrice(data);
             })
-            localStorage.setItem("wishlist", JSON.stringify(data))
-            append(data)
-            totalPrice(data);
+         movetowishlist.addEventListener("click", () => {
+              });
+           div1.append(h3,remove)
+            div.append(img,div1, priceP)
+            container.append(div);
         })
+    }
 
-     movetowishlist.addEventListener("click", () => {
-      
-          });
+    function fileUpload() {
+        document.getElementById("file").click();
+        document.getElementById("file").addEventListener("change", function (event) {
+            console.log(event.target.files[0]);
+            var image = document.getElementById("preview");
+            image.src = URL.createObjectURL(event.target.files[0]);
+        });
+    }
 
-       div1.append(h3,remove)
-
-   
-        div.append(img,div1, priceP)
-        container.append(div);
-    })
-}
 
 </script>
