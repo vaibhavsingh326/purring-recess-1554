@@ -5,9 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <script src="https://kit.fontawesome.com/5089e6484a.js" crossorigin="anonymous"></script>
+    
     <title>Document</title>
     <style>
+        .priceP{
+           color: fuchsia;
+           font-size: 20px;
+        }
+        .wishlist{
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 60px;
+        }
+
+        .part1 img{
+            margin-left: 30%;
+        }
+        .part1{
+            display: flex;
+            justify-content: space-between;
+        }
+        .parent{
+            display: flex;
+            width: 50%;
+       
+           
+        }
+        .parent img{
+            width: 100%;
+            margin-left: 10px;
+        }
+        /* .div1{
+            width:30%;
+           
+            
+        } */
+        .remove{
+           background-color: pink;
+           border: 1px solid white;
+           padding: 10px;
+        }
+        /* .parent{
+            display: flex;
+           
+        } */
+        .parent img{
+            width: 100%;
+        }
+        .div1{
+            width:50%
+        }
+        .remove{
+            margin-top: 30px;
+        }
+        .avatar{
+            margin: auto;
+        }
+
         #empty {
             background-color: rgb(223, 43, 103);
             height: 170px;
@@ -36,31 +93,6 @@
         .part1>p {
             font-family: "Lucida Console", "Courier New", monospace;
             
-        }
-        .parent{
-            display: flex;
-        }
-        .parent img{
-            width: 100%;
-        }
-        .div1{
-            width:50%
-        }
-        .remove{
-            margin-top: 70px;
-        }
-        .parent{
-            display: flex;
-           
-        }
-        .parent img{
-            width: 100%;
-        }
-        .div1{
-            width:50%
-        }
-        .remove{
-            margin-top: 70px;
         }
     </style>
 </head>
@@ -504,52 +536,66 @@
 </html>
 <script>
 
-    let newData=[]
-    let data = JSON.parse(localStorage.getItem("wishlist")) || [];
-    let userId = JSON.parse(localStorage.getItem("userId"))
-    console.log(userId);
-    async function getdata(){
-        let res = await fetch(`http://127.0.0.1:9090/wishlist?userId=${userId}`)
-        let newData = await res.json()
-        console.log(newData);
-        append(newData[0].products);
-    }
-    getdata()
-    const append = (data) => {
-        const container = document.querySelector(".wishlist");
-        container.innerHTML = null;
-        data.forEach((el) => {
-            const div = document.createElement("div");
-            div.classList.add("parent")
-            const img = document.createElement("img");
-            const div1=document.createElement("div");
-            div1.classList.add("div1")
-            const h3 = document.createElement("h3");
-            const priceP = document.createElement("p");
-            const remove = document.createElement("button");
-            remove.classList.add("remove")
-            const movetowishlist=document.createElement("button")
-            img.src = el.image;
-            h3.innerText = el.productName;
-            priceP.innerText = `Price-${el.price}`;
-            remove.innerText="Remove"
-            remove.addEventListener("click", () => {
-                data = data.filter((ele) => {
-                    return ele.id !== el.id;
-                })
-                localStorage.setItem("wishlist", JSON.stringify(data))
-                append(data)
-                totalPrice(data);
-            })
-         movetowishlist.addEventListener("click", () => {
-              });
-           div1.append(h3,remove)
-            div.append(img,div1, priceP)
-            container.append(div);
-        })
-    }
+let newData=[]
+let data = JSON.parse(localStorage.getItem("wishlist")) || [];
+let userId = JSON.parse(localStorage.getItem("userId"))
+console.log(userId);
+async function getdata(){
+    let res = await fetch(`http://127.0.0.1:9090/wishlist?userId=${userId}`)
+    let newData = await res.json()
+   
+    console.log(newData);
+    append(newData[0].products); 
+}
 
-    function fileUpload() {
+getdata()
+
+const append = (data) => {
+    const container = document.querySelector(".wishlist");
+    container.innerHTML = null;
+
+    data.forEach((el) => {
+     
+        const div = document.createElement("div");
+        div.classList.add("parent")
+
+        const img = document.createElement("img");
+        const div1=document.createElement("div");
+        div1.classList.add("div1")
+        const h3 = document.createElement("h3");
+        const priceP = document.createElement("p");
+        priceP.classList.add("priceP")
+     
+ 
+        const remove = document.createElement("button");
+        remove.classList.add("remove")
+        const movetowishlist=document.createElement("button")
+
+        img.src = el.image;
+        
+        h3.innerText = el.productName;
+        priceP.innerText = `₹${el.price}`;
+        remove.innerText="Remove"
+        remove.addEventListener("click", () => {
+            data = data.filter((ele) => {
+                return ele.id !== el.id;
+            })
+            localStorage.setItem("wishlist", JSON.stringify(data))
+            append(data)
+            totalPrice(data);
+        })
+
+
+
+       div1.append(h3,remove)
+
+   
+        div.append(img,div1, priceP)
+        container.append(div);
+    })
+}
+
+function fileUpload() {
         document.getElementById("file").click();
         document.getElementById("file").addEventListener("change", function (event) {
             console.log(event.target.files[0]);
@@ -557,6 +603,5 @@
             image.src = URL.createObjectURL(event.target.files[0]);
         });
     }
-
 
 </script>

@@ -5,7 +5,10 @@
 
 
 
-
+let order=document.querySelector(".placeorder")
+order.addEventListener("click",()=>{
+   window.location="./payment.html"
+})
 
 
  //let data = JSON.parse(localStorage.getItem("cart")) || [];
@@ -14,7 +17,7 @@ console.log(userId);
  var data =[]
  let products=[]
 async function getdata(){
-    let res = await fetch(`http://127.0.0.1:9090/cart`)
+    let res = await fetch(`http://127.0.0.1:9090/cart?userId=${userId}`)
       products = await res.json()
       console.log(products);
    data =products[0].products
@@ -100,7 +103,7 @@ function totalPrice(products, quantity=1) {
         const totalOffer = products.reduce((acc, el) => acc + Number(el.offer), 0);
        const ship=Number(50)
        const discountAmount = totalMRP * (totalOffer / 100);
-       const subtotal =Math.abs( totalMRP-discountAmount);
+       const subtotal =Math.abs( totalMRP-totalOffer);
        const ordertotal = subtotal + ship;
        const yousave = discountAmount;
    
@@ -110,8 +113,9 @@ function totalPrice(products, quantity=1) {
        document.querySelector(".savingonmrp").innerHTML = `₹${totalOffer.toFixed(2)}`;
        document.querySelector(".subtotal").innerHTML = `₹${subtotal.toFixed(2)}`;
     //    document.querySelector(".shippingcharges").innerHTML = `₹${ship.toFixed(2)}`;
+       document.querySelector(".shippingCharges").innerHTML = `₹${ship}`;
        document.querySelector(".ordertotal").innerHTML = `₹${ordertotal.toFixed(2)}`;
-       document.querySelector(".yousave").innerHTML = `₹${yousave.toFixed(2)}`;
+    //    document.querySelector(".yousave").innerHTML = `₹${yousave.toFixed(2)}`;
     
     //     const totalContainer = document.querySelector(".totalmrp");
     //      const totalOffercont=document.querySelector(".savingonmrp");
