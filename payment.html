@@ -155,7 +155,7 @@
                     <div class="flex">
                         <div class="inputBox">
                             <span>state :</span>
-                            <!-- <input id= "state"type="text" placeholder="West Bengal"> -->
+                            <input id="state" type="text" placeholder="West Bengal">
                         </div>
                         <div class="inputBox">
                             <span>zip code :</span>
@@ -220,7 +220,7 @@
                    </div>
                    <div class="bill4">
                     <h4>Shipping Charges:</h4>
-                    <div class="shippingCharges"  style="color:rgb(244, 65, 154);width: 100px;text-align: right;margin-bottom: 15px;">₹55</div>
+                    <div class="shippingCharges"  style="color:rgb(244, 65, 154);width: 100px;text-align: right;margin-bottom: 15px;">₹50</div>
                    </div>
                    <div class="bill5"><h4>Coupon Discount:</h4>
                    <h5 style="color:rgb(244, 65, 154);width: 100px;text-align: right;margin-bottom: 15px;"> Apply Coupon</h5>
@@ -230,11 +230,7 @@
                     <h3>Order Total:</h3>
                     <div class="ordertotal" style="color:rgb(244, 65, 154);width: 100px;text-align: right;margin-bottom: 15px;">₹235</div>
                 </div>
-                <div class="bill7">
-                    <h4>You Save</h4>
-                    <div class="yousave" class="ordertotal" style="color:rgb(244, 65, 154);width: 100px;text-align: right;margin-bottom: 5px;">₹67</div>
-                    
-                </div>
+             
 
             </div>
 
@@ -248,7 +244,8 @@
 <script>
     let submit = document.querySelector("form");
     let userId=JSON.parse(localStorage.getItem("userId"))
-    submit.addEventListener("click",(e)=>{
+    console.log(userId)
+    submit.addEventListener("submit",(e)=>{
         e.preventDefault();
         let userName =document.getElementById("name").value
         let email = document.getElementById("email").value
@@ -337,9 +334,9 @@ const yousave = localStorage.getItem('yousave');
 document.querySelector(".totalmrp").innerHTML = `₹${totalMRP}`;
 document.querySelector(".savingonmrp").innerHTML = `₹${totalOffer}`;
 document.querySelector(".subtotal").innerHTML = `₹${subtotal}`;
-document.querySelector(".shippingcharges").innerHTML = `₹${shipping}`;
+// document.querySelector(".shippingcharges").innerHTML = `₹${shipping}`;
 document.querySelector(".ordertotal").innerHTML = `₹${ordertotal}`;
-document.querySelector(".yousave").innerHTML = `₹${yousave}`;
+// document.querySelector(".yousave").innerHTML = `₹${yousave}`;
 
 
 

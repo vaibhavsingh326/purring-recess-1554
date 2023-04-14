@@ -4,33 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
     <script src="https://kit.fontawesome.com/5089e6484a.js" crossorigin="anonymous"></script>
+    
     <title>Document</title>
     <style>
+        .priceP{
+           color: fuchsia;
+           font-size: 20px;
+        }
+        .wishlist{
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 60px;
+        }
+
+        .part1 img{
+            margin-left: 30%;
+        }
+        .part1{
+            display: flex;
+            justify-content: space-between;
+        }
         .parent{
             display: flex;
-        }
-        .parent img{
-            width: 100%;
-        }
-        .div1{
-            width:50%
-        }
-        .remove{
-            margin-top: 70px;
-        }
-        .parent{
-            display: flex;
+            width: 50%;
+       
            
         }
         .parent img{
             width: 100%;
+            margin-left: 10px;
+        }
+        /* .div1{
+            width:30%;
+           
+            
+        } */
+        .remove{
+           background-color: pink;
+           border: 1px solid white;
+           padding: 10px;
+        }
+        /* .parent{
+            display: flex;
+           
+        } */
+        .parent img{
+            width: 100%;
         }
         .div1{
             width:50%
         }
         .remove{
-            margin-top: 70px;
+            margin-top: 30px;
+        }
+        .avatar{
+            margin: auto;
+        }
+
+        #empty {
+            background-color: rgb(223, 43, 103);
+            height: 170px;
+            margin-top: -34px;
+        }
+        .avatar {
+            margin-top: 80px;
+            margin-left: 50%;
+        }
+        #button {
+            border: none;
+            
+            background-color: rgb(40, 36, 36);
+        }
+       
+        .part1 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+            width: 90%;
+            margin: auto;
+            margin-top: -50px;
+            background-color: white;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        }
+        .part1>p {
+            font-family: "Lucida Console", "Courier New", monospace;
+            
         }
     </style>
 </head>
@@ -132,7 +193,7 @@
 
 
 
-    <div class="whishlist">
+    <div class="wishlist">
         <!-- write on cart part append -->
     </div>
 
@@ -502,6 +563,7 @@ const append = (data) => {
         div1.classList.add("div1")
         const h3 = document.createElement("h3");
         const priceP = document.createElement("p");
+        priceP.classList.add("priceP")
      
  
         const remove = document.createElement("button");
@@ -511,7 +573,7 @@ const append = (data) => {
         img.src = el.image;
         
         h3.innerText = el.productName;
-        priceP.innerText = `Price-${el.price}`;
+        priceP.innerText = `₹${el.price}`;
         remove.innerText="Remove"
         remove.addEventListener("click", () => {
             data = data.filter((ele) => {
@@ -522,9 +584,7 @@ const append = (data) => {
             totalPrice(data);
         })
 
-     movetowishlist.addEventListener("click", () => {
-      
-          });
+
 
        div1.append(h3,remove)
 
@@ -533,5 +593,14 @@ const append = (data) => {
         container.append(div);
     })
 }
+
+function fileUpload() {
+        document.getElementById("file").click();
+        document.getElementById("file").addEventListener("change", function (event) {
+            console.log(event.target.files[0]);
+            var image = document.getElementById("preview");
+            image.src = URL.createObjectURL(event.target.files[0]);
+        });
+    }
 
 </script>
