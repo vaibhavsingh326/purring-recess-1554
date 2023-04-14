@@ -753,6 +753,30 @@
       "lastname": "chacha",
       "createdAt": 1680353241372,
       "id": 74
+    },
+    {
+      "password": "$2b$10$oE26hmfIdnx5pVQXDEeXkO2Flz9J14Cc8v6maR5MKbIypSwZbEKD6",
+      "email": "supriyayout@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680460401982,
+      "id": 75
+    },
+    {
+      "password": "$2b$10$4MxoE1ezcWWs4KJGyLxi7eKWIBgsNmCSBsnuRl/ikL4.k7x3g9XxS",
+      "email": "supriyayout@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680502284669,
+      "id": 76
+    },
+    {
+      "password": "$2b$10$x.VvChwWFVrSmMj.CtvKHuHZ67A.LBthzOR5uk8H9zLdKIiye55rC",
+      "email": "supriyayout@gmail.com",
+      "firstname": "raju",
+      "lastname": "chacha",
+      "createdAt": 1680505632632,
+      "id": 77
     }
   ],
   "products": [
@@ -1907,6 +1931,30 @@
       "createdAt": 1680261726075,
       "id": 96,
       "storeId": 4
+    },
+    {
+      "productName": "bcd bcd",
+      "price": "23112",
+      "offer": "312",
+      "elite": true,
+      "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/325687/good-vibes-vitamin-c-glow-face-wash-deep-cleansing-brightening-refreshing-no-parabens-no-mineral-oil-no-animal-testing-120-ml-1_1_display_1662962061_0a74b151.jpg",
+      "category": "Facewash",
+      "review": "2",
+      "createdAt": 1680460686652,
+      "id": 97,
+      "storeId": 1
+    },
+    {
+      "productName": "bcd bcd",
+      "price": "23112",
+      "offer": "312",
+      "elite": true,
+      "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/325687/good-vibes-vitamin-c-glow-face-wash-deep-cleansing-brightening-refreshing-no-parabens-no-mineral-oil-no-animal-testing-120-ml-1_1_display_1662962061_0a74b151.jpg",
+      "category": "Facewash",
+      "review": "2",
+      "createdAt": 1680460689022,
+      "id": 98,
+      "storeId": 1
     }
   ],
   "wishlist": [
@@ -1960,102 +2008,6 @@
           "createdAt": 1680202936282,
           "id": 11,
           "storeId": 1
-        },
-        {
-          "productName": "Maybelline Newyork Sensational Liquid Lipstick",
-          "price": 399,
-          "offer": 70,
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
-          "category": "Lipstick",
-          "review": "5",
-          "createdAt": 1680202418968,
-          "id": 6,
-          "storeId": 1
-        },
-        {
-          "productName": "Lakme Absolute Matte Lipstick",
-          "price": 550,
-          "offer": 60,
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,dpr-2/static/img/product/331884/lakme-9to5-primer-matte-lip-color-mp6-deep-wine-3-6-g_9_display_1633410901_44ccf247.jpg",
-          "category": "Lipstick",
-          "review": "5",
-          "createdAt": 1680202531652,
-          "id": 8,
-          "storeId": 1
-        },
-        {
-          "productName": "Mamaearth Ubtan Ultra Light Face Cream",
-          "price": 259,
-          "offer": 10,
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/241644/mamaearth-ubtan-ultra-light-gel-oil-free-moisturizer-with-turmeric-and-saffron-for-deep-hydration-200-ml_1_display_1623389908_47b530e7.jpg",
-          "category": "face Cream",
-          "review": "4",
-          "createdAt": 1680202070075,
-          "id": 2,
-          "storeId": 1
-        },
-        {
-          "productName": "Maybelline Newyork Sensational Liquid Lipstick",
-          "price": 399,
-          "offer": 70,
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
-          "category": "Lipstick",
-          "review": "5",
-          "createdAt": 1680202418968,
-          "id": 6,
-          "storeId": 1
-        },
-        {
-          "productName": "Lakme Absolute Matte Lipstick",
-          "price": 550,
-          "offer": 60,
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,dpr-2/static/img/product/331884/lakme-9to5-primer-matte-lip-color-mp6-deep-wine-3-6-g_9_display_1633410901_44ccf247.jpg",
-          "category": "Lipstick",
-          "review": "5",
-          "createdAt": 1680202531652,
-          "id": 8,
-          "storeId": 1
-        },
-        {
-          "productName": "Mamaearth Ubtan Ultra Light Face Cream",
-          "price": 259,
-          "offer": 10,
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/241644/mamaearth-ubtan-ultra-light-gel-oil-free-moisturizer-with-turmeric-and-saffron-for-deep-hydration-200-ml_1_display_1623389908_47b530e7.jpg",
-          "category": "face Cream",
-          "review": "4",
-          "createdAt": 1680202070075,
-          "id": 2,
-          "storeId": 1
-        },
-        {
-          "productName": "Maybelline Newyork Sensational Liquid Lipstick",
-          "price": 399,
-          "offer": 70,
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
-          "category": "Lipstick",
-          "review": "5",
-          "createdAt": 1680202418968,
-          "id": 6,
-          "storeId": 1
-        },
-        {
-          "productName": "Lakme Absolute Matte Lipstick",
-          "price": 550,
-          "offer": 60,
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,dpr-2/static/img/product/331884/lakme-9to5-primer-matte-lip-color-mp6-deep-wine-3-6-g_9_display_1633410901_44ccf247.jpg",
-          "category": "Lipstick",
-          "review": "5",
-          "createdAt": 1680202531652,
-          "id": 8,
-          "storeId": 1
         }
       ]
     },
@@ -2072,6 +2024,71 @@
           "review": "5",
           "createdAt": 1680201769118,
           "id": 1,
+          "storeId": 1
+        },
+        {
+          "productName": "Aroma Magic White Tea and Chamomile Facewash (100ml)",
+          "price": 185,
+          "offer": 40,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/195825/aroma-magic-white-tea-and-chamomile-face-wash-100-ml-13_2_display_1524551242_62a97f2a.jpg",
+          "category": "Facewash",
+          "review": "2",
+          "createdAt": 1680261310540,
+          "id": 91,
+          "storeId": 4
+        }
+      ]
+    },
+    {
+      "userId": 1,
+      "products": [
+        {
+          "productName": "Neutrogena Sheer Dry Touch Sunscreen Spf 30",
+          "price": 260,
+          "offer": 0,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-Best_seller_700x700base_gUMVzNGWt_.png,ofo-top_right,dpr-2/static/img/product/287362/neutrogena-ultra-sheer-spf50-30ml-20-21-20-19_2_display_1671087611_7b2e3c85.jpg",
+          "category": "Sunscreen",
+          "review": "4",
+          "createdAt": 1680203210609,
+          "id": 12,
+          "storeId": 1
+        },
+        {
+          "productName": "Mamaearth Cheery Tinted 100% Natural Lip Balm",
+          "price": 299,
+          "offer": 55,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/264333/mamaearth-cherry-tinted-100-percentage-natural-lip-balm-for-women-with-cherry-and-coconut-oil-2-g_7_display_1640068778_feec3c20.jpg",
+          "category": "Lip Balm",
+          "review": "2",
+          "createdAt": 1680203467857,
+          "id": 15,
+          "storeId": 1
+        },
+        {
+          "productName": "Good Vibes Cheery Moisture Rich Tinted Lipbalm",
+          "price": 199,
+          "offer": 20,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-@@mediafiles@mailers@banners@1659451450_new-tag.png,ow-115,ofo-top_right,dpr-2/static/img/product/315067/good-vibes-cherry-moisture-rich-red-tinted-lip-balm-spf-15-4-2-g_6_display_1665984229_ca38924e.jpg",
+          "category": "Lip Balm",
+          "review": "4",
+          "createdAt": 1680203335720,
+          "id": 37,
+          "storeId": 2
+        },
+        {
+          "productName": "Lakme Sun Expert Spf 50",
+          "price": 325,
+          "offer": 25,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/276114/lakme-sun-expert-spf-50-ultra-matte-lotion-50-ml_1_display_1602321528_3f1d59a5.jpg",
+          "category": "Sunscreen",
+          "review": "5",
+          "createdAt": 1680202637945,
+          "id": 9,
           "storeId": 1
         }
       ]
@@ -2153,41 +2170,46 @@
           "createdAt": 1680203210609,
           "id": 12,
           "storeId": 1
-        },
+        }
+      ]
+    },
+    {
+      "userId": 66,
+      "products": [
         {
-          "productName": "Lakme Absolute Matte Lipstick",
-          "price": 550,
-          "offer": 60,
+          "productName": "Good Vibes Papaya Hydrating Face Cream",
+          "price": 255,
+          "offer": 100,
           "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,dpr-2/static/img/product/331884/lakme-9to5-primer-matte-lip-color-mp6-deep-wine-3-6-g_9_display_1633410901_44ccf247.jpg",
-          "category": "Lipstick",
-          "review": "5",
-          "createdAt": 1680202531652,
-          "id": 8,
-          "storeId": 1
-        },
-        {
-          "productName": "Maybelline Newyork Sensational Liquid Lipstick",
-          "price": 399,
-          "offer": 70,
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
-          "category": "Lipstick",
-          "review": "5",
-          "createdAt": 1680202418968,
-          "id": 6,
-          "storeId": 1
-        },
-        {
-          "productName": "Mamaearth Ubtan Ultra Light Face Cream",
-          "price": 259,
-          "offer": 10,
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/241644/mamaearth-ubtan-ultra-light-gel-oil-free-moisturizer-with-turmeric-and-saffron-for-deep-hydration-200-ml_1_display_1623389908_47b530e7.jpg",
+          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/275214/good-vibes-hydrating-face-cream-papaya-50-g-1_6_display_1620451298_33edd5ed.jpg",
           "category": "face Cream",
-          "review": "4",
-          "createdAt": 1680202070075,
-          "id": 2,
+          "review": "5",
+          "createdAt": 1680201769118,
+          "id": 1,
+          "storeId": 1
+        },
+        {
+          "productName": "Aroma Magic White Tea and Chamomile Facewash (100ml)",
+          "price": 185,
+          "offer": 40,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/195825/aroma-magic-white-tea-and-chamomile-face-wash-100-ml-13_2_display_1524551242_62a97f2a.jpg",
+          "category": "Facewash",
+          "review": "2",
+          "createdAt": 1680261310540,
+          "id": 91,
+          "storeId": 4
+        },
+        {
+          "productName": "Good Vibes Papaya Hydrating Face Cream",
+          "price": 255,
+          "offer": 100,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/275214/good-vibes-hydrating-face-cream-papaya-50-g-1_6_display_1620451298_33edd5ed.jpg",
+          "category": "face Cream",
+          "review": "5",
+          "createdAt": 1680201769118,
+          "id": 1,
           "storeId": 1
         },
         {
@@ -2229,20 +2251,8 @@
       ]
     },
     {
-      "userId": 66,
+      "userId": 1,
       "products": [
-        {
-          "productName": "Good Vibes Papaya Hydrating Face Cream",
-          "price": 255,
-          "offer": 100,
-          "elite": true,
-          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-purplle_exclusive_base_1__1__BytKq6D4b.png,ofo-top_right,dpr-2/static/img/product/275214/good-vibes-hydrating-face-cream-papaya-50-g-1_6_display_1620451298_33edd5ed.jpg",
-          "category": "face Cream",
-          "review": "5",
-          "createdAt": 1680201769118,
-          "id": 1,
-          "storeId": 1
-        },
         {
           "productName": "Mamaearth Ubtan Ultra Light Face Cream",
           "price": 259,
@@ -2268,6 +2278,54 @@
           "storeId": 1
         },
         {
+          "productName": "Neutrogena Sheer Dry Touch Sunscreen Spf 30",
+          "price": 260,
+          "offer": 0,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-Best_seller_700x700base_gUMVzNGWt_.png,ofo-top_right,dpr-2/static/img/product/287362/neutrogena-ultra-sheer-spf50-30ml-20-21-20-19_2_display_1671087611_7b2e3c85.jpg",
+          "category": "Sunscreen",
+          "review": "4",
+          "createdAt": 1680203210609,
+          "id": 12,
+          "storeId": 1
+        },
+        {
+          "productName": "Mamaearth Ubtan Ultra Light Face Cream",
+          "price": 259,
+          "offer": 10,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/241644/mamaearth-ubtan-ultra-light-gel-oil-free-moisturizer-with-turmeric-and-saffron-for-deep-hydration-200-ml_1_display_1623389908_47b530e7.jpg",
+          "category": "face Cream",
+          "review": "4",
+          "createdAt": 1680202070075,
+          "id": 2,
+          "storeId": 1
+        },
+        {
+          "productName": "Mamaearth Cheery Tinted 100% Natural Lip Balm",
+          "price": 299,
+          "offer": 55,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/264333/mamaearth-cherry-tinted-100-percentage-natural-lip-balm-for-women-with-cherry-and-coconut-oil-2-g_7_display_1640068778_feec3c20.jpg",
+          "category": "Lip Balm",
+          "review": "2",
+          "createdAt": 1680203467857,
+          "id": 15,
+          "storeId": 1
+        },
+        {
+          "productName": "Lakme Absolute Matte Lipstick",
+          "price": 550,
+          "offer": 60,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,dpr-2/static/img/product/331884/lakme-9to5-primer-matte-lip-color-mp6-deep-wine-3-6-g_9_display_1633410901_44ccf247.jpg",
+          "category": "Lipstick",
+          "review": "5",
+          "createdAt": 1680202531652,
+          "id": 32,
+          "storeId": 2
+        },
+        {
           "productName": "Good Vibes Cheery Moisture Rich Tinted Lipbalm",
           "price": 199,
           "offer": 20,
@@ -2276,7 +2334,55 @@
           "category": "Lip Balm",
           "review": "4",
           "createdAt": 1680203335720,
-          "id": 13,
+          "id": 37,
+          "storeId": 2
+        },
+        {
+          "productName": "Maybelline Newyork Sensational Liquid Lipstick",
+          "price": 399,
+          "offer": 70,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/325344/maybelline-new-york-sensational-liquid-matte-lipstick-23-untamed-rose_3_display_1627381024_526321cb.jpg",
+          "category": "Lipstick",
+          "review": "5",
+          "createdAt": 1680202418968,
+          "id": 6,
+          "storeId": 1
+        },
+        {
+          "productName": "DermaCo Hyaluronic Sunscreen",
+          "price": 499,
+          "offer": 30,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/269644/1-percentage-hyaluronic-sunscreen-aqua-ultra-light-gel-with-spf-50-pa-for-broad-spectrum-uv-a-uv-b-and-blue-light-protection-50g_1_display_1653126903_d20570c1.jpg",
+          "category": "Sunscreen",
+          "review": "4",
+          "createdAt": 1680202936282,
+          "id": 35,
+          "storeId": 2
+        },
+        {
+          "productName": "Mamaearth Ubtan Ultra Light Face Cream",
+          "price": 259,
+          "offer": 10,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/241644/mamaearth-ubtan-ultra-light-gel-oil-free-moisturizer-with-turmeric-and-saffron-for-deep-hydration-200-ml_1_display_1623389908_47b530e7.jpg",
+          "category": "face Cream",
+          "review": "4",
+          "createdAt": 1680202070075,
+          "id": 2,
+          "storeId": 1
+        },
+        {
+          "productName": "Lakme Sun Expert Spf 50",
+          "price": 325,
+          "offer": 25,
+          "elite": true,
+          "image": "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/276114/lakme-sun-expert-spf-50-ultra-matte-lotion-50-ml_1_display_1602321528_3f1d59a5.jpg",
+          "category": "Sunscreen",
+          "review": "5",
+          "createdAt": 1680202637945,
+          "id": 9,
           "storeId": 1
         }
       ]
@@ -2324,7 +2430,7 @@
       "id": 4
     }
   ],
-  "adminorders": {},
+  "adminorders": [],
   "stores": [
     {
       "storename": "Supriya's",
